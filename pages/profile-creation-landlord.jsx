@@ -71,21 +71,21 @@ const ProfileCreationLandLord = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen">
+    <div className="flex min-h-screen flex-col lg:flex-row">
       {/* Background Image Section */}
-      <div className="hidden lg:block w-1/2 relative">
+      <div className="relative hidden w-1/2 lg:block">
         <img
           src="/home3.png"
           alt="Create Profile Background"
-          className="w-full h-full object-cover"
+          className="h-full w-full object-cover"
         />
         <img
           src="/homi_logo.png"
           alt="Homi Logo"
-          className="absolute top-10 left-10 w-32"
+          className="absolute left-10 top-10 w-32"
         />
-        <div className="absolute bottom-0 h-[300px] left-0 w-full bg-black bg-opacity-70 text-white p-4">
-          <h3 className="text-2xl font-semibold w-[170px] pl-5">
+        <div className="absolute bottom-0 left-0 h-[300px] w-full bg-black bg-opacity-70 p-4 text-white">
+          <h3 className="w-[170px] pl-5 text-2xl font-semibold">
             Welcome to <span className="text-3xl font-bold">HOMI</span>
           </h3>
           <div className="flex items-center gap-2 pl-5">
@@ -93,28 +93,28 @@ const ProfileCreationLandLord = () => {
             <img
               src="/arrow-right-circle.png"
               alt="Arrow Right"
-              className="w-6 h-6"
+              className="h-6 w-6"
             />
           </div>
         </div>
       </div>
 
       {/* Form Section */}
-      <div className="flex-1 flex items-center justify-center p-6 w-full">
+      <div className="flex w-full flex-1 items-center justify-center p-6">
         <form
-          className="w-full max-w-md bg-white rounded-lg p-6"
+          className="w-full max-w-md rounded-lg bg-white p-6"
           onSubmit={handleSubmit}
         >
-          <h3 className="text-2xl font-bold mb-2 text-center">
+          <h3 className="mb-2 text-center text-2xl font-bold">
             {mode === "create" ? "Create Landlord Account" : "Welcome Back"}
           </h3>
 
           {mode === "create" && (
             <>
-              <label htmlFor="fullname" className="block font-medium mb-1">
+              <label htmlFor="fullname" className="mb-1 block font-medium">
                 Enter full name
               </label>
-              <div className="flex flex-col md:flex-row md:gap-4 mb-4">
+              <div className="mb-4 flex flex-col md:flex-row md:gap-4">
                 <input
                   type="text"
                   name="firstName"
@@ -122,7 +122,7 @@ const ProfileCreationLandLord = () => {
                   required
                   value={formData.firstName}
                   onChange={handleChange}
-                  className="flex-1 border mb-4 md:mb-0 w-full md:w-1/2 border-gray-300 p-2 rounded-xl focus:outline-none focus:ring focus:ring-red-300"
+                  className="mb-4 w-full flex-1 rounded-xl border border-gray-300 p-2 focus:outline-none focus:ring focus:ring-red-300 md:mb-0 md:w-1/2"
                 />
                 <input
                   type="text"
@@ -131,13 +131,13 @@ const ProfileCreationLandLord = () => {
                   required
                   value={formData.lastName}
                   onChange={handleChange}
-                  className="flex-1 border w-full md:w-1/2 border-gray-300 p-2 rounded-xl focus:outline-none focus:ring focus:ring-red-300"
+                  className="w-full flex-1 rounded-xl border border-gray-300 p-2 focus:outline-none focus:ring focus:ring-red-300 md:w-1/2"
                 />
               </div>
             </>
           )}
 
-          <label htmlFor="email" className="block font-medium mb-1">
+          <label htmlFor="email" className="mb-1 block font-medium">
             Email Address
           </label>
           <input
@@ -147,10 +147,10 @@ const ProfileCreationLandLord = () => {
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full border border-gray-300 p-2 rounded-xl mb-4 focus:outline-none focus:ring focus:ring-red-300"
+            className="mb-4 w-full rounded-xl border border-gray-300 p-2 focus:outline-none focus:ring focus:ring-red-300"
           />
 
-          <label htmlFor="password" className="block font-medium mb-1">
+          <label htmlFor="password" className="mb-1 block font-medium">
             Password
           </label>
           <input
@@ -160,14 +160,14 @@ const ProfileCreationLandLord = () => {
             required
             value={formData.password}
             onChange={handleChange}
-            className="w-full border border-gray-300 p-2 rounded-xl mb-2 focus:outline-none focus:ring focus:ring-red-300"
+            className="mb-2 w-full rounded-xl border border-gray-300 p-2 focus:outline-none focus:ring focus:ring-red-300"
           />
 
           {mode === "create" && (
             <>
               <label
                 htmlFor="confirm-password"
-                className="block font-medium mt-4 mb-1"
+                className="mb-1 mt-4 block font-medium"
               >
                 Confirm password
               </label>
@@ -178,14 +178,14 @@ const ProfileCreationLandLord = () => {
                 required
                 value={formData.confirmPassword}
                 onChange={handleChange}
-                className="w-full border border-gray-300 p-2 rounded-xl mb-6 focus:outline-none focus:ring focus:ring-red-300"
+                className="mb-6 w-full rounded-xl border border-gray-300 p-2 focus:outline-none focus:ring focus:ring-red-300"
               />
-              <div className="flex items-center gap-2 mb-6">
+              <div className="mb-6 flex items-center gap-2">
                 <input
                   type="checkbox"
                   checked={isChecked}
                   onChange={handleCheckboxChange}
-                  className="w-4 h-4 text-red-600 border-gray-300 rounded focus:ring-red-500"
+                  className="h-4 w-4 rounded border-gray-300 text-red-600 focus:ring-red-500"
                 />
                 <label className="text-sm text-gray-700">Remember</label>
               </div>
@@ -197,7 +197,7 @@ const ProfileCreationLandLord = () => {
             disabled={loading}
             className={`w-full ${
               loading ? "bg-gray-400" : "bg-red-500"
-            } text-white font-medium py-2 px-4 rounded-xl hover:bg-primaryBlue transition`}
+            } rounded-xl px-4 py-2 font-medium text-white transition hover:bg-primaryBlue`}
           >
             {loading
               ? mode === "create"
@@ -207,9 +207,9 @@ const ProfileCreationLandLord = () => {
                 ? "Create Account"
                 : "Sign In"}
           </button>
-          {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+          {error && <p className="mt-2 text-sm text-red-500">{error}</p>}
 
-          <div className="flex items-center justify-center my-6">
+          <div className="my-6 flex items-center justify-center">
             <hr className="w-[20%] border-gray-300" />
             <div className="px-4 text-sm text-gray-400">
               Or sign {mode === "create" ? "up" : "in"} with
@@ -217,25 +217,25 @@ const ProfileCreationLandLord = () => {
             <hr className="w-[20%] border-gray-300" />
           </div>
 
-          <div className="flex gap-4 justify-center">
+          <div className="flex justify-center gap-4">
             <button type="button">
               <img
                 src="/facebook_logo.png"
                 alt="Facebook"
-                className="w-8 h-8"
+                className="h-8 w-8"
               />
             </button>
             <button type="button">
-              <img src="/google_logo.png" alt="Google" className="w-8 h-8" />
+              <img src="/google_logo.png" alt="Google" className="h-8 w-8" />
             </button>
           </div>
 
-          <p className="mb-6 text-center mt-5">
+          <p className="mb-6 mt-5 text-center">
             {mode === "create" ? (
               <>
                 Already a member?{" "}
                 <span
-                  className="text-primary font-medium cursor-pointer"
+                  className="text-primaryGreen cursor-pointer font-medium"
                   onClick={() => setMode("sign-in")}
                 >
                   Sign in
@@ -245,7 +245,7 @@ const ProfileCreationLandLord = () => {
               <>
                 New here?{" "}
                 <span
-                  className="text-red-500 font-medium cursor-pointer"
+                  className="cursor-pointer font-medium text-red-500"
                   onClick={() => setMode("create")}
                 >
                   Create an account

@@ -2,7 +2,7 @@
 
 import { Link } from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import hamburger icon
 
 const Navbar = () => {
@@ -48,9 +48,9 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="absolute top-6 left-0 w-full px-4 sm:px-12 flex items-center justify-center">
+    <div className="absolute left-0 top-6 flex w-full items-center justify-center px-4 sm:px-12">
       {/* Navbar */}
-      <nav className="flex justify-between items-center py-4 px-6 bg-white rounded-full shadow-lg w-full max-w-6xl z-50">
+      <nav className="z-50 flex w-full max-w-6xl items-center justify-between rounded-full bg-white px-6 py-4 shadow-lg">
         {/* Logo */}
         <div>
           <img src={logo} alt="Logo" className="h-10" />
@@ -67,12 +67,12 @@ const Navbar = () => {
         </div>
 
         {/* Navigation Links */}
-        <ul className="hidden sm:flex space-x-8 text-lg text-gray-700">
+        <ul className="hidden space-x-8 text-lg text-gray-700 sm:flex">
           <Link to="/">
             <li
               className={`${
-                pathname === "/" ? "bg-primary  rounded-xl px-4 py-1" : ""
-              } hover:text-gray-800 hover:bg-primary hover:rounded-xl hover:px-4 hover:py-1 cursor-pointer`}
+                pathname === "/" ? "bg-primaryGreen rounded-xl px-4 py-1" : ""
+              } hover:bg-primaryGreen cursor-pointer hover:rounded-xl hover:px-4 hover:py-1 hover:text-gray-800`}
             >
               Home
             </li>
@@ -81,9 +81,9 @@ const Navbar = () => {
             <li
               className={`${
                 pathname === "/properties"
-                  ? "bg-primary rounded-xl px-4 py-1"
+                  ? "bg-primaryGreen rounded-xl px-4 py-1"
                   : ""
-              } hover:text-gray-800 hover:bg-primary hover:rounded-xl hover:px-4 hover:py-1 cursor-pointer`}
+              } hover:bg-primaryGreen cursor-pointer hover:rounded-xl hover:px-4 hover:py-1 hover:text-gray-800`}
             >
               Properties
             </li>
@@ -92,9 +92,9 @@ const Navbar = () => {
             <li
               className={`${
                 pathname === "/homi-match"
-                  ? "bg-primary rounded-xl px-4 py-1"
+                  ? "bg-primaryGreen rounded-xl px-4 py-1"
                   : ""
-              } hover:text-gray-800 hover:bg-primary hover:rounded-xl hover:px-4 hover:py-1 cursor-pointer`}
+              } hover:bg-primaryGreen cursor-pointer hover:rounded-xl hover:px-4 hover:py-1 hover:text-gray-800`}
             >
               Homi Match
             </li>
@@ -103,9 +103,9 @@ const Navbar = () => {
             <li
               className={`${
                 pathname === "/about-us"
-                  ? "bg-primary rounded-xl px-4 py-1"
+                  ? "bg-primaryGreen rounded-xl px-4 py-1"
                   : ""
-              } hover:text-gray-800 hover:bg-primary hover:rounded-xl hover:px-4 hover:py-1 cursor-pointer`}
+              } hover:bg-primaryGreen cursor-pointer hover:rounded-xl hover:px-4 hover:py-1 hover:text-gray-800`}
             >
               About Us
             </li>
@@ -113,9 +113,9 @@ const Navbar = () => {
         </ul>
 
         {/* Desktop Login Button with Dropdown */}
-        <div className="relative hidden sm:flex space-x-4" ref={dropdownRef}>
+        <div className="relative hidden space-x-4 sm:flex" ref={dropdownRef}>
           <button
-            className="bg-primary hover:bg-white text-gray-700 px-6 py-2 rounded-full cursor-pointer"
+            className="bg-primaryGreen cursor-pointer rounded-full px-6 py-2 text-gray-700 hover:bg-white"
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           >
             Login
@@ -123,15 +123,15 @@ const Navbar = () => {
 
           {/* Dropdown Menu */}
           {isDropdownOpen && (
-            <div className="absolute top-full mt-2 right-1 bg-white shadow-lg rounded-md w-40 z-50">
+            <div className="absolute right-1 top-full z-50 mt-2 w-40 rounded-md bg-white shadow-lg">
               <ul className="space-y-2 text-sm text-gray-700">
                 <Link to="/sign-in">
-                  <li className="cursor-pointer block px-4 py-2 hover:bg-primary hover:rounded-full hover:text-white">
+                  <li className="hover:bg-primaryGreen block cursor-pointer px-4 py-2 hover:rounded-full hover:text-white">
                     Tenant
                   </li>
                 </Link>
                 <Link to="/sign-up">
-                  <li className="cursor-pointer block px-4 py-2 hover:bg-primary hover:rounded-full hover:text-white">
+                  <li className="hover:bg-primaryGreen block cursor-pointer px-4 py-2 hover:rounded-full hover:text-white">
                     Landlord
                   </li>
                 </Link>
@@ -142,36 +142,38 @@ const Navbar = () => {
 
         {/* Mobile Nav Links */}
         {isMobileNavOpen && (
-          <div className="absolute top-0 left-0 w-full h-[60vh] bg-white z-40 flex flex-col items-center justify-center">
+          <div className="absolute left-0 top-0 z-40 flex h-[60vh] w-full flex-col items-center justify-center bg-white">
             {/* Close Button */}
             <button
               onClick={() => setIsMobileNavOpen(false)}
-              className="absolute top-4 right-4 text-2xl text-gray-700"
+              className="absolute right-4 top-4 text-2xl text-gray-700"
             >
               <FaTimes />
             </button>
-            <ul className="space-y-6 text-lg text-gray-700 mb-8">
+            <ul className="mb-8 space-y-6 text-lg text-gray-700">
               <Link to="/">
                 {" "}
-                <li className="hover:text-primary cursor-pointer">Home</li>
+                <li className="hover:text-primaryGreen cursor-pointer">Home</li>
               </Link>
               <Link to="/properties">
                 {" "}
-                <li className="hover:text-primary cursor-pointer">
+                <li className="hover:text-primaryGreen cursor-pointer">
                   Properties
                 </li>
               </Link>
               <Link to="/homi-match">
-                <li className="hover:text-primary cursor-pointer">
+                <li className="hover:text-primaryGreen cursor-pointer">
                   Homi Match
                 </li>
               </Link>
-              <li className="hover:text-primary cursor-pointer">About Us</li>
+              <li className="hover:text-primaryGreen cursor-pointer">
+                About Us
+              </li>
             </ul>
             <div className="relative">
               <button
                 onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
-                className="bg-primary hover:bg-primaryLight text-white px-6 py-3 rounded-full text-lg cursor-pointer"
+                className="bg-primaryGreen cursor-pointer rounded-full px-6 py-3 text-lg text-white hover:bg-primaryLight"
               >
                 Login
               </button>
@@ -179,19 +181,19 @@ const Navbar = () => {
               {/* Mobile Dropdown Menu */}
               {isMobileDropdownOpen && (
                 <div
-                  className="absolute top-full mt-2 left-0 bg-white shadow-lg rounded-md w-40 z-50"
+                  className="absolute left-0 top-full z-50 mt-2 w-40 rounded-md bg-white shadow-lg"
                   ref={mobileDropdownRef}
                 >
                   <ul className="space-y-2 text-sm text-gray-700">
                     <Link to="/sign-in">
                       {" "}
-                      <li className="cursor-pointer block px-4 py-2 hover:bg-primary hover:rounded-full hover:text-white">
+                      <li className="hover:bg-primaryGreen block cursor-pointer px-4 py-2 hover:rounded-full hover:text-white">
                         Rental
                       </li>
                     </Link>
                     <Link to="/sign-up">
                       {" "}
-                      <li className="cursor-pointer block px-4 py-2 hover:bg-primary hover:rounded-full hover:text-white">
+                      <li className="hover:bg-primaryGreen block cursor-pointer px-4 py-2 hover:rounded-full hover:text-white">
                         Landlord
                       </li>
                     </Link>

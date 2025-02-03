@@ -72,33 +72,35 @@ export default function NavBar() {
         <ul className="hidden space-x-8 text-lg text-gray-700 sm:flex">
           <li
             className={`${
-              pathname === "/" ? "rounded-xl bg-primary px-4 py-1" : ""
-            } cursor-pointer hover:rounded-xl hover:bg-primary hover:px-4 hover:py-1 hover:text-gray-800`}
+              pathname === "/" ? "bg-primaryGreen" : ""
+            } hover:bg-primaryGreen cursor-pointer rounded-xl px-4 py-1 hover:text-gray-800`}
           >
             <a href="/">Home</a>
           </li>
           <li
             className={`${
               pathname === "/properties"
-                ? "rounded-xl bg-primary px-4 py-1"
+                ? "bg-primaryGreen rounded-xl px-4 py-1"
                 : ""
-            } cursor-pointer hover:rounded-xl hover:bg-primary hover:px-4 hover:py-1 hover:text-gray-800`}
+            } hover:bg-primaryGreen cursor-pointer hover:rounded-xl hover:px-4 hover:py-1 hover:text-gray-800`}
           >
             <Link href="/properties">Properties</Link>
           </li>
           <li
             className={`${
               pathname === "/homi-match"
-                ? "rounded-xl bg-primary px-4 py-1"
+                ? "bg-primaryGreen rounded-xl px-4 py-1"
                 : ""
-            } cursor-pointer hover:rounded-xl hover:bg-primary hover:px-4 hover:py-1 hover:text-gray-800`}
+            } hover:bg-primaryGreen cursor-pointer hover:rounded-xl hover:px-4 hover:py-1 hover:text-gray-800`}
           >
             <Link href="/homi-match">Homi Match</Link>
           </li>
           <li
             className={`${
-              pathname === "/about-us" ? "rounded-xl bg-primary px-4 py-1" : ""
-            } cursor-pointer hover:rounded-xl hover:bg-primary hover:px-4 hover:py-1 hover:text-gray-800`}
+              pathname === "/about-us"
+                ? "bg-primaryGreen rounded-xl px-4 py-1"
+                : ""
+            } hover:bg-primaryGreen cursor-pointer hover:rounded-xl hover:px-4 hover:py-1 hover:text-gray-800`}
           >
             <Link href="/about-us">About Us</Link>
           </li>
@@ -107,7 +109,7 @@ export default function NavBar() {
         {/* Desktop Login Button with Dropdown */}
         <div className="relative hidden space-x-4 sm:flex" ref={dropdownRef}>
           <button
-            className="cursor-pointer rounded-full bg-primary px-6 py-2 text-gray-700 hover:bg-white"
+            className="bg-primaryGreen cursor-pointer rounded-full px-6 py-2 text-gray-700 hover:bg-white"
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           >
             Login
@@ -117,10 +119,10 @@ export default function NavBar() {
           {isDropdownOpen && (
             <div className="absolute right-1 top-full z-50 mt-2 w-40 rounded-md bg-white shadow-lg">
               <ul className="space-y-2 text-sm text-gray-700">
-                <li className="block cursor-pointer px-4 py-2 hover:rounded-full hover:bg-primary hover:text-white">
+                <li className="hover:bg-primaryGreen block cursor-pointer px-4 py-2 hover:rounded-full hover:text-white">
                   <Link href="/sign-in">Tenant</Link>
                 </li>
-                <li className="block cursor-pointer px-4 py-2 hover:rounded-full hover:bg-primary hover:text-white">
+                <li className="hover:bg-primaryGreen block cursor-pointer px-4 py-2 hover:rounded-full hover:text-white">
                   <Link href="/sign-up">Landlord</Link>
                 </li>
               </ul>
@@ -141,23 +143,23 @@ export default function NavBar() {
           </button>
           <ul className="mb-8 space-y-6 text-lg text-gray-700">
             {" "}
-            <li className="cursor-pointer hover:text-primary">
+            <li className="hover:text-primaryGreen cursor-pointer">
               <Link href="/">Home</Link>
             </li>{" "}
-            <li className="cursor-pointer hover:text-primary">
+            <li className="hover:text-primaryGreen cursor-pointer">
               <Link href="/properties">Properties</Link>
             </li>
-            <li className="cursor-pointer hover:text-primary">
+            <li className="hover:text-primaryGreen cursor-pointer">
               <Link href="/homi-match">Homi Match</Link>
             </li>
-            <li className="cursor-pointer hover:text-primary">
+            <li className="hover:text-primaryGreen cursor-pointer">
               <Link href="/about-us">About Us</Link>
             </li>
           </ul>
           <div className="relative">
             <button
               onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
-              className="hover:bg-primaryLight cursor-pointer rounded-full bg-primary px-6 py-3 text-lg text-white"
+              className="bg-primaryGreen cursor-pointer rounded-full px-6 py-3 text-lg text-white hover:bg-primaryLight"
             >
               Login
             </button>
@@ -170,10 +172,10 @@ export default function NavBar() {
               >
                 <ul className="space-y-2 text-sm text-gray-700">
                   {" "}
-                  <li className="block cursor-pointer px-4 py-2 hover:rounded-full hover:bg-primary hover:text-white">
+                  <li className="hover:bg-primaryGreen block cursor-pointer px-4 py-2 hover:rounded-full hover:text-white">
                     <Link href="/sign-in">Rental</Link>
                   </li>{" "}
-                  <li className="block cursor-pointer px-4 py-2 hover:rounded-full hover:bg-primary hover:text-white">
+                  <li className="hover:bg-primaryGreen block cursor-pointer px-4 py-2 hover:rounded-full hover:text-white">
                     <Link href="/sign-up">Landlord</Link>
                   </li>
                 </ul>
@@ -184,7 +186,7 @@ export default function NavBar() {
       )}
       {/* Post a Rental Button */}
       <button
-        className={`${rentalButton} z-50 cursor-pointer whitespace-nowrap rounded-full bg-gray-200 px-8 py-5 text-gray-800 transition-colors duration-300 hover:bg-primary hover:text-white`}
+        className={`${rentalButton} hover:bg-primaryGreen z-50 cursor-pointer whitespace-nowrap rounded-full bg-gray-200 px-8 py-5 text-gray-800 transition-colors duration-300 hover:text-white`}
       >
         Post a Rental
       </button>

@@ -1,12 +1,12 @@
 const PropertyFooter = () => {
   return (
-    <div className="p-6 mt-10">
-      <div className="flex flex-col md:flex-row md:justify-between">
+    <div className="mt-10 p-6">
+      <div className="flex flex-col md:flex-row md:justify-between md:gap-32">
         <div>
-          <h3 className="text-deepBlue text-2xl font-medium mb-4">
+          <h3 className="mb-4 text-2xl font-medium text-deepBlue">
             Start Your Real Estate Journey Today
           </h3>
-          <p className="text-gray-600 mb-6 w-[70%]">
+          <p className="mb-6 w-full text-sm text-gray-600">
             Your dream property is just a click away. Whether you're looking for
             a new home, a strategic investment, or expert real estate advice,
             Estatein is here to assist you every step of the way. Take the first
@@ -15,38 +15,38 @@ const PropertyFooter = () => {
             assistance.
           </p>
         </div>
-        <div className="w-[30%]">
-          <button className="text-deepBlue bg-primary py-3 px-3  rounded-md shadow-md hover:bg-primaryBlue">
+        <div className="w-full">
+          <button className="bg-primaryGreen rounded-md px-5 py-3 text-deepBlue shadow-md hover:bg-primaryBlue">
             Explore Properties
           </button>
         </div>
       </div>
-      <hr className="border-t border-gray-300 my-6" />
-      <div className="flex flex-col md:flex-row items-start gap-32">
+      <hr className="my-6 border-t border-gray-300" />
+      <div className="flex flex-col items-start gap-32 md:flex-row">
         <div className="flex flex-col items-start gap-4">
           <img src="/homi_logo.png" alt="Homi Logo" className="w-20" />
           <div className="relative w-full max-w-sm">
             <img
               src="/email_iconSmall.png"
               alt="Email Icon"
-              className="absolute top-1/2 left-3 transform -translate-y-1/2 w-5 h-5"
+              className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform"
             />
             <input
               type="email"
               placeholder="Enter your email"
-              className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="focus:ring-primaryGreen w-full rounded-md border border-gray-300 py-2 pl-10 pr-10 focus:outline-none focus:ring-2"
             />
             <img
               src="/send_icon.png"
               alt="Send Icon"
-              className="absolute top-1/2 right-3 transform -translate-y-1/2 w-5 h-5 cursor-pointer"
+              className="absolute right-3 top-1/2 h-5 w-5 -translate-y-1/2 transform cursor-pointer"
             />
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-sm">
-          <div className="text-primary">
-            <p className="font-bold mb-2 ">Home</p>
+        <div className="grid grid-cols-2 gap-6 text-sm md:grid-cols-5">
+          <div className="text-primaryGreen">
+            <p className="mb-2 font-bold">Home</p>
             <ul className="space-y-1">
               <li>Hero Section</li>
               <li>Features</li>
@@ -56,7 +56,7 @@ const PropertyFooter = () => {
             </ul>
           </div>
           <div className="text-deepBlue">
-            <p className="text-gray-500  mb-2">About Us</p>
+            <p className="mb-2 text-gray-500">About Us</p>
             <ul className="space-y-1">
               <li>Our Story</li>
               <li>Our Works</li>
@@ -66,14 +66,14 @@ const PropertyFooter = () => {
             </ul>
           </div>
           <div className="text-deepBlue">
-            <p className="text-gray-500 mb-2">Properties</p>
+            <p className="mb-2 text-gray-500">Properties</p>
             <ul className="space-y-1">
               <li>Portfolio</li>
               <li>Categories</li>
             </ul>
           </div>
           <div className="text-deepBlue">
-            <p className="text-gray-500 mb-2">Services</p>
+            <p className="mb-2 text-gray-500">Services</p>
             <ul className="space-y-1">
               <li>Valuation Mastery</li>
               <li>Strategic Marketing</li>
@@ -83,7 +83,7 @@ const PropertyFooter = () => {
             </ul>
           </div>
           <div className="text-deepBlue">
-            <p className="text-gray-500 mb-2">Contact Us</p>
+            <p className="mb-2 text-gray-500">Contact Us</p>
             <ul className="space-y-1">
               <li>Contact Form</li>
               <li>Our Offices</li>

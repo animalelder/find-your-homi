@@ -5,119 +5,119 @@ const PropertyHeader = () => {
     <div className="relative bg-white">
       {/* Hero Section */}
       <div
-        className="relative bg-cover bg-center h-screen"
+        className="relative h-screen bg-cover bg-center"
         style={{ backgroundImage: `url('/property_bg.png')` }}
       >
         {/* Navbar */}
-        <div className="absolute top-0 left-0 w-full px-4 sm:px-12 flex items-center justify-center">
+        <div className="absolute left-0 top-0 flex w-full items-center justify-center px-4 sm:px-12">
           <Navbar />
         </div>
 
         {/* Hero Content */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-white">
           {/* Search Input and Find Property Button */}
           <div className="flex w-full max-w-lg">
-            <div className="relative w-full bg-gray-100 rounded-lg p-2">
+            <div className="relative w-full rounded-lg bg-gray-100 p-2">
               <input
                 type="text"
                 placeholder="Search for a Property"
-                className="w-full border rounded-lg py-2 px-4 pr-20"
+                className="w-full rounded-lg border px-4 py-2 pr-20"
               />
-              <button className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-primaryBlue text-white py-1 px-4 rounded-lg">
+              <button className="absolute right-2 top-1/2 -translate-y-1/2 transform rounded-lg bg-primaryBlue px-4 py-1 text-white">
                 Find Property
               </button>
             </div>
           </div>
 
           {/* Other Input Fields */}
-          <div className="hidden lg:flex gap-2 mt-3 bg-gray-100 rounded-lg p-2">
+          <div className="mt-3 hidden gap-2 rounded-lg bg-gray-100 p-2 lg:flex">
             {/* Location Input */}
-            <div className="relative flex items-center w-full max-w-xs">
+            <div className="relative flex w-full max-w-xs items-center">
               <img
                 src="/location_img.png"
                 alt="Location"
-                className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
+                className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform"
               />
               <input
                 type="text"
                 placeholder="Location"
-                className="w-full border rounded-lg py-2 pl-10 pr-4"
+                className="w-full rounded-lg border py-2 pl-10 pr-4"
               />
             </div>
 
             {/* Property Type Input */}
-            <div className="relative flex items-center w-full max-w-xs">
+            <div className="relative flex w-full max-w-xs items-center">
               <img
                 src="/home_img.png"
                 alt="Home"
-                className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
+                className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform"
               />
               <input
                 type="text"
                 placeholder="Property Type"
-                className="w-full border rounded-lg py-2 pl-10 pr-10"
+                className="w-full rounded-lg border py-2 pl-10 pr-10"
               />
               <img
                 src="/chevron_button.png"
                 alt="Chevron"
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4"
+                className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 transform"
               />
             </div>
 
             {/* Pricing Range Input */}
-            <div className="relative flex items-center w-full max-w-xs">
+            <div className="relative flex w-full max-w-xs items-center">
               <img
                 src="/pricing_icon.png"
                 alt="Pricing"
-                className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
+                className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform"
               />
               <input
                 type="text"
                 placeholder="Pricing Range"
-                className="w-full border rounded-lg py-2 pl-10 pr-10"
+                className="w-full rounded-lg border py-2 pl-10 pr-10"
               />
               <img
                 src="/chevron_button.png"
                 alt="Chevron"
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4"
+                className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 transform"
               />
             </div>
 
             {/* Property Size Input */}
-            <div className="relative flex items-center w-full max-w-xs">
+            <div className="relative flex w-full max-w-xs items-center">
               <img
                 src="/property_size.png"
                 alt="Property Size"
-                className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
+                className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform"
               />
               <input
                 type="text"
                 placeholder="Property Size"
-                className="w-full border rounded-lg py-2 pl-10 pr-10"
+                className="w-full rounded-lg border py-2 pl-10 pr-10"
               />
               <img
                 src="/chevron_button.png"
                 alt="Chevron"
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4"
+                className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 transform"
               />
             </div>
 
             {/* Build Year Input */}
-            <div className="relative flex items-center w-full max-w-xs">
+            <div className="relative flex w-full max-w-xs items-center">
               <img
                 src="/calendar_icon.png"
                 alt="Calendar"
-                className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
+                className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform"
               />
               <input
                 type="text"
                 placeholder="Build Year"
-                className="w-full border rounded-lg py-2 pl-10 pr-10"
+                className="w-full rounded-lg border py-2 pl-10 pr-10"
               />
               <img
                 src="/chevron_button.png"
                 alt="Chevron"
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4"
+                className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 transform"
               />
             </div>
           </div>

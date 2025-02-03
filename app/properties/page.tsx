@@ -4,10 +4,10 @@ import PropertyListing from "@/components/property-listing";
 
 export default function Page() {
   return (
-    <>
+    <div>
       <PropertyHeader />
       <PropertyListing />
       <PropertyFooter />
-    </>
+    </div>
   );
 }

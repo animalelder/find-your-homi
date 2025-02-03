@@ -27,30 +27,30 @@ const FindHome = () => {
   ];
 
   return (
-    <div className="px-4 py-8 bg-primaryLight">
+    <div className="bg-primaryLight px-4 py-8">
       <div className="flex flex-col items-center justify-center">
-        <h2 className="text-4xl font-bold mb-4 text-center">
-          Find your Home with <span className="text-primary">homi</span>
+        <h2 className="mb-4 text-center text-4xl font-bold">
+          Find your Home with <span className="text-primaryGreen">homi</span>
         </h2>
-        <p className="text-gray-600 mb-6 w-full md:w-[1020px] text-center">
+        <p className="mb-6 w-full text-center text-gray-600 md:w-[1020px]">
           Discover the ease of finding your perfect space with Homi. Whether
           you're searching for a cozy apartment or the ideal roommate, our
           platform connects you with trusted listings, tailored matches, and
           seamless communication—all in one place. Your next home is just a few
           clicks away!
         </p>
-        <button className="bg-buttonRed text-white rounded-full px-6 py-2 mb-8">
+        <button className="mb-8 rounded-full bg-buttonRed px-6 py-2 text-white">
           Browse Now
         </button>
       </div>
 
       {/* Display Listings */}
-      <div className="flex flex-wrap justify-center items-center gap-5">
+      <div className="flex flex-wrap items-center justify-center gap-5">
         {listings.map((item, index) => (
           <div
             key={index}
             onClick={() => setActiveIndex(index)} // Set active index when image is clicked
-            className={`relative bg-cover bg-center rounded-2xl overflow-hidden shadow-md w-full sm:w-[320px] md:w-[320px] lg:w-[320px] cursor-pointer`}
+            className={`relative w-full cursor-pointer overflow-hidden rounded-2xl bg-cover bg-center shadow-md sm:w-[320px] md:w-[320px] lg:w-[320px]`}
             style={{
               backgroundImage: `url(${item.bg})`,
               height: "400px",
@@ -59,11 +59,11 @@ const FindHome = () => {
             <img
               src="/Live_Listing.png"
               alt="Live Listing"
-              className="absolute top-[-60px] left-4 w-48 h-48 object-contain"
+              className="absolute left-4 top-[-60px] h-48 w-48 object-contain"
             />
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white rounded-2xl p-4 w-[90%]">
+            <div className="absolute bottom-4 left-1/2 w-[90%] -translate-x-1/2 transform rounded-2xl bg-white p-4">
               <p className="font-semibold">{item.title}</p>
-              <span className="block text-gray-600 text-sm">
+              <span className="block text-sm text-gray-600">
                 {item.description}
               </span>
               <span className="block font-bold">{item.price}</span>
@@ -73,12 +73,12 @@ const FindHome = () => {
       </div>
 
       {/* Carousel Dots */}
-      <div className="flex justify-center mt-4">
+      <div className="mt-4 flex justify-center">
         {listings.map((_, index) => (
           <button
             key={index}
             onClick={() => setActiveIndex(index)}
-            className={`w-3 h-3 mx-2 rounded-full ${activeIndex === index ? "bg-primary" : "bg-gray-400"}`}
+            className={`mx-2 h-3 w-3 rounded-full ${activeIndex === index ? "bg-primaryGreen" : "bg-gray-400"}`}
           />
         ))}
       </div>

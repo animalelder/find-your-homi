@@ -1,26 +1,26 @@
 const HomiMatch = () => {
   return (
-    <div className="px-4 py-8  mx-4 sm:mx-[10%]">
-      <div className="flex flex-col lg:flex-row justify-between items-center gap-20">
+    <div className="mx-4 px-4 py-8 sm:mx-[10%]">
+      <div className="flex flex-col items-center justify-between gap-20 lg:flex-row">
         {/* Left Image Section */}
         <div className="w-full lg:w-1/2">
           <img
             src="/match_btn.png"
             alt="Match with Roommate"
-            className="w-full h-auto"
+            className="h-auto w-full"
           />
         </div>
 
         {/* Right Content Section */}
-        <div className="w-full lg:w-1/2 text-center lg:text-left">
-          <h3 className="text-primary text-3xl font-bold mb-4">
+        <div className="w-full text-center lg:w-1/2 lg:text-left">
+          <h3 className="text-primaryGreen mb-4 text-3xl font-bold">
             Match with your ideal roommate effortlessly
           </h3>
-          <p className="text-gray-600 mb-6">
+          <p className="mb-6 text-gray-600">
             Find roommates that fit your lifestyle and budget seamlessly, making
             shared living comfortable and stress-free.
           </p>
-          <button className="bg-primary  px-6 py-3 rounded-full mb-6">
+          <button className="bg-primaryGreen mb-6 rounded-full px-6 py-3">
             Get Started
           </button>
           <div className="flex justify-center lg:justify-end">
