@@ -113,10 +113,10 @@ const Header = () => {
               {isDropdownOpen && (
                 <div className="absolute right-1 top-full z-50 mt-2 w-40 rounded-md bg-white shadow-lg">
                   <ul className="space-y-2 text-sm text-gray-700">
-                    <li className="hover:bg-primaryGreen block cursor-pointer px-4 py-2 hover:rounded-full hover:text-white">
+                    <li className="hover:bg-primaryGreen block cursor-pointer px-4 py-2 hover:text-white">
                       <Link href="/sign-in">Tenant</Link>
                     </li>
-                    <li className="hover:bg-primaryGreen block cursor-pointer px-4 py-2 hover:rounded-full hover:text-white">
+                    <li className="hover:bg-primaryGreen block cursor-pointer px-4 py-2 hover:text-white">
                       <Link href="/sign-up">Landlord</Link>
                     </li>
                   </ul>
