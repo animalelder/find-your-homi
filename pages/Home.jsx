@@ -4,7 +4,6 @@ import Header from '@/components/header'
 import HomiMatch from '@/components/homi-match'
 import HomiMessage from '@/components/homi-message'
 import LandlordTestimonial from '@/components/landlord-testimonial'
-import React from 'react'
 
 
 const Home = () => {

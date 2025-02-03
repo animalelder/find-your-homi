@@ -1,11 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import arrow_right from "/arrow-right-circle.png";
-import facebook_logo from "/facebook_logo.png";
-import google_logo from "/google_logo.png";
-import home3 from "/home3.png";
-import homi_logo from "/homi_logo.png";
 
 const ProfileCreationLandLord = () => {
   const [formData, setFormData] = useState({
@@ -80,12 +75,12 @@ const ProfileCreationLandLord = () => {
       {/* Background Image Section */}
       <div className="hidden lg:block w-1/2 relative">
         <img
-          src={home3}
+          src="/home3.png"
           alt="Create Profile Background"
           className="w-full h-full object-cover"
         />
         <img
-          src={homi_logo}
+          src="/homi_logo.png"
           alt="Homi Logo"
           className="absolute top-10 left-10 w-32"
         />
@@ -95,7 +90,11 @@ const ProfileCreationLandLord = () => {
           </h3>
           <div className="flex items-center gap-2 pl-5">
             <p>Sign in or Create a new account with us.</p>
-            <img src={arrow_right} alt="Arrow Right" className="w-6 h-6" />
+            <img
+              src="/arrow-right-circle.png"
+              alt="Arrow Right"
+              className="w-6 h-6"
+            />
           </div>
         </div>
       </div>
@@ -220,10 +219,14 @@ const ProfileCreationLandLord = () => {
 
           <div className="flex gap-4 justify-center">
             <button type="button">
-              <img src={facebook_logo} alt="Facebook" className="w-8 h-8" />
+              <img
+                src="/facebook_logo.png"
+                alt="Facebook"
+                className="w-8 h-8"
+              />
             </button>
             <button type="button">
-              <img src={google_logo} alt="Google" className="w-8 h-8" />
+              <img src="/google_logo.png" alt="Google" className="w-8 h-8" />
             </button>
           </div>
 
