@@ -1,6 +1,6 @@
 const HomiMatch = () => {
   return (
-    <div className="mx-4 px-4 py-8 sm:mx-[10%]">
+    <div className="mx-4 mb-40 block px-4 sm:mx-[10%]">
       <div className="flex flex-col items-center justify-between gap-20 lg:flex-row">
         {/* Left Image Section */}
         <div className="w-full lg:w-1/2">
