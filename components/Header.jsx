@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom'; // Import useLocation
-import featured from '/featured.png';
-import hero_img from '/hero_img.png';
-import logo from '/logo.png';
+"use client";
+
+import { Link } from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // For desktop dropdown
@@ -11,7 +11,7 @@ const Header = () => {
   const dropdownRef = useRef(null); // Ref for the desktop dropdown menu
   const mobileDropdownRef = useRef(null); // Ref for the mobile dropdown menu
 
-  const location = useLocation(); // Get the current location
+  const pathname = usePathname(); // Get the current location
 
   // Close the dropdown menu when clicking outside (desktop)
   useEffect(() => {
@@ -21,55 +21,63 @@ const Header = () => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
   // Close the mobile dropdown menu when clicking outside (mobile)
   useEffect(() => {
     const handleClickOutsideMobile = (event) => {
-      if (mobileDropdownRef.current && !mobileDropdownRef.current.contains(event.target)) {
+      if (
+        mobileDropdownRef.current &&
+        !mobileDropdownRef.current.contains(event.target)
+      ) {
         setIsMobileDropdownOpen(false);
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutsideMobile);
+    document.addEventListener("mousedown", handleClickOutsideMobile);
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutsideMobile);
+      document.removeEventListener("mousedown", handleClickOutsideMobile);
     };
   }, []);
 
   return (
-    <div className='relative bg-white'>
+    <div className="relative bg-white">
       {/* Hero Section */}
-      <div className='relative bg-cover bg-center h-screen' style={{ backgroundImage: `url(${hero_img})` }}>
-        <div className='absolute top-6 left-0 w-full px-4 sm:px-12 flex items-center justify-center'>
+      <div
+        className="relative bg-cover bg-center h-screen"
+        style={{ backgroundImage: `url("/hero_img.png")` }}
+      >
+        <div className="absolute top-6 left-0 w-full px-4 sm:px-12 flex items-center justify-center">
           {/* Navbar */}
-          <nav className='flex justify-between items-center py-4 px-6 bg-white rounded-full shadow-lg w-full max-w-6xl z-50'>
+          <nav className="flex justify-between items-center py-4 px-6 bg-white rounded-full shadow-lg w-full max-w-6xl z-50">
             {/* Logo */}
             <div>
-              <img src={logo} alt='Logo' className='h-10' />
+              <img src="/logo.png" alt="Logo" className="h-10" />
             </div>
 
             {/* Navigation Links */}
-            <ul className='hidden sm:flex space-x-8 text-lg text-gray-700'>
-              <Link to='/'>
+            <ul className="hidden sm:flex space-x-8 text-lg text-gray-700">
+              <Link to="/">
                 <li
                   className={`${
-                    location.pathname === '/' ? 'bg-primary rounded-xl px-4 py-1' : ''
+                    pathname === "/" ? "bg-primary rounded-xl px-4 py-1" : ""
                   } hover:text-gray-800 hover:bg-primary hover:rounded-xl hover:px-4 hover:py-1 cursor-pointer`}
                 >
                   Home
                 </li>
               </Link>
-              <Link to='/property'>
+              <Link to="/properties">
                 <li
                   className={`${
-                    location.pathname === '/property' ? 'bg-primary rounded-xl px-4 py-1' : ''
+                    pathname === "/properties"
+                      ? "bg-primary rounded-xl px-4 py-1"
+                      : ""
                   } hover:text-gray-800 hover:bg-primary hover:rounded-xl hover:px-4 hover:py-1 cursor-pointer`}
                 >
                   Properties
@@ -77,14 +85,18 @@ const Header = () => {
               </Link>
               <li
                 className={`${
-                  location.pathname === '/profile' ? 'bg-primary rounded-xl px-4 py-1' : ''
+                  pathname === "/dashboard"
+                    ? "bg-primary rounded-xl px-4 py-1"
+                    : ""
                 } hover:text-gray-800 hover:bg-primary hover:rounded-xl hover:px-4 hover:py-1 cursor-pointer`}
               >
                 Homi Match
               </li>
               <li
                 className={`${
-                  location.pathname === '/about-us' ? 'bg-primary rounded-xl px-4 py-1' : ''
+                  pathname === "/about-us"
+                    ? "bg-primary rounded-xl px-4 py-1"
+                    : ""
                 } hover:text-gray-800 hover:bg-primary hover:rounded-xl hover:px-4 hover:py-1 cursor-pointer`}
               >
                 About Us
@@ -92,9 +104,12 @@ const Header = () => {
             </ul>
 
             {/* Desktop Login Button with Dropdown */}
-            <div className='relative hidden sm:flex space-x-4' ref={dropdownRef}>
+            <div
+              className="relative hidden sm:flex space-x-4"
+              ref={dropdownRef}
+            >
               <button
-                className='bg-primary hover:bg-white text-gray-700 px-6 py-2 rounded-full cursor-pointer'
+                className="bg-primary hover:bg-white text-gray-700 px-6 py-2 rounded-full cursor-pointer"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               >
                 Login
@@ -102,15 +117,15 @@ const Header = () => {
 
               {/* Dropdown Menu */}
               {isDropdownOpen && (
-                <div className='absolute top-full mt-2 right-1 bg-white shadow-lg rounded-md w-40 z-50'>
-                  <ul className='space-y-2 text-sm text-gray-700'>
-                    <Link to='/create-profile'>
-                      <li className='cursor-pointer block px-4 py-2 hover:bg-primary hover:rounded-full hover:text-white'>
+                <div className="absolute top-full mt-2 right-1 bg-white shadow-lg rounded-md w-40 z-50">
+                  <ul className="space-y-2 text-sm text-gray-700">
+                    <Link to="/sign-in">
+                      <li className="cursor-pointer block px-4 py-2 hover:bg-primary hover:rounded-full hover:text-white">
                         Tenant
                       </li>
                     </Link>
-                    <Link to='/create-Landlord'>
-                      <li className='cursor-pointer block px-4 py-2 hover:bg-primary hover:rounded-full hover:text-white'>
+                    <Link to="/sign-in">
+                      <li className="cursor-pointer block px-4 py-2 hover:bg-primary hover:rounded-full hover:text-white">
                         Landlord
                       </li>
                     </Link>
@@ -120,13 +135,19 @@ const Header = () => {
             </div>
 
             {/* Mobile Navigation */}
-            <div className='sm:hidden'>
+            <div className="sm:hidden">
               {isMobileNavOpen ? (
-                <button onClick={() => setIsMobileNavOpen(false)} className='text-2xl text-gray-700'>
+                <button
+                  onClick={() => setIsMobileNavOpen(false)}
+                  className="text-2xl text-gray-700"
+                >
                   &times; {/* Close Icon */}
                 </button>
               ) : (
-                <button onClick={() => setIsMobileNavOpen(true)} className='text-2xl text-gray-700'>
+                <button
+                  onClick={() => setIsMobileNavOpen(true)}
+                  className="text-2xl text-gray-700"
+                >
                   &#9776; {/* Hamburger Icon */}
                 </button>
               )}
@@ -135,25 +156,29 @@ const Header = () => {
 
           {/* Mobile Nav Links */}
           {isMobileNavOpen && (
-            <div className='absolute top-0 left-0 w-full h-[60vh] bg-white z-40 flex flex-col items-center justify-center'>
-              <ul className='space-y-6 text-lg text-gray-700 mb-8'>
-                <Link to='/'>
-                  {' '}
-                  <li className='hover:text-primary cursor-pointer'>Home</li>
+            <div className="absolute top-0 left-0 w-full h-[60vh] bg-white z-40 flex flex-col items-center justify-center">
+              <ul className="space-y-6 text-lg text-gray-700 mb-8">
+                <Link to="/">
+                  {" "}
+                  <li className="hover:text-primary cursor-pointer">Home</li>
                 </Link>
-                <Link to='/property'>
-                  {' '}
-                  <li className='hover:text-primary cursor-pointer'>Properties</li>
+                <Link to="/properties">
+                  {" "}
+                  <li className="hover:text-primary cursor-pointer">
+                    Properties
+                  </li>
                 </Link>
-                <Link to='/profile'>
-                  <li className='hover:text-primary cursor-pointer'>Homi Match</li>
+                <Link to="/dashboard">
+                  <li className="hover:text-primary cursor-pointer">
+                    Homi Match
+                  </li>
                 </Link>
-                <li className='hover:text-primary cursor-pointer'>About Us</li>
+                <li className="hover:text-primary cursor-pointer">About Us</li>
               </ul>
-              <div className='relative'>
+              <div className="relative">
                 <button
                   onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
-                  className='bg-primary hover:bg-primaryLight text-white px-6 py-3 rounded-full text-lg cursor-pointer'
+                  className="bg-primary hover:bg-primaryLight text-white px-6 py-3 rounded-full text-lg cursor-pointer"
                 >
                   Login
                 </button>
@@ -161,14 +186,14 @@ const Header = () => {
                 {/* Mobile Dropdown Menu */}
                 {isMobileDropdownOpen && (
                   <div
-                    className='absolute top-full mt-2 left-0 bg-white shadow-lg rounded-md w-40 z-50'
+                    className="absolute top-full mt-2 left-0 bg-white shadow-lg rounded-md w-40 z-50"
                     ref={mobileDropdownRef}
                   >
-                    <ul className='space-y-2 text-sm text-gray-700'>
-                      <li className='cursor-pointer block px-4 py-2 hover:bg-primary hover:rounded-full hover:text-white'>
+                    <ul className="space-y-2 text-sm text-gray-700">
+                      <li className="cursor-pointer block px-4 py-2 hover:bg-primary hover:rounded-full hover:text-white">
                         Rental
                       </li>
-                      <li className='cursor-pointer block px-4 py-2 hover:bg-primary hover:rounded-full hover:text-white'>
+                      <li className="cursor-pointer block px-4 py-2 hover:bg-primary hover:rounded-full hover:text-white">
                         Landlord
                       </li>
                     </ul>
@@ -179,25 +204,29 @@ const Header = () => {
           )}
 
           {/* Post a Rental Button */}
-          <button className='cursor-pointer bg-gray-200 text-gray-800 px-8 py-5 rounded-full sm:block whitespace-nowrap hover:bg-primary hover:text-white transition-colors duration-300 z-50'>
+          <button className="cursor-pointer bg-gray-200 text-gray-800 px-8 py-5 rounded-full sm:block whitespace-nowrap hover:bg-primary hover:text-white transition-colors duration-300 z-50">
             Post a Rental
           </button>
         </div>
 
         {/* Hero Content */}
-        <div className='absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4'>
-          <h2 className='text-3xl sm:text-5xl md:text-6xl font-bold max-w-2xl leading-tight'>
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold max-w-2xl leading-tight">
             Welcome to HOMI Renting Made Simple and Seamless
           </h2>
-          <button className='mt-6 bg-primary text-white hover:bg-primaryLight hover:text-gray-700 px-6 py-3 rounded-full text-lg cursor-pointer'>
+          <button className="mt-6 bg-primary text-white hover:bg-primaryLight hover:text-gray-700 px-6 py-3 rounded-full text-lg cursor-pointer">
             Find Your Home
           </button>
         </div>
       </div>
 
       {/* Featured Image */}
-      <div className='w-full flex justify-center py-8'>
-        <img src={featured} alt='Featured' className='w-11/12 max-w-5xl rounded-lg ' />
+      <div className="w-full flex justify-center py-8">
+        <img
+          src="/featured.png"
+          alt="Featured"
+          className="w-11/12 max-w-5xl rounded-lg "
+        />
       </div>
     </div>
   );

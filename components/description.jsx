@@ -1,8 +1,4 @@
 import React from "react";
-import area_icon from "/area_icon.png";
-import bathroom_icon from "/bathroom_icon.png";
-import bedroom_icon from "/bedroom_icon.png";
-import feature_icon from "/feature_icon.png";
 
 const Description = () => {
   return (
@@ -24,7 +20,7 @@ const Description = () => {
             {/* First Item */}
             <div className="flex flex-col">
               <div className="flex items-center gap-1">
-                <img src={bedroom_icon} alt="" className="w-5 h-5" />
+                <img src="/bedroom_icon.png" alt="" className="w-5 h-5" />
                 <p className="text-gray-600">Bedrooms</p>
               </div>
               <p className="text-gray-900 font-medium">04</p>
@@ -35,7 +31,7 @@ const Description = () => {
               <div className="border-r-2 border-gray-800 self-stretch"></div>
               <div className="flex flex-col pl-2">
                 <div className="flex items-center gap-1">
-                  <img src={bathroom_icon} alt="" className="w-5 h-5" />
+                  <img src="/bathroom_icon.png" alt="" className="w-5 h-5" />
                   <p className="text-gray-600">Bathrooms</p>
                 </div>
                 <p className="text-gray-900 font-medium">03</p>
@@ -47,7 +43,7 @@ const Description = () => {
               <div className="border-r-2 border-gray-800 self-stretch"></div>
               <div className="flex flex-col pl-2">
                 <div className="flex items-center gap-1">
-                  <img src={area_icon} alt="" className="w-5 h-5" />
+                  <img src="/area_icon.png" alt="" className="w-5 h-5" />
                   <p className="text-gray-600">Area</p>
                 </div>
                 <p className="text-gray-900 font-medium">2,500 Square Feet</p>
@@ -62,27 +58,27 @@ const Description = () => {
         <div className="flex flex-col gap-2">
         <div className="flex items-center gap-1 text-white bg-gradient-to-r from-[#FF5757] to-[#FF9897] p-2 rounded-lg ">
 
-                  <img src={feature_icon} alt="" className="w-5 h-5" />
+                  <img src="/feature_icon.png" alt="" className="w-5 h-5" />
                   <p className="text-[14px] font-semibold">Expansive oceanfront terrace for outdoor entertaining</p>
                 </div>
                 <div className="flex items-center gap-1 text-white bg-gradient-to-r from-[#FF5757] to-[#FF9897] p-2 rounded-lg">
 
-                  <img src={feature_icon} alt="" className="w-5 h-5" />
+                  <img src="/feature_icon.png" alt="" className="w-5 h-5" />
                   <p className="text-[14px] font-semibold">Expansive oceanfront terrace for outdoor entertaining</p>
                 </div>
                 <div className="flex items-center gap-1 text-white bg-gradient-to-r from-[#FF5757] to-[#FF9897] p-2 rounded-lg">
 
-                  <img src={feature_icon} alt="" className="w-5 h-5" />
+                  <img src="/feature_icon.png" alt="" className="w-5 h-5" />
                   <p className="text-[14px] font-semibold">Expansive oceanfront terrace for outdoor entertaining</p>
                 </div>
                 <div className="flex items-center gap-1 text-white bg-gradient-to-r from-[#FF5757] to-[#FF9897] p-2 rounded-lg">
 
-                  <img src={feature_icon} alt="" className="w-5 h-5" />
+                  <img src="/feature_icon.png" alt="" className="w-5 h-5" />
                   <p className="text-[14px] font-semibold">Expansive oceanfront terrace for outdoor entertaining</p>
                 </div>
                 <div className="flex items-center gap-1 text-white bg-gradient-to-r from-[#FF5757] to-[#FF9897] p-2 rounded-lg">
 
-                  <img src={feature_icon} alt="" className="w-5 h-5" />
+                  <img src="/feature_icon.png" alt="" className="w-5 h-5" />
                   <p className="text-[14px] font-semibold">Expansive oceanfront terrace for outdoor entertaining</p>
                 </div>
                 </div>

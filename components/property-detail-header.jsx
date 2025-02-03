@@ -1,27 +1,17 @@
 import Navbar from '@/components/navbar';
 import React, { useState } from 'react';
-import back_button from '/back_button.png';
-import forward_button from '/forward_button.png';
-import indicator from '/indicator.png';
-import property1 from '/property1.png';
-import property2 from '/property2.png';
-import property3 from '/property3.png';
-import PropertyDetail_bg from '/propertyDetail_bg.png';
-import rental1 from '/rental1.png';
-import rental2 from '/rental2.png';
-import rental3 from '/rental3.png';
 
 const PropertyDetailHeader = () => {
   const images = [
-    property1,
-    property2,
-    property3,
-    rental1,
-    rental2,
-    rental3,
-    rental1,
-    rental2,
-    rental3
+    '/property1.png',
+    '/property2.png',
+    '/property3.png',
+    '/rental1.png',
+    '/rental2.png',
+    '/rental3.png',
+    '/rental1.png',
+    '/rental2.png',
+    '/rental3.png'
   ];
 
   const [carouselIndex, setCarouselIndex] = useState(0);
@@ -46,7 +36,7 @@ const PropertyDetailHeader = () => {
     <div className="relative">
       <div
         className="relative bg-cover bg-center h-screen"
-        style={{ backgroundImage: `url(${PropertyDetail_bg})` }}
+        style={{ backgroundImage: `url('/propertyDetail_bg.png')` }}
         aria-label="Property Detail Background"
       >
         {/* Navbar */}
@@ -88,11 +78,11 @@ const PropertyDetailHeader = () => {
           {/* Bottom Navigation */}
           <div className="flex justify-center items-center mt-8 space-x-4">
             <button onClick={handlePrev} className="p-2">
-              <img src={back_button} alt="Previous" className="w-8 h-8" />
+              <img src='/back_button.png' alt="Previous" className="w-8 h-8" />
             </button>
-            <img src={indicator} alt="Indicator" className='hidden md:block' />
+            <img src='/indicator.png' alt="Indicator" className='hidden md:block' />
             <button onClick={handleNext} className="p-2">
-              <img src={forward_button} alt="Next" className="w-8 h-8" />
+              <img src='/forward_button.png' alt="Next" className="w-8 h-8" />
             </button>
           </div>
         </div>
