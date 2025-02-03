@@ -1,4 +1,4 @@
-import Navbar from '@/Components/Navbar';
+import Navbar from '@/components/navbar';
 import React from 'react';
 import add_icon from '/add_icon.png';
 import home_icon from '/home_icon.png';
