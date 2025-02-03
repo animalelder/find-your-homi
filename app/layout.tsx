@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { poppins, roboto } from "./fonts";
 import "./globals.css";
 
 // const geistSans = localFont({
@@ -25,9 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable} ${poppins.variable} antialiased`}>
-        {children}
-      </body>
+      <body className={`antialiased`}>{children}</body>
     </html>
   );
 }

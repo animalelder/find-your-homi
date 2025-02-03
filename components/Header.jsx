@@ -1,6 +1,5 @@
 "use client";
 
-import { Link } from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
@@ -50,54 +49,54 @@ const Header = () => {
     <div className="relative bg-white">
       {/* Hero Section */}
       <div
-        className="relative bg-cover bg-center h-screen"
+        className="relative h-screen bg-cover bg-center"
         style={{ backgroundImage: `url("/hero_img.png")` }}
       >
-        <div className="absolute top-6 left-0 w-full px-4 sm:px-12 flex items-center justify-center">
+        <div className="absolute left-0 top-6 flex w-full items-center justify-center px-4 sm:px-12">
           {/* Navbar */}
-          <nav className="flex justify-between items-center py-4 px-6 bg-white rounded-full shadow-lg w-full max-w-6xl z-50">
+          <nav className="z-50 flex w-full max-w-6xl items-center justify-between rounded-full bg-white px-6 py-4 shadow-lg">
             {/* Logo */}
             <div>
               <img src="/logo.png" alt="Logo" className="h-10" />
             </div>
 
             {/* Navigation Links */}
-            <ul className="hidden sm:flex space-x-8 text-lg text-gray-700">
-              <Link to="/">
+            <ul className="hidden space-x-8 text-lg text-gray-700 sm:flex">
+              <a href="/">
                 <li
                   className={`${
-                    pathname === "/" ? "bg-primary rounded-xl px-4 py-1" : ""
-                  } hover:text-gray-800 hover:bg-primary hover:rounded-xl hover:px-4 hover:py-1 cursor-pointer`}
+                    pathname === "/" ? "rounded-xl bg-primary px-4 py-1" : ""
+                  } cursor-pointer hover:rounded-xl hover:bg-primary hover:px-4 hover:py-1 hover:text-gray-800`}
                 >
                   Home
                 </li>
-              </Link>
-              <Link to="/properties">
+              </a>
+              <a href="/properties">
                 <li
                   className={`${
                     pathname === "/properties"
-                      ? "bg-primary rounded-xl px-4 py-1"
+                      ? "rounded-xl bg-primary px-4 py-1"
                       : ""
-                  } hover:text-gray-800 hover:bg-primary hover:rounded-xl hover:px-4 hover:py-1 cursor-pointer`}
+                  } cursor-pointer hover:rounded-xl hover:bg-primary hover:px-4 hover:py-1 hover:text-gray-800`}
                 >
                   Properties
                 </li>
-              </Link>
+              </a>
               <li
                 className={`${
                   pathname === "/dashboard"
-                    ? "bg-primary rounded-xl px-4 py-1"
+                    ? "rounded-xl bg-primary px-4 py-1"
                     : ""
-                } hover:text-gray-800 hover:bg-primary hover:rounded-xl hover:px-4 hover:py-1 cursor-pointer`}
+                } cursor-pointer hover:rounded-xl hover:bg-primary hover:px-4 hover:py-1 hover:text-gray-800`}
               >
                 Homi Match
               </li>
               <li
                 className={`${
                   pathname === "/about-us"
-                    ? "bg-primary rounded-xl px-4 py-1"
+                    ? "rounded-xl bg-primary px-4 py-1"
                     : ""
-                } hover:text-gray-800 hover:bg-primary hover:rounded-xl hover:px-4 hover:py-1 cursor-pointer`}
+                } cursor-pointer hover:rounded-xl hover:bg-primary hover:px-4 hover:py-1 hover:text-gray-800`}
               >
                 About Us
               </li>
@@ -105,11 +104,11 @@ const Header = () => {
 
             {/* Desktop Login Button with Dropdown */}
             <div
-              className="relative hidden sm:flex space-x-4"
+              className="relative hidden space-x-4 sm:flex"
               ref={dropdownRef}
             >
               <button
-                className="bg-primary hover:bg-white text-gray-700 px-6 py-2 rounded-full cursor-pointer"
+                className="cursor-pointer rounded-full bg-primary px-6 py-2 text-gray-700 hover:bg-white"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               >
                 Login
@@ -117,18 +116,18 @@ const Header = () => {
 
               {/* Dropdown Menu */}
               {isDropdownOpen && (
-                <div className="absolute top-full mt-2 right-1 bg-white shadow-lg rounded-md w-40 z-50">
+                <div className="absolute right-1 top-full z-50 mt-2 w-40 rounded-md bg-white shadow-lg">
                   <ul className="space-y-2 text-sm text-gray-700">
-                    <Link to="/sign-in">
-                      <li className="cursor-pointer block px-4 py-2 hover:bg-primary hover:rounded-full hover:text-white">
+                    <a href="/sign-in">
+                      <li className="block cursor-pointer px-4 py-2 hover:rounded-full hover:bg-primary hover:text-white">
                         Tenant
                       </li>
-                    </Link>
-                    <Link to="/sign-in">
-                      <li className="cursor-pointer block px-4 py-2 hover:bg-primary hover:rounded-full hover:text-white">
+                    </a>
+                    <a href="/sign-in">
+                      <li className="block cursor-pointer px-4 py-2 hover:rounded-full hover:bg-primary hover:text-white">
                         Landlord
                       </li>
-                    </Link>
+                    </a>
                   </ul>
                 </div>
               )}
@@ -154,31 +153,31 @@ const Header = () => {
             </div>
           </nav>
 
-          {/* Mobile Nav Links */}
+          {/* Mobile Nav as */}
           {isMobileNavOpen && (
-            <div className="absolute top-0 left-0 w-full h-[60vh] bg-white z-40 flex flex-col items-center justify-center">
-              <ul className="space-y-6 text-lg text-gray-700 mb-8">
-                <Link to="/">
+            <div className="absolute left-0 top-0 z-40 flex h-[60vh] w-full flex-col items-center justify-center bg-white">
+              <ul className="mb-8 space-y-6 text-lg text-gray-700">
+                <a href="/">
                   {" "}
-                  <li className="hover:text-primary cursor-pointer">Home</li>
-                </Link>
-                <Link to="/properties">
+                  <li className="cursor-pointer hover:text-primary">Home</li>
+                </a>
+                <a href="/properties">
                   {" "}
-                  <li className="hover:text-primary cursor-pointer">
+                  <li className="cursor-pointer hover:text-primary">
                     Properties
                   </li>
-                </Link>
-                <Link to="/dashboard">
-                  <li className="hover:text-primary cursor-pointer">
+                </a>
+                <a href="/dashboard">
+                  <li className="cursor-pointer hover:text-primary">
                     Homi Match
                   </li>
-                </Link>
-                <li className="hover:text-primary cursor-pointer">About Us</li>
+                </a>
+                <li className="cursor-pointer hover:text-primary">About Us</li>
               </ul>
               <div className="relative">
                 <button
                   onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
-                  className="bg-primary hover:bg-primaryLight text-white px-6 py-3 rounded-full text-lg cursor-pointer"
+                  className="hover:bg-primaryLight cursor-pointer rounded-full bg-primary px-6 py-3 text-lg text-white"
                 >
                   Login
                 </button>
@@ -186,14 +185,14 @@ const Header = () => {
                 {/* Mobile Dropdown Menu */}
                 {isMobileDropdownOpen && (
                   <div
-                    className="absolute top-full mt-2 left-0 bg-white shadow-lg rounded-md w-40 z-50"
+                    className="absolute left-0 top-full z-50 mt-2 w-40 rounded-md bg-white shadow-lg"
                     ref={mobileDropdownRef}
                   >
                     <ul className="space-y-2 text-sm text-gray-700">
-                      <li className="cursor-pointer block px-4 py-2 hover:bg-primary hover:rounded-full hover:text-white">
+                      <li className="block cursor-pointer px-4 py-2 hover:rounded-full hover:bg-primary hover:text-white">
                         Rental
                       </li>
-                      <li className="cursor-pointer block px-4 py-2 hover:bg-primary hover:rounded-full hover:text-white">
+                      <li className="block cursor-pointer px-4 py-2 hover:rounded-full hover:bg-primary hover:text-white">
                         Landlord
                       </li>
                     </ul>
@@ -204,28 +203,28 @@ const Header = () => {
           )}
 
           {/* Post a Rental Button */}
-          <button className="cursor-pointer bg-gray-200 text-gray-800 px-8 py-5 rounded-full sm:block whitespace-nowrap hover:bg-primary hover:text-white transition-colors duration-300 z-50">
+          <button className="z-50 cursor-pointer whitespace-nowrap rounded-full bg-gray-200 px-8 py-5 text-gray-800 transition-colors duration-300 hover:bg-primary hover:text-white sm:block">
             Post a Rental
           </button>
         </div>
 
         {/* Hero Content */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold max-w-2xl leading-tight">
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-white">
+          <h2 className="max-w-2xl text-3xl font-bold leading-tight sm:text-5xl md:text-6xl">
             Welcome to HOMI Renting Made Simple and Seamless
           </h2>
-          <button className="mt-6 bg-primary text-white hover:bg-primaryLight hover:text-gray-700 px-6 py-3 rounded-full text-lg cursor-pointer">
+          <button className="hover:bg-primaryLight mt-6 cursor-pointer rounded-full bg-primary px-6 py-3 text-lg text-white hover:text-gray-700">
             Find Your Home
           </button>
         </div>
       </div>
 
       {/* Featured Image */}
-      <div className="w-full flex justify-center py-8">
+      <div className="flex w-full justify-center py-8">
         <img
           src="/featured.png"
           alt="Featured"
-          className="w-11/12 max-w-5xl rounded-lg "
+          className="w-11/12 max-w-5xl rounded-lg"
         />
       </div>
     </div>

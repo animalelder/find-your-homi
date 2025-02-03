@@ -4,15 +4,17 @@ import Header from "@/components/header";
 import HomiMatch from "@/components/homi-match";
 import HomiMessage from "@/components/homi-message";
 import LandlordTestimonial from "@/components/landlord-testimonial";
-export default async function Home() {
+
+export default function Home() {
   return (
-    <>
+    <div>
       <Header />
+
       <FindHome />
-      <HomiMatch />
       <HomiMessage />
+      <HomiMatch />
       <LandlordTestimonial />
       <Footer />
-    </>
+    </div>
   );
 }
