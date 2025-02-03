@@ -205,10 +205,21 @@ const Header = () => {
 
         {/* Hero Content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-white">
-          <h2 className="max-w-2xl text-3xl font-bold leading-tight sm:text-5xl md:text-6xl">
-            Welcome to HOMI Renting Made Simple and Seamless
+          <h2 className="max-w-2xl text-3xl font-bold leading-relaxed tracking-normal drop-shadow-lg sm:text-5xl md:text-6xl">
+            Welcome to{" "}
+            <span className="text-primaryGreen drop-shadow">HOMI</span>
+            <div className="py-1">Renting made</div>
+            <div className="py-1 drop-shadow-lg">
+              <span className="playfair-display-italic tracking-wide">
+                Simple
+              </span>{" "}
+              and{" "}
+              <span className="playfair-display-italic tracking-wider drop-shadow-xl">
+                Seamless
+              </span>
+            </div>
           </h2>
-          <button className="bg-primaryGreen mt-6 cursor-pointer rounded-full px-6 py-3 text-lg text-white hover:bg-primaryLight hover:text-gray-700">
+          <button className="bg-primaryGreen mt-6 cursor-pointer rounded-full px-6 py-3 text-lg text-green-950 hover:bg-primaryLight hover:text-gray-700">
             Find Your Home
           </button>
         </div>
