@@ -37,20 +37,6 @@ const LandlordTestimonial = () => {
           </div>
         </div>
 
-        {/* Center Image */}
-
-        {/* <Image
-            src="/landlord_img.png"
-            alt="Landlord"
-            className="min-w-[500px] object-cover"
-          /> */}
-        {/* Carousel Dots */}
-        {/* <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 transform space-x-2">
-            <div className="bg-primaryGreen h-3 w-3 rounded-full"></div>
-            <div className="h-3 w-3 rounded-full bg-white"></div>
-            <div className="h-3 w-3 rounded-full bg-white"></div>
-          </div> */}
-
         {/* Testimonial 2 */}
         <div className="h-auto max-w-[370px] rounded-bl-3xl rounded-br-3xl bg-white p-4 shadow-xl lg:mt-[-300px]">
           <h4 className="mb-2 text-lg font-medium text-gray-700">
@@ -79,13 +65,6 @@ const LandlordTestimonial = () => {
           </div>
         </div>
       </div>
-
-      {/* Landlords Header */}
-      {/* <div className="flex justify-end">
-        <h3 className="text-lg font-bold text-gray-800 sm:mr-[10%] md:mr-[20%] lg:mr-[25%]">
-          Landlords
-        </h3>
-      </div> */}
     </div>
   );
 };

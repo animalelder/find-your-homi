@@ -2,18 +2,18 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="bg-deepBlue px-6 py-2 text-white sm:px-10 lg:px-20">
+    <div className="bg-deepBlue px-6 pt-2 text-white sm:px-10 lg:px-20">
       {/* Top Section */}
       <div className="mb-8 mt-10 flex flex-col items-center justify-between lg:flex-row">
-        <p className="mb-6 text-center text-xl font-light sm:text-2xl lg:mb-0 lg:max-w-[40%] lg:text-left">
+        <h1 className="mb-6 h-auto w-[500px] text-wrap text-center text-4xl font-light sm:text-2xl lg:mb-0 lg:text-left">
           Choose HOMI for great apartments and roommate matching
-        </p>
+        </h1>
         <button className="rounded-full bg-primaryGreen px-6 py-2 text-white">
           Contact Us
         </button>
       </div>
 
-      <div className="mb-8 border-gray-500" />
+      <div className="mx-auto mb-8 h-px w-[90%] min-w-[1300px] border border-white/10 fill-white/40" />
 
       {/* Social Icons and Links */}
       <div className="flex flex-col justify-between lg:flex-row">

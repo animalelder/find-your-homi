@@ -84,18 +84,28 @@ const PropertyDetailHeader = () => {
           <div className="mt-8 flex items-center justify-center space-x-4">
             <button onClick={handlePrev} className="p-2">
               <Image
-                src="/back_button.png"
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//back_button.png"
+                width={77}
+                height={77}
                 alt="Previous"
                 className="h-8 w-8"
               />
             </button>
             <Image
-              src="/indicator.png"
+              src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//indicator.png"
               alt="Indicator"
+              width={185}
+              height={7}
               className="hidden md:block"
             />
             <button onClick={handleNext} className="p-2">
-              <Image src="/forward_button.png" alt="Next" className="h-8 w-8" />
+              <Image
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//forward_button.png"
+                width={77}
+                height={77}
+                alt="Next"
+                className="h-8 w-8"
+              />
             </button>
           </div>
         </div>

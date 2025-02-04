@@ -10,9 +10,6 @@ export default async function Login(props: { searchParams: Promise<Message> }) {
   const searchParams = await props.searchParams;
   return (
     <div className="block min-h-screen w-full flex-col content-center">
-      {/* <div className="absolute right-4 top-4">
-        <Image src="/homi_logo.png" alt="Homi Logo" className="w-32" />
-      </div> */}
       <div className="flex h-full w-full flex-grow items-center justify-center p-6">
         <form className="w-full max-w-md space-y-5 rounded-lg bg-white p-6">
           <h3 className="mb-2 text-center text-2xl font-bold">
