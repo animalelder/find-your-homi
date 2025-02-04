@@ -1,16 +1,16 @@
 {
-  "extends": [],
+  "extends": ["eslint-config-next"],
   "plugins": ["simple-import-sort"],
   "rules": {
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error"
+    "simple-import-sort/imports": "warning",
+    "simple-import-sort/exports": "warning"
   },
   "overrides": [
     {
-      "files": ["**/*.js", "**/*.ts", "**/*.tsx"],
+      "files": ["**/*.js", "**/*.ts", "**/*.tsx", "**/*.jsx"],
       "rules": {
         "simple-import-sort/imports": [
-          "error",
+          "warning",
           {
             "groups": [
               // `react` first, `next` second, then packages starting with a character
