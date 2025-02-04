@@ -61,10 +61,10 @@ const LandingTop = () => {
             <div>
               <Image
                 src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//logo.png"
-                width={80}
-                height={80}
+                width={40}
+                height={40}
                 alt="Logo"
-                className="h-10"
+                className="object-scale-down"
               />
             </div>
 

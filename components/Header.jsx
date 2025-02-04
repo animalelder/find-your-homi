@@ -64,7 +64,7 @@ export default function Header() {
                 width={80}
                 height={80}
                 alt="Logo"
-                className="h-10"
+                className="size-10"
               />
             </div>
 

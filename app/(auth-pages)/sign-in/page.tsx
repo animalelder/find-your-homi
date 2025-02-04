@@ -68,14 +68,16 @@ export default async function Login(props: { searchParams: Promise<Message> }) {
               <Image
                 src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//facebook_logo.png"
                 alt="Facebook"
+                width={32}
+                height={32}
                 className="h-8 w-8"
               />
             </button>
             <button type="button">
               <Image
                 src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//google_logo.png"
-                width={72}
-                height={72}
+                width={32}
+                height={32}
                 alt="Google"
                 className="h-8 w-8"
               />

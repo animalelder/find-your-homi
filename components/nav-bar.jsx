@@ -59,8 +59,8 @@ export function NavBar() {
         <div>
           <Image
             src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//logo.png"
-            widht={80}
-            height={80}
+            widht={40}
+            height={40}
             alt="Logo"
             className="h-10"
           />
