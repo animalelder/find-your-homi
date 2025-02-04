@@ -1,5 +1,5 @@
-import NavBar from "@/components/navbar";
 import Image from "next/image";
+import NavBar from "./navbar";
 
 const PropertyHeader = () => {
   return (

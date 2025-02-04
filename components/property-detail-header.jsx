@@ -1,8 +1,8 @@
 "use client";
 
-import NavBar from "@/components/navbar";
 import Image from "next/image";
 import { useState } from "react";
+import NavBar from "./navbar";
 
 const PropertyDetailHeader = () => {
   const images = [
