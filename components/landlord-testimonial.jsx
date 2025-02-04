@@ -34,19 +34,18 @@ const LandlordTestimonial = () => {
         </div>
 
         {/* Center Image */}
-        <div className="self-end">
-          {/* <img
+
+        {/* <img
             src="/landlord_img.png"
             alt="Landlord"
             className="min-w-[500px] object-cover"
           /> */}
-          {/* Carousel Dots */}
-          {/* <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 transform space-x-2">
+        {/* Carousel Dots */}
+        {/* <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 transform space-x-2">
             <div className="bg-primaryGreen h-3 w-3 rounded-full"></div>
             <div className="h-3 w-3 rounded-full bg-white"></div>
             <div className="h-3 w-3 rounded-full bg-white"></div>
           </div> */}
-        </div>
 
         {/* Testimonial 2 */}
         <div className="h-auto max-w-[370px] rounded-bl-3xl rounded-br-3xl bg-white p-4 shadow-xl lg:mt-[-300px]">
