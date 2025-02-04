@@ -36,7 +36,9 @@ const PropertyDetailHeader = () => {
     <div className="relative">
       <div
         className="relative h-screen bg-cover bg-center"
-        style={{ backgroundImage: `url('/propertyDetail_bg.png')` }}
+        style={{
+          backgroundImage: `url('https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/property/detail_bg.png')`,
+        }}
         aria-label="Property Detail Background"
       >
         {/* Navbar */}

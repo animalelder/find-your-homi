@@ -7,7 +7,9 @@ const PropertyHeader = () => {
       {/* Hero Section */}
       <div
         className="relative h-screen bg-cover bg-center"
-        style={{ backgroundImage: `url('/property_bg.png')` }}
+        style={{
+          backgroundImage: `url('https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/property/bg.png')`,
+        }}
       >
         {/* Navbar */}
         <div className="absolute left-0 top-0 flex w-full items-center justify-center px-4 sm:px-12">

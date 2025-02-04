@@ -52,7 +52,10 @@ const LandingTop = () => {
       {/* Hero Section */}
       <div
         className="relative h-screen bg-cover bg-center"
-        style={{ backgroundImage: "url('/hero_img.png')" }}
+        style={{
+          backgroundImage:
+            "url('https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/home/hero_img.png')",
+        }}
       >
         <div className="absolute left-0 top-6 flex w-full items-center justify-center gap-5 px-4 sm:px-12">
           {/* Navbar */}
