@@ -1,6 +1,5 @@
+import feature_icon from "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//feature_icon.png";
 import Image from "next/image";
-import bedroom_icon from "./bedroom_icon.png";
-import feature_icon from "./feature_icon.png";
 
 const Description = () => {
   return (
@@ -23,8 +22,10 @@ const Description = () => {
             <div className="flex flex-col">
               <div className="flex items-center gap-1">
                 <Image
-                  src={bedroom_icon}
+                  src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//bedroom_icon.png"
                   alt="bedroom icon"
+                  width={32}
+                  height={32}
                   className="h-5 w-5"
                 />
                 <p className="text-gray-600">Bedrooms</p>
@@ -37,7 +38,13 @@ const Description = () => {
               <div className="self-stretch border-r-2 border-gray-800"></div>
               <div className="flex flex-col pl-2">
                 <div className="flex items-center gap-1">
-                  <Image src="/bathroom_icon.png" alt="" className="h-5 w-5" />
+                  <Image
+                    src="/bathroom_icon.png"
+                    width={32}
+                    height={32}
+                    alt="bathroom icon"
+                    className="h-5 w-5"
+                  />
                   <p className="text-gray-600">Bathrooms</p>
                 </div>
                 <p className="font-medium text-gray-900">03</p>
@@ -49,7 +56,13 @@ const Description = () => {
               <div className="self-stretch border-r-2 border-gray-800"></div>
               <div className="flex flex-col pl-2">
                 <div className="flex items-center gap-1">
-                  <Image src="/area_icon.png" alt="" className="h-5 w-5" />
+                  <Image
+                    src="/area_icon.png"
+                    alt="square feet icon"
+                    width={32}
+                    height={32}
+                    className="h-5 w-5"
+                  />
                   <p className="text-gray-600">Area</p>
                 </div>
                 <p className="font-medium text-gray-900">2,500 Square Feet</p>

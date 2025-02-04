@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import hamburger icon
-import logo from "/logo.png";
 
 export default function NavBar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // For desktop dropdown
@@ -58,7 +57,13 @@ export default function NavBar() {
       <nav className="z-50 flex w-full max-w-6xl items-center justify-between rounded-full bg-white px-6 py-4 shadow-lg">
         {/* Logo */}
         <div>
-          <Image src={logo} alt="Logo" className="h-10" />
+          <Image
+            src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//logo.png"
+            widht={80}
+            height={80}
+            alt="Logo"
+            className="h-10"
+          />
         </div>
 
         {/* Mobile Hamburger Icon */}

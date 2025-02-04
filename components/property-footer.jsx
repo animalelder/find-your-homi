@@ -1,7 +1,4 @@
 import Image from "next/image";
-import email_iconSmall from "/email_iconSmall.png";
-import homi_logo from "/homi_logo.png";
-import send_icon from "/send_icon.png";
 
 const PropertyFooter = () => {
   return (
@@ -29,10 +26,16 @@ const PropertyFooter = () => {
       <hr className="my-6 border-t border-gray-300" />
       <div className="flex flex-col items-start gap-32 md:flex-row">
         <div className="flex flex-col items-start gap-4">
-          <Image src={homi_logo} alt="Homi Logo" className="w-20" />
+          <Image
+            src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//homi_logo.png"
+            width={392}
+            height={143}
+            alt="Homi Logo"
+            className="w-20"
+          />
           <div className="relative w-full max-w-sm">
             <Image
-              src={email_iconSmall}
+              src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//email_iconSmall.png"
               alt="Email Icon"
               className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform"
             />
@@ -42,7 +45,9 @@ const PropertyFooter = () => {
               className="w-full rounded-md border border-gray-300 py-2 pl-10 pr-10 focus:outline-none focus:ring-2 focus:ring-primaryGreen"
             />
             <Image
-              src={send_icon}
+              src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//send_icon.png"
+              width={50}
+              height={50}
               alt="Send Icon"
               className="absolute right-3 top-1/2 h-5 w-5 -translate-y-1/2 transform cursor-pointer"
             />

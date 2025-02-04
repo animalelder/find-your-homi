@@ -6,8 +6,16 @@ const nextConfig: NextConfig = {
     dirs: ["app", "pages", "components", "lib", "types"],
   },
   images: {
-    localPatterns: [{ pathname: "/public/**/*", search: "" }],
-    domains: ["pqrdckeuqfydcgbgrxcg.supabase.co"],
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "pqrdckeuqfydcgbgrxcg.supabase.co",
+        port: "",
+        pathname: "/storage/v1/object/public/assets/**",
+        search: "",
+      },
+    ],
   },
 };
 

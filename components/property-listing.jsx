@@ -1,49 +1,39 @@
 import Image from "next/image";
-import home4 from "/home4.png";
-import home5 from "/home5.png";
-import home6 from "/home6.png";
-import home7 from "/home7.png";
-import home8 from "/home8.png";
-import home9 from "/home9.png";
-import Live_listing from "/live_listing.png";
-import property1 from "/property1.png";
-import property2 from "/property2.png";
-import property3 from "/property3.png";
 
 const PropertyListing = () => {
   const listings = [
     {
-      bg: home4,
+      bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home4.png",
       title: "Apartment in Toronto, Canada",
       description: "Region Home Apartment",
       price: "$5,300/m",
     },
     {
-      bg: home5,
+      bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home5.png",
       title: "Condo in Toronto",
       description: "Resource Home apartment",
       price: "$8,500/m",
     },
     {
-      bg: home6,
+      bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home6.png",
       title: "Duplex in Toronto, Canada",
       description: "Region Home apartment",
       price: "$8,300/m",
     },
     {
-      bg: home7,
+      bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home7.png",
       title: "Duplex in Toronto, Canada",
       description: "Region Home apartment",
       price: "$8,300/m",
     },
     {
-      bg: home8,
+      bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home8.png",
       title: "Duplex in Toronto, Canada",
       description: "Region Home apartment",
       price: "$8,300/m",
     },
     {
-      bg: home9,
+      bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home9.png",
       title: "Condo in Toronto, Canada",
       description: "Region Home apartment",
       price: "$9,500/m",
@@ -66,13 +56,19 @@ const PropertyListing = () => {
 
           {/* Featured Properties */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {[property1, property2, property3].map((property, index) => (
+            {[
+              "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//property1.png",
+              "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//property2.png",
+              "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//property3.png",
+            ].map((property, index) => (
               <div
                 key={index}
                 className="w-full max-w-sm rounded-lg bg-white p-4 shadow-md"
               >
                 <Image
                   src={property}
+                  width={834}
+                  height={1119}
                   alt={`Property ${index + 1}`}
                   className="w-full rounded-lg"
                 />
@@ -126,7 +122,9 @@ const PropertyListing = () => {
                 style={{ backgroundImage: `url(${item.bg})`, height: "400px" }}
               >
                 <Image
-                  src={Live_listing}
+                  src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//live_listing.png"
+                  width={249}
+                  height={43}
                   alt="Live Listing"
                   className="absolute left-4 top-[-60px] h-48 w-48 object-contain"
                 />

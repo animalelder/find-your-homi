@@ -8,19 +8,19 @@ const FindHome = () => {
 
   const listings = [
     {
-      bg: "./home1.png",
+      bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home1.png",
       title: "Apartment in Toronto",
       description: "Region Home apartment",
       price: "$5,300/m",
     },
     {
-      bg: "./home2.png",
+      bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home2.png",
       title: "Condo in Toronto",
       description: "Resource Home apartment",
       price: "$8,500/m",
     },
     {
-      bg: "./home3.png",
+      bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home3.png",
       title: "Condo in Toronto",
       description: "Region Home apartment",
       price: "$5,300/m",
@@ -58,8 +58,10 @@ const FindHome = () => {
             }}
           >
             <Image
-              src="/Live_Listing.png"
+              src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//Live_Listing.png"
               alt="Live Listing"
+              width={249}
+              height={43}
               className="absolute left-4 top-[-60px] h-48 w-48 object-contain"
             />
             <div className="absolute bottom-4 left-1/2 w-[90%] -translate-x-1/2 transform rounded-2xl bg-white p-4">

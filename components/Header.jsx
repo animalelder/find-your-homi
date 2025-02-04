@@ -4,8 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import featured from "/featured.png";
-import logo from "/logo.png";
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // For desktop dropdown
@@ -61,7 +59,13 @@ const Header = () => {
           <nav className="z-50 flex w-full max-w-6xl items-center justify-between rounded-full border-2 border-[#fafcfe] bg-white px-6 py-4 shadow-lg">
             {/* Logo */}
             <div>
-              <Image src={logo} alt="Logo" className="h-10" />
+              <Image
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//logo.png"
+                width={80}
+                height={80}
+                alt="Logo"
+                className="h-10"
+              />
             </div>
 
             {/* Navigation as */}
@@ -230,7 +234,9 @@ const Header = () => {
       {/* Featured Image */}
       <div className="flex w-full justify-center py-8">
         <Image
-          src={featured}
+          src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//featured.png"
+          width={1046}
+          height={95}
           alt="Featured"
           className="w-11/12 max-w-5xl rounded-lg"
         />

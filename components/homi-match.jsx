@@ -1,5 +1,5 @@
+import match_btn from "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//match_btn.png";
 import Image from "next/image";
-import match_btn from "/match_btn.png";
 
 const HomiMatch = () => {
   return (
@@ -9,6 +9,8 @@ const HomiMatch = () => {
         <div className="w-full lg:w-1/2">
           <Image
             src={match_btn}
+            width={310}
+            height={232}
             alt="Match with Roommate"
             className="h-auto w-full"
           />
@@ -27,7 +29,13 @@ const HomiMatch = () => {
             Get Started
           </button>
           <div className="flex justify-center lg:justify-end">
-            <Image src={match_btn} alt="Get Started Button" className="" />
+            <Image
+              src={match_btn}
+              width={310}
+              height={232}
+              alt="Get Started Button"
+              className=""
+            />
           </div>
         </div>
       </div>

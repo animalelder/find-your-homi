@@ -3,15 +3,16 @@
 import NavBar from "@/components/navbar";
 import Image from "next/image";
 import { useState } from "react";
-import property1 from "/property1.png";
-import property2 from "/property2.png";
-import property3 from "/property3.png";
-import rental1 from "/rental1.png";
-import rental2 from "/rental2.png";
-import rental3 from "/rental3.png";
 
 const PropertyDetailHeader = () => {
-  const images = [property1, property2, property3, rental1, rental2, rental3];
+  const images = [
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//property1.png",
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//property2.png",
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//property3.png",
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//rental1.png",
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//rental2.png",
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//rental3.png",
+  ];
 
   const [carouselIndex, setCarouselIndex] = useState(0);
   const [selectedImages, setSelectedImages] = useState([images[0], images[1]]);
@@ -55,6 +56,8 @@ const PropertyDetailHeader = () => {
                   <Image
                     key={index}
                     src={image}
+                    width={720}
+                    height={910}
                     alt="Carousel Item"
                     className="h-32 w-32 cursor-pointer rounded hover:opacity-80" // Updated sizes
                     onClick={() => handleImageClick(image)}
@@ -69,6 +72,8 @@ const PropertyDetailHeader = () => {
               <Image
                 key={index}
                 src={image}
+                width={720}
+                height={910}
                 alt="Selected Item"
                 className="h-96 w-96 rounded shadow-lg" // Updated sizes
               />

@@ -1,11 +1,5 @@
 import NavBar from "@/components/navbar";
 import Image from "next/image";
-import calendar_icon from "./calendar_icon.png";
-import chevron_button from "./chevron_button.png";
-import home_img from "./home_img.png";
-import location_img from "./location_img.png";
-import pricing_icon from "./pricing_icon.png";
-import property_size from "./property_size.png";
 
 const PropertyHeader = () => {
   return (
@@ -41,7 +35,9 @@ const PropertyHeader = () => {
             {/* Location Input */}
             <div className="relative flex w-full max-w-xs items-center">
               <Image
-                src={location_img}
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//location_img.png"
+                width={40}
+                height={40}
                 alt="Location"
                 className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform"
               />
@@ -55,7 +51,9 @@ const PropertyHeader = () => {
             {/* Property Type Input */}
             <div className="relative flex w-full max-w-xs items-center">
               <Image
-                src={home_img}
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home_img.png"
+                width={40}
+                height={40}
                 alt="Home"
                 className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform"
               />
@@ -65,7 +63,9 @@ const PropertyHeader = () => {
                 className="w-full rounded-lg border py-2 pl-10 pr-10"
               />
               <Image
-                src={chevron_button}
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//chevron_button.png"
+                width={40}
+                height={40}
                 alt="Chevron"
                 className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 transform"
               />
@@ -74,7 +74,9 @@ const PropertyHeader = () => {
             {/* Pricing Range Input */}
             <div className="relative flex w-full max-w-xs items-center">
               <Image
-                src={pricing_icon}
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//pricing_icon.png"
+                width={40}
+                height={40}
                 alt="Pricing"
                 className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform"
               />
@@ -84,7 +86,9 @@ const PropertyHeader = () => {
                 className="w-full rounded-lg border py-2 pl-10 pr-10"
               />
               <Image
-                src={chevron_button}
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//chevron_button.png"
+                width={40}
+                height={40}
                 alt="Chevron"
                 className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 transform"
               />
@@ -93,7 +97,9 @@ const PropertyHeader = () => {
             {/* Property Size Input */}
             <div className="relative flex w-full max-w-xs items-center">
               <Image
-                src={property_size}
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//property_size.png"
+                width={40}
+                height={40}
                 alt="Property Size"
                 className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform"
               />
@@ -103,7 +109,9 @@ const PropertyHeader = () => {
                 className="w-full rounded-lg border py-2 pl-10 pr-10"
               />
               <Image
-                src={chevron_button}
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//chevron_button.png"
+                width={40}
+                height={40}
                 alt="Chevron"
                 className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 transform"
               />
@@ -112,7 +120,9 @@ const PropertyHeader = () => {
             {/* Build Year Input */}
             <div className="relative flex w-full max-w-xs items-center">
               <Image
-                src={calendar_icon}
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//calendar_icon.png"
+                width={40}
+                height={40}
                 alt="Calendar"
                 className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform"
               />
@@ -122,7 +132,9 @@ const PropertyHeader = () => {
                 className="w-full rounded-lg border py-2 pl-10 pr-10"
               />
               <Image
-                src={chevron_button}
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//chevron_button.png"
+                width={40}
+                height={40}
                 alt="Chevron"
                 className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 transform"
               />

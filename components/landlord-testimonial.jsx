@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Joshua from "/Joshua.png";
-import Nora from "/Nora.png";
 
 const LandlordTestimonial = () => {
   return (
@@ -10,7 +8,7 @@ const LandlordTestimonial = () => {
           What people say about us
         </h1>
       </div>
-      <div className="flex items-center justify-between gap-6 bg-[url('/landlord_img.png')] bg-contain bg-bottom bg-no-repeat lg:flex-row lg:gap-10">
+      <div className="flex items-center justify-between gap-6 bg-[url('https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//landlord_img.png')] bg-contain bg-bottom bg-no-repeat lg:flex-row lg:gap-10">
         {/* Testimonial 1 */}
         <div className="h-auto max-w-[370px] rounded-bl-3xl rounded-br-3xl bg-white p-4 shadow-xl lg:my-44">
           <h4 className="mb-2 text-lg font-medium text-gray-700">
@@ -20,7 +18,9 @@ const LandlordTestimonial = () => {
           <div>
             <div className="flex gap-4">
               <Image
-                src={Joshua}
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//Joshua.png"
+                width={58}
+                height={58}
                 alt="Joshua"
                 className="h-16 w-16 rounded-full object-cover"
               />
@@ -60,7 +60,9 @@ const LandlordTestimonial = () => {
           <div>
             <div className="flex gap-4">
               <Image
-                src={Nora}
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//Nora.png"
+                width={58}
+                height={58}
                 alt="Nora"
                 className="h-16 w-16 rounded-full object-cover"
               />

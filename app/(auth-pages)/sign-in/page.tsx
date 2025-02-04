@@ -5,8 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Image from "next/image";
 import Link from "next/link";
-import facebook_logo from "/facebook_logo.png";
-import google_logo from "/google_logo.png";
 
 export default async function Login(props: { searchParams: Promise<Message> }) {
   const searchParams = await props.searchParams;
@@ -67,10 +65,20 @@ export default async function Login(props: { searchParams: Promise<Message> }) {
 
           <div className="flex justify-center gap-4">
             <button type="button">
-              <Image src={facebook_logo} alt="Facebook" className="h-8 w-8" />
+              <Image
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//facebook_logo.png"
+                alt="Facebook"
+                className="h-8 w-8"
+              />
             </button>
             <button type="button">
-              <Image src={google_logo} alt="Google" className="h-8 w-8" />
+              <Image
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//google_logo.png"
+                width={72}
+                height={72}
+                alt="Google"
+                className="h-8 w-8"
+              />
             </button>
           </div>
         </form>

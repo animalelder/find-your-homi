@@ -19,10 +19,34 @@ const Footer = () => {
       <div className="flex flex-col justify-between lg:flex-row">
         {/* Social Icons */}
         <div className="mb-8 flex justify-center gap-4 lg:mb-0 lg:justify-start">
-          <Image src="/instagram.png" alt="Instagram" className="h-8 w-8" />
-          <Image src="/linkedin-box.png" alt="LinkedIn" className="h-8 w-8" />
-          <Image src="/pinterest.png" alt="Pinterest" className="h-8 w-8" />
-          <Image src="/twitter.png" alt="Twitter" className="h-8 w-8" />
+          <Image
+            src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//instagram.png"
+            width={43}
+            height={43}
+            alt="Instagram"
+            className="h-8 w-8"
+          />
+          <Image
+            src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//linkedin-box.png"
+            width={43}
+            height={43}
+            alt="LinkedIn"
+            className="h-8 w-8"
+          />
+          <Image
+            src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//pinterest.png"
+            width={43}
+            height={43}
+            alt="Pinterest"
+            className="h-8 w-8"
+          />
+          <Image
+            src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//twitter.png"
+            width={43}
+            height={43}
+            alt="Twitter"
+            className="h-8 w-8"
+          />
         </div>
 
         {/* Links */}
@@ -64,7 +88,13 @@ const Footer = () => {
 
       {/* Logo at the extreme bottom */}
       <div className="mb-0 mt-12 flex justify-center">
-        <Image src="/homi.png" alt="Homi Logo" className="h-auto w-auto" />
+        <Image
+          src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//homi.png"
+          width={2336}
+          height={49}
+          alt="Homi Logo"
+          className="h-auto w-auto"
+        />
       </div>
     </div>
   );
