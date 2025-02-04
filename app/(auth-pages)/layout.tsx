@@ -4,7 +4,7 @@ export default async function Layout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex min-h-screen max-w-7xl flex-col items-start lg:flex-row">
+    <div className="flex flex-col items-stretch lg:flex-row">
       {/* Background Image Section */}
       <div className="relative hidden w-1/2 lg:block">
         <img
@@ -31,7 +31,7 @@ export default async function Layout({
           </div>
         </div>
       </div>
-      {children}
+      <div className="h-full w-1/2">{children}</div>
     </div>
   );
 }

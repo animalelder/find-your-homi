@@ -55,7 +55,7 @@ const Header = () => {
       >
         <div className="absolute left-0 top-6 flex w-full items-center justify-center gap-5 px-4 sm:px-12">
           {/* Navbar */}
-          <nav className="z-50 flex w-full max-w-6xl items-center justify-between rounded-full bg-white px-6 py-4 shadow-lg">
+          <nav className="z-50 flex w-full max-w-6xl items-center justify-between rounded-full border-2 border-[#fafcfe] bg-white px-6 py-4 shadow-lg">
             {/* Logo */}
             <div>
               <img src="/logo.png" alt="Logo" className="h-10" />
@@ -113,12 +113,16 @@ const Header = () => {
               {isDropdownOpen && (
                 <div className="absolute right-1 top-full z-50 mt-2 w-40 rounded-md bg-white shadow-lg">
                   <ul className="space-y-2 text-sm text-gray-700">
-                    <li className="hover:bg-primaryGreen block cursor-pointer px-4 py-2 hover:text-white">
-                      <Link href="/sign-in">Tenant</Link>
-                    </li>
-                    <li className="hover:bg-primaryGreen block cursor-pointer px-4 py-2 hover:text-white">
-                      <Link href="/sign-up">Landlord</Link>
-                    </li>
+                    <a href="/sign-in">
+                      <li className="hover:bg-primaryGreen block cursor-pointer px-4 py-2 hover:text-white">
+                        Tenant
+                      </li>
+                    </a>
+                    <a href="/sign-up">
+                      <li className="hover:bg-primaryGreen block cursor-pointer px-4 py-2 hover:text-white">
+                        Landlord
+                      </li>
+                    </a>
                   </ul>
                 </div>
               )}
