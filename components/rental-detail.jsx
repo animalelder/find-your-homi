@@ -1,5 +1,3 @@
-import Footer from "@/components/footer";
-
 const RentalDetail = () => {
   // Options for different features
   const laundryOptions = ["In-Unit", "On-site", "None"];
@@ -24,7 +22,7 @@ const RentalDetail = () => {
             <div className="rounded-xl border border-gray-700 p-4">
               <div className="mb-4 flex items-center justify-between">
                 <h3 className="text-lg font-semibold">Rental Details</h3>
-                <button className="hover:bg-primaryGreen cursor-pointer rounded-lg border border-gray-700 bg-white px-4 py-2 transition duration-300 hover:text-white">
+                <button className="cursor-pointer rounded-lg border border-gray-700 bg-white px-4 py-2 transition duration-300 hover:bg-primaryGreen hover:text-white">
                   Learn More
                 </button>
               </div>
@@ -56,7 +54,7 @@ const RentalDetail = () => {
                       {laundryOptions.map((option, index) => (
                         <p
                           key={index}
-                          className="hover:bg-primaryGreen rounded-full border border-gray-700 bg-white px-4 py-2 text-gray-600 transition duration-300 hover:text-white"
+                          className="rounded-full border border-gray-700 bg-white px-4 py-2 text-gray-600 transition duration-300 hover:bg-primaryGreen hover:text-white"
                         >
                           {option}
                         </p>
@@ -72,7 +70,7 @@ const RentalDetail = () => {
                   {petOptions.map((option, index) => (
                     <p
                       key={index}
-                      className="hover:bg-primaryGreen rounded-full border border-gray-700 bg-white px-4 py-2 text-gray-600 transition duration-300 hover:text-white"
+                      className="rounded-full border border-gray-700 bg-white px-4 py-2 text-gray-600 transition duration-300 hover:bg-primaryGreen hover:text-white"
                     >
                       {option}
                     </p>
@@ -85,7 +83,7 @@ const RentalDetail = () => {
             <div className="rounded-xl border border-gray-700 p-4">
               <div className="mb-4 flex items-center justify-between">
                 <h3 className="text-lg font-semibold">Lease Details</h3>
-                <button className="hover:bg-primaryGreen cursor-pointer rounded-lg border border-gray-700 bg-white px-4 py-2 transition duration-300 hover:text-white">
+                <button className="cursor-pointer rounded-lg border border-gray-700 bg-white px-4 py-2 transition duration-300 hover:bg-primaryGreen hover:text-white">
                   Learn More
                 </button>
               </div>
@@ -109,7 +107,7 @@ const RentalDetail = () => {
                     {leaseOptions.map((option, index) => (
                       <p
                         key={index}
-                        className="hover:bg-primaryGreen cursor-pointer rounded-full border border-gray-700 bg-white px-4 py-2"
+                        className="cursor-pointer rounded-full border border-gray-700 bg-white px-4 py-2 hover:bg-primaryGreen"
                       >
                         {option}
                       </p>
@@ -123,7 +121,7 @@ const RentalDetail = () => {
             <div className="rounded-xl border border-gray-700 p-4">
               <div className="mb-4 flex items-center justify-between">
                 <h3 className="text-lg font-semibold">Room Matching</h3>
-                <button className="hover:bg-primaryGreen cursor-pointer rounded-lg border border-gray-700 bg-white px-4 py-2 transition duration-300 hover:text-white">
+                <button className="cursor-pointer rounded-lg border border-gray-700 bg-white px-4 py-2 transition duration-300 hover:bg-primaryGreen hover:text-white">
                   Learn More
                 </button>
               </div>
@@ -137,7 +135,7 @@ const RentalDetail = () => {
                     {genderOptions.map((option, index) => (
                       <p
                         key={index}
-                        className="hover:bg-primaryGreen rounded-full border border-gray-700 bg-white px-4 py-2 text-gray-600 transition duration-300 hover:text-white"
+                        className="rounded-full border border-gray-700 bg-white px-4 py-2 text-gray-600 transition duration-300 hover:bg-primaryGreen hover:text-white"
                       >
                         {option}
                       </p>
@@ -152,7 +150,7 @@ const RentalDetail = () => {
                       {smokingOptions.map((option, index) => (
                         <p
                           key={index}
-                          className="hover:bg-primaryGreen rounded-full border border-gray-700 bg-white px-4 py-2 text-gray-600 transition duration-300 hover:text-white"
+                          className="rounded-full border border-gray-700 bg-white px-4 py-2 text-gray-600 transition duration-300 hover:bg-primaryGreen hover:text-white"
                         >
                           {option}
                         </p>
@@ -179,10 +177,10 @@ const RentalDetail = () => {
                       Credit Check/Background Check
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      <p className="hover:bg-primaryGreen rounded-full border border-gray-700 bg-white px-4 py-2 text-gray-600 transition duration-300 hover:text-white">
+                      <p className="rounded-full border border-gray-700 bg-white px-4 py-2 text-gray-600 transition duration-300 hover:bg-primaryGreen hover:text-white">
                         Approved
                       </p>
-                      <p className="hover:bg-primaryGreen rounded-full border border-gray-700 bg-white px-4 py-2 text-gray-600 transition duration-300 hover:text-white">
+                      <p className="rounded-full border border-gray-700 bg-white px-4 py-2 text-gray-600 transition duration-300 hover:bg-primaryGreen hover:text-white">
                         Denied
                       </p>
                     </div>
@@ -195,7 +193,7 @@ const RentalDetail = () => {
             <div className="rounded-xl border border-gray-700 p-4">
               <div className="mb-4 flex items-center justify-between">
                 <h3 className="text-lg font-semibold">Building Features</h3>
-                <button className="hover:bg-primaryGreen cursor-pointer rounded-lg border border-gray-700 bg-white px-4 py-2 transition duration-300 hover:text-white">
+                <button className="cursor-pointer rounded-lg border border-gray-700 bg-white px-4 py-2 transition duration-300 hover:bg-primaryGreen hover:text-white">
                   Learn More
                 </button>
               </div>
@@ -207,7 +205,7 @@ const RentalDetail = () => {
                     {securityOptions.map((option, index) => (
                       <p
                         key={index}
-                        className="hover:bg-primaryGreen rounded-full border border-gray-700 bg-white px-4 py-2 text-gray-600 transition duration-300 hover:text-white"
+                        className="rounded-full border border-gray-700 bg-white px-4 py-2 text-gray-600 transition duration-300 hover:bg-primaryGreen hover:text-white"
                       >
                         {option}
                       </p>
@@ -222,7 +220,7 @@ const RentalDetail = () => {
                       {securityOptions.map((option, index) => (
                         <p
                           key={index}
-                          className="hover:bg-primaryGreen rounded-full border border-gray-700 bg-white px-4 py-2 text-gray-600 transition duration-300 hover:text-white"
+                          className="rounded-full border border-gray-700 bg-white px-4 py-2 text-gray-600 transition duration-300 hover:bg-primaryGreen hover:text-white"
                         >
                           {option}
                         </p>
@@ -239,7 +237,7 @@ const RentalDetail = () => {
                     {outdoorOptions.map((option, index) => (
                       <p
                         key={index}
-                        className="hover:bg-primaryGreen rounded-full border border-gray-700 bg-white px-4 py-2 text-gray-600 transition duration-300 hover:text-white"
+                        className="rounded-full border border-gray-700 bg-white px-4 py-2 text-gray-600 transition duration-300 hover:bg-primaryGreen hover:text-white"
                       >
                         {option}
                       </p>
@@ -263,7 +261,7 @@ const RentalDetail = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

@@ -1,36 +1,3 @@
 {
-  "extends": ["eslint-config-next"],
-  "plugins": ["simple-import-sort"],
-  "rules": {
-    "simple-import-sort/imports": "warning",
-    "simple-import-sort/exports": "warning"
-  },
-  "overrides": [
-    {
-      "files": ["**/*.js", "**/*.ts", "**/*.tsx", "**/*.jsx"],
-      "rules": {
-        "simple-import-sort/imports": [
-          "warning",
-          {
-            "groups": [
-              // `react` first, `next` second, then packages starting with a character
-              ["^react$", "^next", "^[a-z]"],
-              // Packages starting with `@`
-              ["^@"],
-              // Packages starting with `~`
-              ["^~"],
-              // Imports starting with `../`
-              ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
-              // Imports starting with `./`
-              ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
-              // Style imports
-              ["^.+\\.s?css$"],
-              // Side effect imports
-              ["^\\u0000"]
-            ]
-          }
-        ]
-      }
-    }
-  ]
+  "extends": "next"
 }

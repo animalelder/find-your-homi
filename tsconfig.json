@@ -5,7 +5,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": false,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
@@ -26,10 +26,10 @@
   },
   "include": [
     "next-env.d.ts",
+    "declarationFiles.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts",
-    "components/justnavbar.jsx"
+    ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }

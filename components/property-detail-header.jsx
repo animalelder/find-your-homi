@@ -1,17 +1,17 @@
+"use client";
+
+import NavBar from "@/components/navbar";
+import Image from "next/image";
 import { useState } from "react";
+import property1 from "/property1.png";
+import property2 from "/property2.png";
+import property3 from "/property3.png";
+import rental1 from "/rental1.png";
+import rental2 from "/rental2.png";
+import rental3 from "/rental3.png";
 
 const PropertyDetailHeader = () => {
-  const images = [
-    "/property1.png",
-    "/property2.png",
-    "/property3.png",
-    "/rental1.png",
-    "/rental2.png",
-    "/rental3.png",
-    "/rental1.png",
-    "/rental2.png",
-    "/rental3.png",
-  ];
+  const images = [property1, property2, property3, rental1, rental2, rental3];
 
   const [carouselIndex, setCarouselIndex] = useState(0);
   const [selectedImages, setSelectedImages] = useState([images[0], images[1]]);
@@ -40,7 +40,7 @@ const PropertyDetailHeader = () => {
       >
         {/* Navbar */}
         <div className="absolute left-0 top-[-2] z-10 w-full px-4 sm:px-12">
-          <Navbar />
+          <NavBar />
         </div>
 
         {/* Content Wrapper */}
@@ -52,7 +52,7 @@ const PropertyDetailHeader = () => {
               {images
                 .slice(carouselIndex, carouselIndex + 9)
                 .map((image, index) => (
-                  <img
+                  <Image
                     key={index}
                     src={image}
                     alt="Carousel Item"
@@ -66,7 +66,7 @@ const PropertyDetailHeader = () => {
           {/* Middle Section */}
           <div className="mt-12 flex items-center justify-center space-x-4">
             {selectedImages.map((image, index) => (
-              <img
+              <Image
                 key={index}
                 src={image}
                 alt="Selected Item"
@@ -78,15 +78,19 @@ const PropertyDetailHeader = () => {
           {/* Bottom Navigation */}
           <div className="mt-8 flex items-center justify-center space-x-4">
             <button onClick={handlePrev} className="p-2">
-              <img src="/back_button.png" alt="Previous" className="h-8 w-8" />
+              <Image
+                src="/back_button.png"
+                alt="Previous"
+                className="h-8 w-8"
+              />
             </button>
-            <img
+            <Image
               src="/indicator.png"
               alt="Indicator"
               className="hidden md:block"
             />
             <button onClick={handleNext} className="p-2">
-              <img src="/forward_button.png" alt="Next" className="h-8 w-8" />
+              <Image src="/forward_button.png" alt="Next" className="h-8 w-8" />
             </button>
           </div>
         </div>

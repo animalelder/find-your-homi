@@ -1,3 +1,7 @@
+import Image from "next/image";
+import Joshua from "/Joshua.png";
+import Nora from "/Nora.png";
+
 const LandlordTestimonial = () => {
   return (
     <div className="mb-auto block px-4 pt-10 sm:px-6 lg:px-20">
@@ -15,8 +19,8 @@ const LandlordTestimonial = () => {
           <hr className="mb-4 border-gray-300" />
           <div>
             <div className="flex gap-4">
-              <img
-                src="/Joshua.png"
+              <Image
+                src={Joshua}
                 alt="Joshua"
                 className="h-16 w-16 rounded-full object-cover"
               />
@@ -26,16 +30,16 @@ const LandlordTestimonial = () => {
               </div>
             </div>
             <p className="mt-2 text-sm text-gray-600">
-              "Listing my property on Homi was straightforward, and I started
+              Listing my property on Homi was straightforward, and I started
               getting inquiries within hours. The in-app chat made tenant
-              communication so easy and professional."
+              communication so easy and professional.
             </p>
           </div>
         </div>
 
         {/* Center Image */}
 
-        {/* <img
+        {/* <Image
             src="/landlord_img.png"
             alt="Landlord"
             className="min-w-[500px] object-cover"
@@ -55,8 +59,8 @@ const LandlordTestimonial = () => {
           <hr className="mb-4 border-gray-300" />
           <div>
             <div className="flex gap-4">
-              <img
-                src="/Nora.png"
+              <Image
+                src={Nora}
                 alt="Nora"
                 className="h-16 w-16 rounded-full object-cover"
               />
@@ -66,9 +70,9 @@ const LandlordTestimonial = () => {
               </div>
             </div>
             <p className="mt-2 text-sm text-gray-600">
-              "With Homi, I didn't just find tenants faster, I found the right
-              tenants. The verification process gave me peace of mind, and
-              payments were hassle-free."
+              With Homi, I didn&apos;t just find tenants faster, I found the
+              right tenants. The verification process gave me peace of mind, and
+              payments were hassle-free.
             </p>
           </div>
         </div>

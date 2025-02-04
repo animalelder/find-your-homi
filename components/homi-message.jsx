@@ -1,3 +1,6 @@
+import Image from "next/image";
+import message from "/message.png";
+
 const HomiMessage = () => {
   return (
     <div className="mx-4 px-4 py-8 sm:mx-[10%]">
@@ -40,8 +43,8 @@ const HomiMessage = () => {
 
         {/* Image Section */}
         <div className="flex w-full justify-center rounded-lg md:w-1/2">
-          <img
-            src="/message.png"
+          <Image
+            src={message}
             alt="Message Illustration"
             className="w-64 md:w-auto"
           />

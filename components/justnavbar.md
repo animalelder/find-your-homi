@@ -6,55 +6,57 @@ import { useEffect, useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import hamburger icon
 
 const Navbar = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // For desktop dropdown
-  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false); // For mobile nav
-  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false); // For mobile login dropdown
-  const dropdownRef = useRef(null); // Ref for the desktop dropdown menu
-  const mobileDropdownRef = useRef(null); // Ref for the mobile dropdown menu
+const [isDropdownOpen, setIsDropdownOpen] = useState(false); // For desktop dropdown
+const [isMobileNavOpen, setIsMobileNavOpen] = useState(false); // For mobile nav
+const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false); // For mobile login dropdown
+const dropdownRef = useRef(null); // Ref for the desktop dropdown menu
+const mobileDropdownRef = useRef(null); // Ref for the mobile dropdown menu
 
-  const pathname = usePathname(); // Get the current location
+const pathname = usePathname(); // Get the current location
 
-  // Close the dropdown menu when clicking outside (desktop)
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropdownOpen(false);
-      }
-    };
+// Close the dropdown menu when clicking outside (desktop)
+useEffect(() => {
+const handleClickOutside = (event) => {
+if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+setIsDropdownOpen(false);
+}
+};
 
     document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
 
-  // Close the mobile dropdown menu when clicking outside (mobile)
-  useEffect(() => {
-    const handleClickOutsideMobile = (event) => {
-      if (
-        mobileDropdownRef.current &&
-        !mobileDropdownRef.current.contains(event.target)
-      ) {
-        setIsMobileDropdownOpen(false);
-      }
-    };
+}, []);
+
+// Close the mobile dropdown menu when clicking outside (mobile)
+useEffect(() => {
+const handleClickOutsideMobile = (event) => {
+if (
+mobileDropdownRef.current &&
+!mobileDropdownRef.current.contains(event.target)
+) {
+setIsMobileDropdownOpen(false);
+}
+};
 
     document.addEventListener("mousedown", handleClickOutsideMobile);
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutsideMobile);
     };
-  }, []);
 
-  return (
-    <div className="absolute left-0 top-6 flex w-full items-center justify-center px-4 sm:px-12">
-      {/* Navbar */}
-      <nav className="z-50 flex w-full max-w-6xl items-center justify-between rounded-full bg-white px-6 py-4 shadow-lg">
-        {/* Logo */}
-        <div>
-          <img src={logo} alt="Logo" className="h-10" />
-        </div>
+}, []);
+
+return (
+<div className="absolute left-0 top-6 flex w-full items-center justify-center px-4 sm:px-12">
+{/_ Navbar _/}
+<nav className="z-50 flex w-full max-w-6xl items-center justify-between rounded-full bg-white px-6 py-4 shadow-lg">
+{/_ Logo _/}
+<div>
+<Image src={logo} alt="Logo" className="h-10" />
+</div>
 
         {/* Mobile Hamburger Icon */}
         <div className="sm:hidden">
@@ -205,7 +207,8 @@ const Navbar = () => {
         )}
       </nav>
     </div>
-  );
+
+);
 };
 
 export default Navbar;

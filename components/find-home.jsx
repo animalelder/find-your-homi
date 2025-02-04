@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 const FindHome = () => {
@@ -7,19 +8,19 @@ const FindHome = () => {
 
   const listings = [
     {
-      bg: "/home1.png",
+      bg: "./home1.png",
       title: "Apartment in Toronto",
       description: "Region Home apartment",
       price: "$5,300/m",
     },
     {
-      bg: "/home2.png",
+      bg: "./home2.png",
       title: "Condo in Toronto",
       description: "Resource Home apartment",
       price: "$8,500/m",
     },
     {
-      bg: "/home3.png",
+      bg: "./home3.png",
       title: "Condo in Toronto",
       description: "Region Home apartment",
       price: "$5,300/m",
@@ -34,7 +35,7 @@ const FindHome = () => {
         </h2>
         <p className="mb-6 w-full text-center text-gray-600 md:w-[1020px]">
           Discover the ease of finding your perfect space with Homi. Whether
-          you're searching for a cozy apartment or the ideal roommate, our
+          you&apos;re searching for a cozy apartment or the ideal roommate, our
           platform connects you with trusted listings, tailored matches, and
           seamless communication—all in one place. Your next home is just a few
           clicks away!
@@ -56,7 +57,7 @@ const FindHome = () => {
               height: "400px",
             }}
           >
-            <img
+            <Image
               src="/Live_Listing.png"
               alt="Live Listing"
               className="absolute left-4 top-[-60px] h-48 w-48 object-contain"

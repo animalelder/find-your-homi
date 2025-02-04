@@ -1,3 +1,8 @@
+import Image from "next/image";
+import arrow_right_circle from "/arrow-right-circle.png";
+import home3 from "/home3.png";
+import homi_logo from "/homi_logo.png";
+
 export default async function Layout({
   children,
 }: {
@@ -7,13 +12,13 @@ export default async function Layout({
     <div className="flex flex-col items-stretch lg:flex-row">
       {/* Background Image Section */}
       <div className="relative hidden w-1/2 lg:block">
-        <img
-          src="/home3.png"
+        <Image
+          src={home3}
           alt="Create Profile Background"
           className="h-full w-full object-cover"
         />
-        <img
-          src="/homi_logo.png"
+        <Image
+          src={homi_logo}
           alt="Homi Logo"
           className="absolute left-10 top-10 w-32"
         />
@@ -23,8 +28,8 @@ export default async function Layout({
           </h3>
           <div className="flex items-center gap-2 pl-5">
             <p>Sign in or Create a new account with us.</p>
-            <img
-              src="/arrow-right-circle.png"
+            <Image
+              src={arrow_right_circle}
               alt="Arrow Right"
               className="h-6 w-6"
             />

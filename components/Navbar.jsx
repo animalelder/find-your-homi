@@ -1,9 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import hamburger icon
+import logo from "/logo.png";
 
 export default function NavBar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // For desktop dropdown
@@ -13,6 +15,7 @@ export default function NavBar() {
   const mobileDropdownRef = useRef(null); // Ref for the mobile dropdown menu
 
   const pathname = usePathname(); // Get the current location
+  const router = useRouter(); // Get the router object
 
   const rentalButton = pathname === "/" ? "block" : "hidden";
 
@@ -55,7 +58,7 @@ export default function NavBar() {
       <nav className="z-50 flex w-full max-w-6xl items-center justify-between rounded-full bg-white px-6 py-4 shadow-lg">
         {/* Logo */}
         <div>
-          <img src="/logo.png" alt="Logo" className="h-10" />
+          <Image src={logo} alt="Logo" className="h-10" />
         </div>
 
         {/* Mobile Hamburger Icon */}
@@ -73,43 +76,41 @@ export default function NavBar() {
           <li
             className={`${
               pathname === "/" ? "bg-primaryGreen" : ""
-            } hover:bg-primaryGreen cursor-pointer rounded-xl px-4 py-1 hover:text-gray-800`}
+            } cursor-pointer rounded-xl px-4 py-1 hover:bg-primaryGreen hover:text-gray-800`}
+            onClick={() => router.push("/")}
           >
-            <a href="/">Home</a>
+            Home
           </li>
           <li
+            onClick={() => router.push("/properties")}
             className={`${
-              pathname === "/properties"
-                ? "bg-primaryGreen rounded-xl px-4 py-1"
-                : ""
-            } hover:bg-primaryGreen cursor-pointer hover:rounded-xl hover:px-4 hover:py-1 hover:text-gray-800`}
+              pathname === "/properties" ? "bg-primaryGreen" : "bg-altGreen"
+            } cursor-pointer rounded-xl px-4 py-1 hover:bg-primaryGreen hover:text-gray-800`}
           >
-            <Link href="/properties">Properties</Link>
+            Properties
           </li>
           <li
+            onClick={() => router.push("/homi-match")}
             className={`${
-              pathname === "/homi-match"
-                ? "bg-primaryGreen rounded-xl px-4 py-1"
-                : ""
-            } hover:bg-primaryGreen cursor-pointer hover:rounded-xl hover:px-4 hover:py-1 hover:text-gray-800`}
+              pathname === "/homi-match" ? "bg-primaryGreen" : ""
+            } cursor-pointer rounded-xl px-4 py-1 hover:bg-primaryGreen hover:text-gray-800`}
           >
-            <Link href="/homi-match">Homi Match</Link>
+            Homi Match
           </li>
           <li
+            onClick={() => router.push("/about-us")}
             className={`${
-              pathname === "/about-us"
-                ? "bg-primaryGreen rounded-xl px-4 py-1"
-                : ""
-            } hover:bg-primaryGreen cursor-pointer hover:rounded-xl hover:px-4 hover:py-1 hover:text-gray-800`}
+              pathname === "/about-us" ? "bg-primaryGreen" : ""
+            } cursor-pointer rounded-xl px-4 py-1 hover:bg-primaryGreen hover:text-gray-800`}
           >
-            <Link href="/about-us">About Us</Link>
+            About Us
           </li>
         </ul>
 
         {/* Desktop Login Button with Dropdown */}
         <div className="relative hidden space-x-4 sm:flex" ref={dropdownRef}>
           <button
-            className="bg-primaryGreen cursor-pointer rounded-full px-6 py-2 text-gray-700 hover:bg-white"
+            className="cursor-pointer rounded-full bg-primaryGreen px-6 py-2 text-gray-700 hover:bg-white"
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           >
             Login
@@ -119,10 +120,10 @@ export default function NavBar() {
           {isDropdownOpen && (
             <div className="absolute right-1 top-full z-50 mt-2 w-40 rounded-md bg-white shadow-lg">
               <ul className="space-y-2 text-sm text-gray-700">
-                <li className="hover:bg-primaryGreen block cursor-pointer px-4 py-2 hover:rounded-full hover:text-white">
+                <li className="block cursor-pointer px-4 py-2 hover:rounded-full hover:bg-primaryGreen hover:text-white">
                   <Link href="/sign-in">Tenant</Link>
                 </li>
-                <li className="hover:bg-primaryGreen block cursor-pointer px-4 py-2 hover:rounded-full hover:text-white">
+                <li className="block cursor-pointer px-4 py-2 hover:rounded-full hover:bg-primaryGreen hover:text-white">
                   <Link href="/sign-up">Landlord</Link>
                 </li>
               </ul>
@@ -143,23 +144,23 @@ export default function NavBar() {
           </button>
           <ul className="mb-8 space-y-6 text-lg text-gray-700">
             {" "}
-            <li className="hover:text-primaryGreen cursor-pointer">
+            <li className="cursor-pointer hover:text-primaryGreen">
               <Link href="/">Home</Link>
             </li>{" "}
-            <li className="hover:text-primaryGreen cursor-pointer">
+            <li className="cursor-pointer hover:text-primaryGreen">
               <Link href="/properties">Properties</Link>
             </li>
-            <li className="hover:text-primaryGreen cursor-pointer">
+            <li className="cursor-pointer hover:text-primaryGreen">
               <Link href="/homi-match">Homi Match</Link>
             </li>
-            <li className="hover:text-primaryGreen cursor-pointer">
+            <li className="cursor-pointer hover:text-primaryGreen">
               <Link href="/about-us">About Us</Link>
             </li>
           </ul>
           <div className="relative">
             <button
               onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
-              className="bg-primaryGreen cursor-pointer rounded-full px-6 py-3 text-lg text-white hover:bg-primaryLight"
+              className="cursor-pointer rounded-full bg-primaryGreen px-6 py-3 text-lg text-white hover:bg-primaryLight"
             >
               Login
             </button>
@@ -172,10 +173,10 @@ export default function NavBar() {
               >
                 <ul className="space-y-2 text-sm text-gray-700">
                   {" "}
-                  <li className="hover:bg-primaryGreen block cursor-pointer px-4 py-2 hover:rounded-full hover:text-white">
+                  <li className="block cursor-pointer px-4 py-2 hover:rounded-full hover:bg-primaryGreen hover:text-white">
                     <Link href="/sign-in">Rental</Link>
                   </li>{" "}
-                  <li className="hover:bg-primaryGreen block cursor-pointer px-4 py-2 hover:rounded-full hover:text-white">
+                  <li className="block cursor-pointer px-4 py-2 hover:rounded-full hover:bg-primaryGreen hover:text-white">
                     <Link href="/sign-up">Landlord</Link>
                   </li>
                 </ul>
@@ -186,7 +187,7 @@ export default function NavBar() {
       )}
       {/* Post a Rental Button */}
       <button
-        className={`${rentalButton} hover:bg-primaryGreen z-50 cursor-pointer whitespace-nowrap rounded-full bg-gray-200 px-8 py-5 text-gray-800 transition-colors duration-300 hover:text-white`}
+        className={`${rentalButton} z-50 cursor-pointer whitespace-nowrap rounded-full bg-gray-200 px-8 py-5 text-gray-800 transition-colors duration-300 hover:bg-primaryGreen hover:text-white`}
       >
         Post a Rental
       </button>

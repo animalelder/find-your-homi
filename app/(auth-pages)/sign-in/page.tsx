@@ -3,14 +3,17 @@ import { FormMessage, Message } from "@/components/form-message";
 import { SubmitButton } from "@/components/submit-button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import Image from "next/image";
 import Link from "next/link";
+import facebook_logo from "/facebook_logo.png";
+import google_logo from "/google_logo.png";
 
 export default async function Login(props: { searchParams: Promise<Message> }) {
   const searchParams = await props.searchParams;
   return (
     <div className="block min-h-screen w-full flex-col content-center">
       {/* <div className="absolute right-4 top-4">
-        <img src="/homi_logo.png" alt="Homi Logo" className="w-32" />
+        <Image src="/homi_logo.png" alt="Homi Logo" className="w-32" />
       </div> */}
       <div className="flex h-full w-full flex-grow items-center justify-center p-6">
         <form className="w-full max-w-md space-y-5 rounded-lg bg-white p-6">
@@ -43,7 +46,7 @@ export default async function Login(props: { searchParams: Promise<Message> }) {
             className="mb-2 w-full rounded-full border border-gray-300 p-2 focus:outline-none focus:ring focus:ring-red-300"
           />
           <Link
-            className="text-foreground text-xs underline"
+            className="text-xs text-foreground underline"
             href="/forgot-password"
           >
             Forgot Password?
@@ -64,14 +67,10 @@ export default async function Login(props: { searchParams: Promise<Message> }) {
 
           <div className="flex justify-center gap-4">
             <button type="button">
-              <img
-                src="/facebook_logo.png"
-                alt="Facebook"
-                className="h-8 w-8"
-              />
+              <Image src={facebook_logo} alt="Facebook" className="h-8 w-8" />
             </button>
             <button type="button">
-              <img src="/google_logo.png" alt="Google" className="h-8 w-8" />
+              <Image src={google_logo} alt="Google" className="h-8 w-8" />
             </button>
           </div>
         </form>

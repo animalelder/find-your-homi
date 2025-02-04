@@ -4,61 +4,62 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 const Header = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // For desktop dropdown
-  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false); // For mobile nav
-  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false); // For mobile login dropdown
-  const dropdownRef = useRef(null); // Ref for the desktop dropdown menu
-  const mobileDropdownRef = useRef(null); // Ref for the mobile dropdown menu
+const [isDropdownOpen, setIsDropdownOpen] = useState(false); // For desktop dropdown
+const [isMobileNavOpen, setIsMobileNavOpen] = useState(false); // For mobile nav
+const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false); // For mobile login dropdown
+const dropdownRef = useRef(null); // Ref for the desktop dropdown menu
+const mobileDropdownRef = useRef(null); // Ref for the mobile dropdown menu
 
-  const pathname = usePathname(); // Get the current location
+const pathname = usePathname(); // Get the current location
 
-  // Close the dropdown menu when clicking outside (desktop)
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropdownOpen(false);
-      }
-    };
+// Close the dropdown menu when clicking outside (desktop)
+useEffect(() => {
+const handleClickOutside = (event) => {
+if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+setIsDropdownOpen(false);
+}
+};
 
     document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
 
-  // Close the mobile dropdown menu when clicking outside (mobile)
-  useEffect(() => {
-    const handleClickOutsideMobile = (event) => {
-      if (
-        mobileDropdownRef.current &&
-        !mobileDropdownRef.current.contains(event.target)
-      ) {
-        setIsMobileDropdownOpen(false);
-      }
-    };
+}, []);
+
+// Close the mobile dropdown menu when clicking outside (mobile)
+useEffect(() => {
+const handleClickOutsideMobile = (event) => {
+if (
+mobileDropdownRef.current &&
+!mobileDropdownRef.current.contains(event.target)
+) {
+setIsMobileDropdownOpen(false);
+}
+};
 
     document.addEventListener("mousedown", handleClickOutsideMobile);
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutsideMobile);
     };
-  }, []);
 
-  return (
-    <div className="relative bg-white">
-      {/* Hero Section */}
-      <div
-        className="relative h-screen bg-cover bg-center"
-        style={{ backgroundImage: `url("/hero_img.png")` }}
-      >
-        <div className="absolute left-0 top-6 flex w-full items-center justify-center px-4 sm:px-12">
-          {/* Navbar */}
-          <nav className="z-50 flex w-full max-w-6xl items-center justify-between rounded-full bg-white px-6 py-4 shadow-lg">
-            {/* Logo */}
-            <div>
-              <img src="/logo.png" alt="Logo" className="h-10" />
-            </div>
+}, []);
+
+return (
+<div className="relative bg-white">
+{/_ Hero Section _/}
+<div
+className="relative h-screen bg-cover bg-center"
+style={{ backgroundImage: `url("/hero_img.png")` }} >
+<div className="absolute left-0 top-6 flex w-full items-center justify-center px-4 sm:px-12">
+{/_ Navbar _/}
+<nav className="z-50 flex w-full max-w-6xl items-center justify-between rounded-full bg-white px-6 py-4 shadow-lg">
+{/_ Logo _/}
+<div>
+<Image src="/logo.png" alt="Logo" className="h-10" />
+</div>
 
             {/* Navigation Links */}
             <ul className="hidden space-x-8 text-lg text-gray-700 sm:flex">
@@ -221,14 +222,15 @@ const Header = () => {
 
       {/* Featured Image */}
       <div className="flex w-full justify-center py-8">
-        <img
+        <Image
           src="/featured.png"
           alt="Featured"
           className="w-11/12 max-w-5xl rounded-lg"
         />
       </div>
     </div>
-  );
+
+);
 };
 
 export default Header;

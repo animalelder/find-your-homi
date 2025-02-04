@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Footer = () => {
   return (
     <div className="bg-deepBlue px-6 py-2 text-white sm:px-10 lg:px-20">
@@ -6,7 +8,7 @@ const Footer = () => {
         <p className="mb-6 text-center text-xl font-light sm:text-2xl lg:mb-0 lg:max-w-[40%] lg:text-left">
           Choose HOMI for great apartments and roommate matching
         </p>
-        <button className="bg-primaryGreen rounded-full px-6 py-2 text-white">
+        <button className="rounded-full bg-primaryGreen px-6 py-2 text-white">
           Contact Us
         </button>
       </div>
@@ -17,10 +19,10 @@ const Footer = () => {
       <div className="flex flex-col justify-between lg:flex-row">
         {/* Social Icons */}
         <div className="mb-8 flex justify-center gap-4 lg:mb-0 lg:justify-start">
-          <img src="/instagram.png" alt="Instagram" className="h-8 w-8" />
-          <img src="/linkedin-box.png" alt="LinkedIn" className="h-8 w-8" />
-          <img src="/pinterest.png" alt="Pinterest" className="h-8 w-8" />
-          <img src="/twitter.png" alt="Twitter" className="h-8 w-8" />
+          <Image src="/instagram.png" alt="Instagram" className="h-8 w-8" />
+          <Image src="/linkedin-box.png" alt="LinkedIn" className="h-8 w-8" />
+          <Image src="/pinterest.png" alt="Pinterest" className="h-8 w-8" />
+          <Image src="/twitter.png" alt="Twitter" className="h-8 w-8" />
         </div>
 
         {/* Links */}
@@ -62,7 +64,7 @@ const Footer = () => {
 
       {/* Logo at the extreme bottom */}
       <div className="mb-0 mt-12 flex justify-center">
-        <img src="/homi.png" alt="Homi Logo" className="h-auto w-auto" />
+        <Image src="/homi.png" alt="Homi Logo" className="h-auto w-auto" />
       </div>
     </div>
   );

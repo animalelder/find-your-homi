@@ -1,4 +1,11 @@
-import Navbar from "@/components/navbar";
+import NavBar from "@/components/navbar";
+import Image from "next/image";
+import calendar_icon from "./calendar_icon.png";
+import chevron_button from "./chevron_button.png";
+import home_img from "./home_img.png";
+import location_img from "./location_img.png";
+import pricing_icon from "./pricing_icon.png";
+import property_size from "./property_size.png";
 
 const PropertyHeader = () => {
   return (
@@ -10,7 +17,7 @@ const PropertyHeader = () => {
       >
         {/* Navbar */}
         <div className="absolute left-0 top-0 flex w-full items-center justify-center px-4 sm:px-12">
-          <Navbar />
+          <NavBar />
         </div>
 
         {/* Hero Content */}
@@ -33,8 +40,8 @@ const PropertyHeader = () => {
           <div className="mt-3 hidden gap-2 rounded-lg bg-gray-100 p-2 lg:flex">
             {/* Location Input */}
             <div className="relative flex w-full max-w-xs items-center">
-              <img
-                src="/location_img.png"
+              <Image
+                src={location_img}
                 alt="Location"
                 className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform"
               />
@@ -47,8 +54,8 @@ const PropertyHeader = () => {
 
             {/* Property Type Input */}
             <div className="relative flex w-full max-w-xs items-center">
-              <img
-                src="/home_img.png"
+              <Image
+                src={home_img}
                 alt="Home"
                 className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform"
               />
@@ -57,8 +64,8 @@ const PropertyHeader = () => {
                 placeholder="Property Type"
                 className="w-full rounded-lg border py-2 pl-10 pr-10"
               />
-              <img
-                src="/chevron_button.png"
+              <Image
+                src={chevron_button}
                 alt="Chevron"
                 className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 transform"
               />
@@ -66,8 +73,8 @@ const PropertyHeader = () => {
 
             {/* Pricing Range Input */}
             <div className="relative flex w-full max-w-xs items-center">
-              <img
-                src="/pricing_icon.png"
+              <Image
+                src={pricing_icon}
                 alt="Pricing"
                 className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform"
               />
@@ -76,8 +83,8 @@ const PropertyHeader = () => {
                 placeholder="Pricing Range"
                 className="w-full rounded-lg border py-2 pl-10 pr-10"
               />
-              <img
-                src="/chevron_button.png"
+              <Image
+                src={chevron_button}
                 alt="Chevron"
                 className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 transform"
               />
@@ -85,8 +92,8 @@ const PropertyHeader = () => {
 
             {/* Property Size Input */}
             <div className="relative flex w-full max-w-xs items-center">
-              <img
-                src="/property_size.png"
+              <Image
+                src={property_size}
                 alt="Property Size"
                 className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform"
               />
@@ -95,8 +102,8 @@ const PropertyHeader = () => {
                 placeholder="Property Size"
                 className="w-full rounded-lg border py-2 pl-10 pr-10"
               />
-              <img
-                src="/chevron_button.png"
+              <Image
+                src={chevron_button}
                 alt="Chevron"
                 className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 transform"
               />
@@ -104,8 +111,8 @@ const PropertyHeader = () => {
 
             {/* Build Year Input */}
             <div className="relative flex w-full max-w-xs items-center">
-              <img
-                src="/calendar_icon.png"
+              <Image
+                src={calendar_icon}
                 alt="Calendar"
                 className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform"
               />
@@ -114,8 +121,8 @@ const PropertyHeader = () => {
                 placeholder="Build Year"
                 className="w-full rounded-lg border py-2 pl-10 pr-10"
               />
-              <img
-                src="/chevron_button.png"
+              <Image
+                src={chevron_button}
                 alt="Chevron"
                 className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 transform"
               />

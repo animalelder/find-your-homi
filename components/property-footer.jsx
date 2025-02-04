@@ -1,3 +1,8 @@
+import Image from "next/image";
+import email_iconSmall from "/email_iconSmall.png";
+import homi_logo from "/homi_logo.png";
+import send_icon from "/send_icon.png";
+
 const PropertyFooter = () => {
   return (
     <div className="mt-10 p-6">
@@ -7,16 +12,16 @@ const PropertyFooter = () => {
             Start Your Real Estate Journey Today
           </h3>
           <p className="mb-6 w-full text-sm text-gray-600">
-            Your dream property is just a click away. Whether you're looking for
-            a new home, a strategic investment, or expert real estate advice,
-            Estatein is here to assist you every step of the way. Take the first
-            step towards your real estate goals and explore our available
-            properties or get in touch with our team for personalized
+            Your dream property is just a click away. Whether you&apos;re
+            looking for a new home, a strategic investment, or expert real
+            estate advice, Estatein is here to assist you every step of the way.
+            Take the first step towards your real estate goals and explore our
+            available properties or get in touch with our team for personalized
             assistance.
           </p>
         </div>
         <div className="w-full">
-          <button className="bg-primaryGreen rounded-md px-5 py-3 text-deepBlue shadow-md hover:bg-primaryBlue">
+          <button className="rounded-md bg-primaryGreen px-5 py-3 text-deepBlue shadow-md hover:bg-primaryBlue">
             Explore Properties
           </button>
         </div>
@@ -24,20 +29,20 @@ const PropertyFooter = () => {
       <hr className="my-6 border-t border-gray-300" />
       <div className="flex flex-col items-start gap-32 md:flex-row">
         <div className="flex flex-col items-start gap-4">
-          <img src="/homi_logo.png" alt="Homi Logo" className="w-20" />
+          <Image src={homi_logo} alt="Homi Logo" className="w-20" />
           <div className="relative w-full max-w-sm">
-            <img
-              src="/email_iconSmall.png"
+            <Image
+              src={email_iconSmall}
               alt="Email Icon"
               className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform"
             />
             <input
               type="email"
               placeholder="Enter your email"
-              className="focus:ring-primaryGreen w-full rounded-md border border-gray-300 py-2 pl-10 pr-10 focus:outline-none focus:ring-2"
+              className="w-full rounded-md border border-gray-300 py-2 pl-10 pr-10 focus:outline-none focus:ring-2 focus:ring-primaryGreen"
             />
-            <img
-              src="/send_icon.png"
+            <Image
+              src={send_icon}
               alt="Send Icon"
               className="absolute right-3 top-1/2 h-5 w-5 -translate-y-1/2 transform cursor-pointer"
             />
