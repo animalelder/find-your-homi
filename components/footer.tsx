@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export function Footer() {
+const Footer = () => {
   return (
     <div className="bg-deepBlue px-6 py-2 text-white sm:px-10 lg:px-20">
       {/* Top Section */}
@@ -98,4 +98,7 @@ export function Footer() {
       </div>
     </div>
   );
-}
+};
+
+Footer.displayName = "Footer";
+export { Footer };
