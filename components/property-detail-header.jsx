@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { NavBar } from "./navbar";
+import { NavBar } from "./nav-bar";
 
 const PropertyDetailHeader = () => {
   const images = [

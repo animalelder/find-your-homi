@@ -1,4 +1,3 @@
-import feature_icon from "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//feature_icon.png";
 import Image from "next/image";
 
 const Description = () => {
@@ -39,7 +38,7 @@ const Description = () => {
               <div className="flex flex-col pl-2">
                 <div className="flex items-center gap-1">
                   <Image
-                    src="/bathroom_icon.png"
+                    src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//bathroom_icon.png"
                     width={32}
                     height={32}
                     alt="bathroom icon"
@@ -57,7 +56,7 @@ const Description = () => {
               <div className="flex flex-col pl-2">
                 <div className="flex items-center gap-1">
                   <Image
-                    src="/area_icon.png"
+                    src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//area_icon.png"
                     alt="square feet icon"
                     width={32}
                     height={32}
@@ -80,7 +79,9 @@ const Description = () => {
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-1 rounded-lg bg-gradient-to-r from-[#FF5757] to-[#FF9897] p-2 text-white">
               <Image
-                src={feature_icon}
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//feature_icon.png"
+                wdith={32}
+                height={32}
                 alt="icon for feature"
                 className="h-5 w-5"
               />
@@ -90,7 +91,9 @@ const Description = () => {
             </div>
             <div className="flex items-center gap-1 rounded-lg bg-gradient-to-r from-[#FF5757] to-[#FF9897] p-2 text-white">
               <Image
-                src={feature_icon}
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//feature_icon.png"
+                wdith={32}
+                height={32}
                 alt="icon for feature"
                 className="h-5 w-5"
               />
@@ -100,7 +103,9 @@ const Description = () => {
             </div>
             <div className="flex items-center gap-1 rounded-lg bg-gradient-to-r from-[#FF5757] to-[#FF9897] p-2 text-white">
               <Image
-                src={feature_icon}
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//feature_icon.png"
+                wdith={32}
+                height={32}
                 alt="icon for feature"
                 className="h-5 w-5"
               />
@@ -110,7 +115,9 @@ const Description = () => {
             </div>
             <div className="flex items-center gap-1 rounded-lg bg-gradient-to-r from-[#FF5757] to-[#FF9897] p-2 text-white">
               <Image
-                src={feature_icon}
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//feature_icon.png"
+                wdith={32}
+                height={32}
                 alt="icon for feature"
                 className="h-5 w-5"
               />
@@ -120,7 +127,9 @@ const Description = () => {
             </div>
             <div className="flex items-center gap-1 rounded-lg bg-gradient-to-r from-[#FF5757] to-[#FF9897] p-2 text-white">
               <Image
-                src={feature_icon}
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//feature_icon.png"
+                wdith={32}
+                height={32}
                 alt="icon for feature"
                 className="h-5 w-5"
               />
