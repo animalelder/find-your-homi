@@ -1,17 +1,16 @@
-import Navbar from '@/components/navbar';
-import React, { useState } from 'react';
+import { useState } from "react";
 
 const PropertyDetailHeader = () => {
   const images = [
-    '/property1.png',
-    '/property2.png',
-    '/property3.png',
-    '/rental1.png',
-    '/rental2.png',
-    '/rental3.png',
-    '/rental1.png',
-    '/rental2.png',
-    '/rental3.png'
+    "/property1.png",
+    "/property2.png",
+    "/property3.png",
+    "/rental1.png",
+    "/rental2.png",
+    "/rental3.png",
+    "/rental1.png",
+    "/rental2.png",
+    "/rental3.png",
   ];
 
   const [carouselIndex, setCarouselIndex] = useState(0);
@@ -35,54 +34,59 @@ const PropertyDetailHeader = () => {
   return (
     <div className="relative">
       <div
-        className="relative bg-cover bg-center h-screen"
+        className="relative h-screen bg-cover bg-center"
         style={{ backgroundImage: `url('/propertyDetail_bg.png')` }}
         aria-label="Property Detail Background"
       >
         {/* Navbar */}
-        <div className="absolute top-[-2] left-0 w-full px-4 sm:px-12 z-10">
+        <div className="absolute left-0 top-[-2] z-10 w-full px-4 sm:px-12">
           <Navbar />
         </div>
 
         {/* Content Wrapper */}
-       {/* Content Wrapper */}
-<div className="bg-white rounded-lg shadow-2xl p-6 mt-32 mx-auto w-[80%] max-w-7xl absolute left-1/2 transform -translate-x-1/2 flex flex-col justify-center items-center">
+        {/* Content Wrapper */}
+        <div className="absolute left-1/2 mx-auto mt-32 flex w-[80%] max-w-7xl -translate-x-1/2 transform flex-col items-center justify-center rounded-lg bg-white p-6 shadow-2xl">
+          {/* Upper Carousel */}
+          <div className="flex items-center justify-center space-x-2 rounded-xl border border-gray-700 p-3">
+            <div className="flex w-full max-w-3xl space-x-2 overflow-hidden">
+              {images
+                .slice(carouselIndex, carouselIndex + 9)
+                .map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt="Carousel Item"
+                    className="h-32 w-32 cursor-pointer rounded hover:opacity-80" // Updated sizes
+                    onClick={() => handleImageClick(image)}
+                  />
+                ))}
+            </div>
+          </div>
 
-        {/* Upper Carousel */}
-<div className="flex justify-center items-center p-3 space-x-2 border border-gray-700 rounded-xl">
-  <div className="flex overflow-hidden space-x-2 w-full max-w-3xl">
-    {images.slice(carouselIndex, carouselIndex + 9).map((image, index) => (
-      <img
-        key={index}
-        src={image}
-        alt="Carousel Item"
-        className="w-32 h-32 rounded cursor-pointer hover:opacity-80" // Updated sizes
-        onClick={() => handleImageClick(image)}
-      />
-    ))}
-  </div>
-</div>
-
-{/* Middle Section */}
-<div className="flex justify-center items-center mt-12 space-x-4">
-  {selectedImages.map((image, index) => (
-    <img
-      key={index}
-      src={image}
-      alt="Selected Item"
-      className="w-96 h-96 rounded shadow-lg" // Updated sizes
-    />
-  ))}
-</div>
+          {/* Middle Section */}
+          <div className="mt-12 flex items-center justify-center space-x-4">
+            {selectedImages.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt="Selected Item"
+                className="h-96 w-96 rounded shadow-lg" // Updated sizes
+              />
+            ))}
+          </div>
 
           {/* Bottom Navigation */}
-          <div className="flex justify-center items-center mt-8 space-x-4">
+          <div className="mt-8 flex items-center justify-center space-x-4">
             <button onClick={handlePrev} className="p-2">
-              <img src='/back_button.png' alt="Previous" className="w-8 h-8" />
+              <img src="/back_button.png" alt="Previous" className="h-8 w-8" />
             </button>
-            <img src='/indicator.png' alt="Indicator" className='hidden md:block' />
+            <img
+              src="/indicator.png"
+              alt="Indicator"
+              className="hidden md:block"
+            />
             <button onClick={handleNext} className="p-2">
-              <img src='/forward_button.png' alt="Next" className="w-8 h-8" />
+              <img src="/forward_button.png" alt="Next" className="h-8 w-8" />
             </button>
           </div>
         </div>
