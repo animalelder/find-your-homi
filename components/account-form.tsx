@@ -1,50 +1,50 @@
-'use client'
-import Avatar from '@/components/avatar'
-import { createClient } from '@/utils/supabase/client'
-import { type User } from '@supabase/supabase-js'
-import { useCallback, useEffect, useState } from 'react'
+"use client";
+import Avatar from "@/components/avatar";
+import { createClient } from "@/utils/supabase/client";
+import { type User } from "@supabase/supabase-js";
+import { useCallback, useEffect, useState } from "react";
 
 // ...
 
 export default function AccountForm({ user }: { user: User | null }) {
-  const supabase = createClient()
-  const [loading, setLoading] = useState(true)
-  const [fullname, setFullname] = useState<string | null>(null)
-  const [occupation, setOccupation] = useState<string | null>(null)
-  const [bio, setBio] = useState<string | null>(null)
-  const [avatar_url, setAvatarUrl] = useState<string | null>(null)
+  const supabase = createClient();
+  const [loading, setLoading] = useState(true);
+  const [fullname, setFullname] = useState<string | null>(null);
+  const [occupation, setOccupation] = useState<string | null>(null);
+  const [bio, setBio] = useState<string | null>(null);
+  const [avatar_url, setAvatarUrl] = useState<string | null>(null);
 
   const getProfile = useCallback(async () => {
     try {
-      setLoading(true)
+      setLoading(true);
 
       const { data, error, status } = await supabase
-        .from('profiles')
+        .from("profiles")
         .select(`full_name, occupation, bio, avatar_url`)
-        .eq('id', user?.id)
-        .single()
+        .eq("id", user?.id)
+        .single();
 
       if (error && status !== 406) {
-        console.log(error)
-        throw error
+        console.log(error);
+        throw error;
       }
 
       if (data) {
-        setFullname(data.full_name)
-        setOccupation(data.occupation)
-        setBio(data.bio)
-        setAvatarUrl(data.avatar_url)
+        setFullname(data.full_name);
+        setOccupation(data.occupation);
+        setBio(data.bio);
+        setAvatarUrl(data.avatar_url);
       }
-    } catch (error) {
-      alert('Error loading user data!')
+    } catch (error: Error | any) {
+      alert(error.message);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }, [user, supabase])
+  }, [user, supabase]);
 
   useEffect(() => {
-    getProfile()
-  }, [user, getProfile])
+    getProfile();
+  }, [user, getProfile]);
 
   async function updateProfile({
     occupation,
@@ -52,41 +52,40 @@ export default function AccountForm({ user }: { user: User | null }) {
     bio,
     avatar_url,
   }: {
-    occupation: string | null
-    fullname: string | null
-    bio: string | null
-    avatar_url: string | null
+    occupation: string | null;
+    fullname: string | null;
+    bio: string | null;
+    avatar_url: string | null;
   }) {
     try {
-      setLoading(true)
+      setLoading(true);
 
-      const { error } = await supabase.from('profiles').upsert({
+      const { error } = await supabase.from("profiles").upsert({
         id: user?.id as string,
         full_name: fullname,
         occupation,
         bio,
         avatar_url,
         updated_at: new Date().toISOString(),
-      })
-      if (error) throw error
-      alert('Profile updated!')
+      });
+      if (error) throw error;
+      alert("Profile updated!");
     } catch (error) {
-      alert('Error updating the data!')
+      alert("Error updating the data!");
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
   }
 
   return (
     <div className="form-widget">
-
-            <Avatar
+      <Avatar
         uid={user?.id ?? null}
         url={avatar_url}
         size={150}
         onUpload={(url) => {
-          setAvatarUrl(url)
-          updateProfile({ fullname, occupation, bio, avatar_url: url })
+          setAvatarUrl(url);
+          updateProfile({ fullname, occupation, bio, avatar_url: url });
         }}
       />
 
@@ -99,7 +98,7 @@ export default function AccountForm({ user }: { user: User | null }) {
         <input
           id="fullName"
           type="text"
-          value={fullname || ''}
+          value={fullname || ""}
           onChange={(e) => setFullname(e.target.value)}
         />
       </div>
@@ -108,7 +107,7 @@ export default function AccountForm({ user }: { user: User | null }) {
         <input
           id="occupation"
           type="text"
-          value={occupation || ''}
+          value={occupation || ""}
           onChange={(e) => setOccupation(e.target.value)}
         />
       </div>
@@ -117,7 +116,7 @@ export default function AccountForm({ user }: { user: User | null }) {
         <input
           id="bio"
           type="text"
-          value={bio || ''}
+          value={bio || ""}
           onChange={(e) => setBio(e.target.value)}
         />
       </div>
@@ -125,10 +124,12 @@ export default function AccountForm({ user }: { user: User | null }) {
       <div>
         <button
           className="button primary block"
-          onClick={() => updateProfile({ fullname, occupation, bio, avatar_url })}
+          onClick={() =>
+            updateProfile({ fullname, occupation, bio, avatar_url })
+          }
           disabled={loading}
         >
-          {loading ? 'Loading ...' : 'Update'}
+          {loading ? "Loading ..." : "Update"}
         </button>
       </div>
 
@@ -140,5 +141,5 @@ export default function AccountForm({ user }: { user: User | null }) {
         </form>
       </div>
     </div>
-  )
+  );
 }
