@@ -1,5 +1,5 @@
 import Description from "@/components/description";
-import Footer from "@/components/footer";
+import { Footer } from "@/components/footer";
 import PropertyDetailHeader from "@/components/property-detail-header";
 import RentalDetail from "@/components/rental-detail";
 

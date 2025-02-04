@@ -6,7 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import hamburger icon
 
-export default function NavBar() {
+export const NavBar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // For desktop dropdown
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false); // For mobile nav
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false); // For mobile login dropdown
@@ -198,4 +198,4 @@ export default function NavBar() {
       </button>
     </div>
   );
-}
+};

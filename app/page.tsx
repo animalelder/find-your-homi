@@ -1,5 +1,5 @@
 import FindHome from "@/components/find-home";
-import Footer from "@/components/footer";
+import { Footer } from "@/components/footer";
 import Header from "@/components/hero";
 import HomiMatch from "@/components/homi-match";
 import HomiMessage from "@/components/homi-message";
