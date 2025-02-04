@@ -30,7 +30,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/ui/input.jsx"
+    "components/ui/input.tsx"
   ],
   "exclude": ["node_modules"]
 }

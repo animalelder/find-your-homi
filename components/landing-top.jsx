@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
-export default function Header() {
+const LandingTop = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // For desktop dropdown
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false); // For mobile nav
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false); // For mobile login dropdown
@@ -243,4 +243,6 @@ export default function Header() {
       </div>
     </div>
   );
-}
+};
+
+export default LandingTop;
