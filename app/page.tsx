@@ -7,7 +7,7 @@ import LandlordTestimonial from "@/components/landlord-testimonial";
 
 export default function Home() {
   return (
-    <div>
+    <div className="relative">
       <Header />
       <FindHome />
       <HomiMessage />

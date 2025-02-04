@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export const Footer = () => {
+export function Footer() {
   return (
     <div className="bg-deepBlue px-6 py-2 text-white sm:px-10 lg:px-20">
       {/* Top Section */}
@@ -13,7 +13,7 @@ export const Footer = () => {
         </button>
       </div>
 
-      <hr className="mb-8 border-gray-500" />
+      <div className="mb-8 border-gray-500" />
 
       {/* Social Icons and Links */}
       <div className="flex flex-col justify-between lg:flex-row">
@@ -98,4 +98,4 @@ export const Footer = () => {
       </div>
     </div>
   );
-};
+}

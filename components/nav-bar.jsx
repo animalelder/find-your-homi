@@ -6,7 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import hamburger icon
 
-export const NavBar = () => {
+export function NavBar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // For desktop dropdown
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false); // For mobile nav
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false); // For mobile login dropdown
@@ -79,34 +79,26 @@ export const NavBar = () => {
         {/* Navigation Links */}
         <ul className="hidden space-x-8 text-lg text-gray-700 sm:flex">
           <li
-            className={`${
-              pathname === "/" ? "bg-primaryGreen" : ""
-            } cursor-pointer rounded-xl px-4 py-1 hover:bg-primaryGreen hover:text-gray-800`}
+            className={`${pathname === "/" ? "bg-primaryGreen" : ""} cursor-pointer rounded-xl px-4 py-1 hover:bg-primaryGreen hover:text-gray-800`}
             onClick={() => router.push("/")}
           >
             Home
           </li>
           <li
             onClick={() => router.push("/properties")}
-            className={`${
-              pathname === "/properties" ? "bg-primaryGreen" : "bg-altGreen"
-            } cursor-pointer rounded-xl px-4 py-1 hover:bg-primaryGreen hover:text-gray-800`}
+            className={`${pathname === "/properties" ? "bg-primaryGreen" : "bg-altGreen"} cursor-pointer rounded-xl px-4 py-1 hover:bg-primaryGreen hover:text-gray-800`}
           >
             Properties
           </li>
           <li
             onClick={() => router.push("/homi-match")}
-            className={`${
-              pathname === "/homi-match" ? "bg-primaryGreen" : ""
-            } cursor-pointer rounded-xl px-4 py-1 hover:bg-primaryGreen hover:text-gray-800`}
+            className={`${pathname === "/homi-match" ? "bg-primaryGreen" : ""} cursor-pointer rounded-xl px-4 py-1 hover:bg-primaryGreen hover:text-gray-800`}
           >
             Homi Match
           </li>
           <li
             onClick={() => router.push("/about-us")}
-            className={`${
-              pathname === "/about-us" ? "bg-primaryGreen" : ""
-            } cursor-pointer rounded-xl px-4 py-1 hover:bg-primaryGreen hover:text-gray-800`}
+            className={`${pathname === "/about-us" ? "bg-primaryGreen" : ""} cursor-pointer rounded-xl px-4 py-1 hover:bg-primaryGreen hover:text-gray-800`}
           >
             About Us
           </li>
@@ -198,4 +190,4 @@ export const NavBar = () => {
       </button>
     </div>
   );
-};
+}
