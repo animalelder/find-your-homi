@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const Description = () => {
   return (
-    <div className="bg-gradient-to-b from-white via-red-50 to-white p-4 md:p-8 lg:p-12">
-      <div className="-mt-8 h-28 w-full backdrop-blur-3xl"></div>
+    <div className="bg-gradient-to-b from-transparent via-red-50 to-white p-4 md:p-8 lg:p-12">
+      <div className="-mt-8 h-48 w-full backdrop-blur-3xl"></div>
       <div className="flex flex-col gap-10 lg:flex-row">
         {/* Left Section */}
         <div className="flex flex-col gap-4 lg:w-7/12">

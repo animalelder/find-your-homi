@@ -37,7 +37,7 @@ const PropertyDetailHeader = () => {
 
   return (
     <div
-      className="relative min-h-screen"
+      className="relative min-h-screen bg-contain bg-bottom"
       style={{
         backgroundImage: `url('https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/property/detail_bg.png')`,
         backgroundClip: "border-box",
@@ -45,10 +45,7 @@ const PropertyDetailHeader = () => {
         backdropFilter: "blur(70px)",
       }}
     >
-      <div
-        className="relative min-h-screen bg-cover bg-top"
-        aria-label="Property Detail Background"
-      >
+      <div className="relative w-full" aria-label="Property Detail Background">
         {/* Navbar */}
         <div className="absolute left-0 top-[-2] z-10 w-full px-4 sm:px-12">
           <NavBar />
