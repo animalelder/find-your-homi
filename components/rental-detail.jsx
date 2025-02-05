@@ -20,9 +20,9 @@ const RentalDetail = () => {
   };
 
   return (
-    <div>
-      <div className="grid min-h-fit grid-flow-row space-y-7 bg-gradient-to-b from-white/60 from-10% via-emerald-400/45 via-50% to-white to-90% p-4 sm:p-6 lg:p-8">
-        <div className="my-12 flex flex-col lg:flex-row">
+    <div className="relative min-h-screen bg-gradient-to-b from-white/60 from-5% via-emerald-400/45 via-35% to-white to-70%">
+      <div className="grid h-full grid-flow-row space-y-7 p-4 sm:p-6 lg:p-8">
+        <div className="my-12 flex flex-col px-28 lg:flex-row">
           <div className="p-4 lg:w-1/4">
             <p className="text-[10px] text-black">Listing Price</p>
             <p className="text-2xl font-bold text-gray-900">$1,250</p>
@@ -30,7 +30,7 @@ const RentalDetail = () => {
 
           <div className="flex flex-col space-y-10 lg:w-3/4">
             {/* Rental Details Section */}
-            <div className="space-y-20 rounded-xl border border-gray-700 bg-white/40 p-4">
+            <div className="space-y-10 rounded-xl border border-gray-700 bg-white/40 p-4">
               <div className="mb-4 flex items-center justify-between">
                 <h3 className="text-lg font-semibold">Rental Details</h3>
                 <button className="cursor-pointer rounded-lg border border-gray-700 bg-white px-4 py-2 transition duration-300 hover:bg-primary hover:text-white">
@@ -40,13 +40,13 @@ const RentalDetail = () => {
               <hr className="mb-4 border border-gray-700" />
               <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
                 <div className="flex flex-col">
-                  <p className="text-sm text-black">Bedrooms</p>
+                  <p className="text-[18px] text-black">Bedrooms</p>
                   <p className="font-medium text-gray-900">04</p>
                 </div>
                 <div className="flex">
                   <div className="self-stretch border-r-2 border-gray-800"></div>
                   <div className="flex flex-col pl-2">
-                    <p className="text-sm text-black">Bathrooms</p>
+                    <p className="text-[18px] text-black">Bathrooms</p>
                     <p className="font-medium text-gray-900">03</p>
                   </div>
                 </div>
@@ -54,18 +54,18 @@ const RentalDetail = () => {
               <hr className="mb-4 border border-gray-700" />
               <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
                 <div className="flex flex-col">
-                  <p className="text-sm text-black">Square Feet</p>
+                  <p className="text-[18px] text-black">Square Feet</p>
                   <p className="font-medium text-gray-900">05</p>
                 </div>
                 <div className="flex">
                   <div className="self-stretch border-r-2 border-gray-800"></div>
                   <div className="flex flex-col pl-2">
-                    <p className="text-sm text-black">Laundry</p>
+                    <p className="text-[18px] text-black">Laundry</p>
                     <div className="flex flex-wrap gap-2">
                       {laundryOptions.map((option, index) => (
                         <p
                           key={index}
-                          className="rounded-full border border-gray-700 bg-white px-4 py-2 text-black transition duration-300 hover:bg-primary hover:text-white"
+                          className={`${index === 0 ? "bg-primary text-white" : "bg-white text-black"} rounded-full border border-gray-700 px-4 py-2 transition duration-300`}
                         >
                           {option}
                         </p>
@@ -76,12 +76,12 @@ const RentalDetail = () => {
               </div>
               <hr className="mb-4 border border-gray-700" />
               <div>
-                <p className="text-sm text-black">Pet friendly</p>
+                <p className="text-[18px] text-black">Pet friendly</p>
                 <div className="flex flex-wrap gap-2">
                   {petOptions.map((option, index) => (
                     <p
                       key={index}
-                      className="rounded-full border border-gray-700 bg-white px-4 py-2 text-black transition duration-300 hover:bg-primary hover:text-white"
+                      className={`${index === 0 ? "bg-primary text-white" : "bg-white text-black"} rounded-full border border-gray-700 px-4 py-2 transition duration-300`}
                     >
                       {option}
                     </p>
@@ -101,7 +101,7 @@ const RentalDetail = () => {
               <hr className="mb-4 border border-gray-700" />
               <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
                 <div className="flex flex-col">
-                  <p className="text-sm text-black">Move in Date</p>
+                  <p className="text-[18px] text-black">Move in Date</p>
                   <div className="flex space-x-2">
                     <p className="font-medium text-gray-900">MM/DD/YYYY</p>
                     <p className="rounded-2xl border border-gray-800 bg-white px-4 py-2">
@@ -118,7 +118,7 @@ const RentalDetail = () => {
                     {leaseOptions.map((option, index) => (
                       <p
                         key={index}
-                        className="cursor-pointer rounded-full border border-gray-700 bg-white px-4 py-2 hover:bg-primary"
+                        className={`${index === 1 ? "bg-primary text-white" : "bg-white text-black"} rounded-full border border-gray-700 px-4 py-2 text-black transition duration-300 hover:bg-primary`}
                       >
                         {option}
                       </p>
@@ -139,7 +139,7 @@ const RentalDetail = () => {
               <hr className="mb-4 border border-gray-700" />
               <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
                 <div className="flex flex-col">
-                  <p className="text-sm text-black">
+                  <p className="text-[18px] text-black">
                     Roommate Gender Preference
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -156,7 +156,7 @@ const RentalDetail = () => {
                 <div className="flex">
                   <div className="self-stretch border-r-2 border-gray-800"></div>
                   <div className="flex flex-col pl-2">
-                    <p className="text-sm text-black">Smoking preference</p>
+                    <p className="text-[18px] text-black">Smoking preference</p>
                     <div className="flex flex-wrap gap-2">
                       {smokingOptions.map((option, index) => (
                         <p
@@ -173,7 +173,7 @@ const RentalDetail = () => {
               <hr className="mb-4 border border-gray-700" />
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                 <div className="flex flex-col">
-                  <p className="text-sm text-black">Deposit Payment</p>
+                  <p className="text-[18px] text-black">Deposit Payment</p>
                   <div className="flex space-x-2">
                     <p className="font-medium text-gray-900">$500</p>
                     <p className="rounded-2xl border border-gray-800 bg-white px-4 py-2">
@@ -184,7 +184,7 @@ const RentalDetail = () => {
                 <div className="flex">
                   <div className="self-stretch border-r-2 border-gray-800"></div>
                   <div className="flex flex-col pl-2">
-                    <p className="text-sm text-black">
+                    <p className="text-[18px] text-black">
                       Credit Check/Background Check
                     </p>
                     <div className="flex flex-wrap gap-2">
@@ -211,7 +211,7 @@ const RentalDetail = () => {
               <hr className="mb-4 border border-gray-700" />
               <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
                 <div className="flex flex-col">
-                  <p className="text-sm text-black">Security Feature</p>
+                  <p className="text-[18px] text-black">Security Feature</p>
                   <div className="flex flex-wrap gap-2">
                     {securityOptions.map((option, index) => (
                       <p
@@ -226,7 +226,7 @@ const RentalDetail = () => {
                 <div className="flex">
                   <div className="self-stretch border-r-2 border-gray-800"></div>
                   <div className="flex flex-col pl-2">
-                    <p className="text-sm text-black">Utilities included</p>
+                    <p className="text-[18px] text-black">Utilities included</p>
                     <div className="flex flex-wrap gap-2">
                       {securityOptions.map((option, index) => (
                         <p
@@ -243,7 +243,7 @@ const RentalDetail = () => {
               <hr className="mb-4 border border-gray-700" />
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                 <div className="flex flex-col">
-                  <p className="text-sm text-black">Outdoor space</p>
+                  <p className="text-[18px] text-black">Outdoor space</p>
                   <div className="flex flex-wrap gap-2">
                     {outdoorOptions.map((option, index) => (
                       <p
@@ -258,7 +258,7 @@ const RentalDetail = () => {
                 <div className="flex">
                   <div className="self-stretch border-r-2 border-gray-800"></div>
                   <div className="flex flex-col pl-2">
-                    <p className="text-sm text-black">Property Insurance</p>
+                    <p className="text-[18px] text-black">Property Insurance</p>
                     <div className="flex space-x-2">
                       <p className="font-medium text-gray-900">$100</p>
                       <p className="rounded-2xl border border-gray-800 bg-white px-4 py-2">
@@ -272,13 +272,13 @@ const RentalDetail = () => {
           </div>
         </div>
         {/* down form */}
-        <div className="flex w-[1168px] justify-between place-self-center backdrop-blur-xl">
+        <div className="flex w-[1168px] max-w-[1200px] justify-between place-self-center font-['Urbanist'] backdrop-blur-xl">
           {/* Left Section */}
-          <div className="lg:w-1/3">
-            <h3 className="mb-4 text-4xl font-bold tracking-wider text-gray-950">
+          <div className="grow basis-1/3">
+            <h3 className="mb-4 text-4xl font-semibold leading-normal tracking-wide text-black">
               Inquire About Metropolitan Haven
             </h3>
-            <p className="mb-6 tracking-wide text-black">
+            <p className="mb-6 tracking-normal text-gray-400">
               Interested in this property? Fill out the form below, and our real
               estate experts will get back to you with more details, including
               scheduling a viewing and answering any questions you may have.
@@ -298,14 +298,14 @@ const RentalDetail = () => {
           </div>
 
           {/* Right Section - Form */}
-          <div className="lg:w-1/2">
+          <div className="grow basis-2/3">
             <form action="" className="space-y-6 p-9">
               {/* Name Fields */}
               <div className="flex flex-col gap-4 sm:flex-row">
                 <div className="w-full sm:w-1/2">
                   <label
                     htmlFor="fname"
-                    className="mb-1 block text-sm font-medium text-gray-700"
+                    className="mb-1 block text-sm font-semibold tracking-wide text-gray-700"
                   >
                     First Name
                   </label>
@@ -319,7 +319,7 @@ const RentalDetail = () => {
                 <div className="w-full sm:w-1/2">
                   <label
                     htmlFor="Lname"
-                    className="mb-1 block text-sm font-medium text-gray-700"
+                    className="mb-1 block text-sm font-semibold tracking-wide text-gray-700"
                   >
                     Last Name
                   </label>
@@ -337,7 +337,7 @@ const RentalDetail = () => {
                 <div className="w-full sm:w-1/2">
                   <label
                     htmlFor="email"
-                    className="mb-1 block text-sm font-medium text-gray-700"
+                    className="mb-1 block text-sm font-semibold tracking-wide text-gray-700"
                   >
                     Email
                   </label>
@@ -351,7 +351,7 @@ const RentalDetail = () => {
                 <div className="w-full sm:w-1/2">
                   <label
                     htmlFor="phone"
-                    className="mb-1 block text-sm font-medium text-gray-700"
+                    className="mb-1 block text-sm font-semibold tracking-wide text-gray-700"
                   >
                     Phone
                   </label>
@@ -366,13 +366,14 @@ const RentalDetail = () => {
 
               {/* Property Selection */}
               <div>
-                <p className="mb-2 text-sm font-bold text-black">
+                <p className="mb-2 text-sm font-bold tracking-wide text-black">
                   Selected property
                 </p>
                 <select
                   name="property"
                   id="property"
-                  className="w-full rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                  disabled
+                  className="w-full rounded-md bg-white px-4 py-2 caret-white focus:outline-none focus:ring-1 focus:ring-primary/25"
                 >
                   <option value="Downtown Condo, Toronto Canada">
                     Metropolitan Haven
@@ -390,7 +391,7 @@ const RentalDetail = () => {
               <div>
                 <label
                   htmlFor="message"
-                  className="mb-1 block text-sm font-medium text-gray-700"
+                  className="mb-1 block text-sm font-semibold tracking-wide text-gray-700"
                 >
                   Message
                 </label>
@@ -408,15 +409,18 @@ const RentalDetail = () => {
                   <input
                     type="checkbox"
                     id="terms"
-                    className="h-4 w-4 rounded border border-gray-300 focus:ring-primary"
+                    className="h-4 w-4 rounded border border-gray-300 checked:bg-primaryGreen focus:ring-primary/50"
                   />
-                  <label htmlFor="terms" className="ml-2 text-sm text-black">
-                    I agree with Terms of Use and Privacy Policy
+                  <label
+                    htmlFor="terms"
+                    className="ml-2 text-sm tracking-wide text-gray-500"
+                  >
+                    I agree with <u>Terms of Use</u> and <u>Privacy Policy</u>
                   </label>
                 </div>
                 <button
                   type="submit"
-                  className="rounded-md bg-primary px-6 py-2 text-sm text-black transition duration-300 hover:bg-[#1aa71a] sm:w-auto"
+                  className="rounded-md bg-primary px-6 py-2 text-sm text-black transition duration-300 hover:bg-emerald-300 hover:text-emerald-950"
                 >
                   Send Your Message
                 </button>

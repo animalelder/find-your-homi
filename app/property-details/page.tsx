@@ -5,7 +5,7 @@ import RentalDetail from "@/components/rental-detail";
 
 export default function Page() {
   return (
-    <div className="relative">
+    <div className="relative w-full">
       <PropertyDetailHeader />
       <Description />
       <RentalDetail />

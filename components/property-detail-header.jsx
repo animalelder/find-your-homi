@@ -53,10 +53,10 @@ const PropertyDetailHeader = () => {
 
         {/* Content Wrapper */}
         {/* Content Wrapper */}
-        <div className="absolute left-1/2 mx-auto my-52 flex min-w-[80%] max-w-7xl -translate-x-1/2 transform flex-col items-center justify-center rounded-lg border border-gray-700/50 bg-white p-6 shadow-md shadow-black/15">
+        <div className="absolute left-1/2 mx-auto my-52 flex w-[1150px] max-w-7xl -translate-x-1/2 transform flex-col items-center justify-center rounded-lg border border-gray-700/50 bg-white p-6 shadow-md shadow-black/15">
           {/* Upper Carousel */}
           <div className="flex items-center justify-center space-x-2 rounded-xl border border-gray-400 p-3">
-            <div className="flex w-full max-w-3xl space-x-2 overflow-hidden">
+            <div className="flex w-full space-x-2 overflow-hidden">
               {images
                 .slice(carouselIndex, carouselIndex + 9)
                 .map((image, index) => (
@@ -74,7 +74,7 @@ const PropertyDetailHeader = () => {
           </div>
 
           {/* Middle Section */}
-          <div className="mt-12 flex items-center justify-center space-x-4">
+          <div className="mt-12 flex h-auto w-[1190px] items-center justify-center space-x-4">
             {selectedImages.map((image, index) => (
               <Image
                 key={index}
@@ -82,7 +82,7 @@ const PropertyDetailHeader = () => {
                 width={963}
                 height={767}
                 alt="Selected Item"
-                className="max-h-96 max-w-96 rounded object-cover shadow-lg" // Updated sizes
+                className="h-auto max-w-[500px] rounded object-scale-down shadow-lg" // Updated sizes
               />
             ))}
           </div>

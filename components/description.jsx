@@ -139,7 +139,7 @@ const Description = () => {
           </div>
         </div>
       </div>
-      <div className="mt-5 w-full">
+      <div className="mx-28 mt-5">
         <h3 className="mb-6 text-center text-2xl font-semibold md:text-left">
           Property Details
         </h3>
