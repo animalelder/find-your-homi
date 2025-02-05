@@ -21,13 +21,11 @@ export function NavBar() {
 
           {/* Navigation Links */}
           <ul className="hidden space-x-8 text-lg text-gray-700 sm:flex">
-            <Link href="/">
-              <li
-                className={`cursor-pointer rounded-xl px-4 py-1 hover:bg-primaryGreen hover:text-gray-800`}
-              >
-                Home
-              </li>
-            </Link>
+            <li
+              className={`cursor-pointer rounded-xl px-4 py-1 hover:bg-primaryGreen hover:text-gray-800`}
+            >
+              Home
+            </li>
             <Link href="/properties">
               <li
                 className={`cursor-pointer rounded-xl px-4 py-1 hover:bg-primaryGreen hover:text-gray-800`}
@@ -40,22 +38,17 @@ export function NavBar() {
             >
               Homi Match
             </li>
-            <li
-              className={`cursor-pointer rounded-xl px-4 py-1 hover:bg-primaryGreen hover:text-gray-800`}
-            >
-              Profile
-            </li>
+            <Link href="/profile">
+              <li
+                className={`cursor-pointer rounded-xl px-4 py-1 hover:bg-primaryGreen hover:text-gray-800`}
+              >
+                Profile
+              </li>
+            </Link>
           </ul>
 
           <AuthButton />
         </nav>
-
-        {/* Post a Rental Button */}
-        <button
-          className={`z-50 ml-4 cursor-pointer whitespace-nowrap rounded-full bg-gray-200 px-8 py-5 text-gray-800 transition-colors duration-300 hover:bg-primaryGreen hover:text-white`}
-        >
-          Post a Rental
-        </button>
       </div>
     </div>
   );
