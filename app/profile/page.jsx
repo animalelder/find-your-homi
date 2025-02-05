@@ -16,11 +16,6 @@ export default function Page() {
         {/* Sidebar Icons */}
         <div className="w-8 items-center justify-center gap-y-14 lg:flex lg:flex-col lg:items-center">
           <img
-            src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/profile/home_icon.png"
-            alt="Home"
-            className="h-6 w-6 cursor-pointer hover:bg-gray-100 sm:h-7 sm:w-7"
-          />
-          <img
             src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/profile/message_icon.png"
             alt="Message"
             className="h-6 w-6 cursor-pointer hover:bg-primaryLight sm:h-7 sm:w-7"
@@ -64,7 +59,7 @@ export default function Page() {
                   Toronto, Canada
                 </p>
               </div>
-              <p className="text-lg text-gray-700">Interior Designer</p>
+              <p className="text-lg text-gray-700">Marketing Analyst</p>
               <div className="inline-flex h-fit w-full justify-around gap-3 px-4 py-5">
                 <button className="w-auto min-w-[160px] rounded-lg bg-blue-500 px-3 py-2 text-sm text-white hover:bg-blue-600 sm:text-base">
                   Edit Profile
