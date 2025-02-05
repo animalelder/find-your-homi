@@ -10,6 +10,7 @@ const RentalDetail = () => {
   const genderOptions = ["male", "female", "non-binary"];
   const smokingOptions = ["smoking", "non-smoking"];
   const securityOptions = ["gate", "concierge", "camera"];
+  const utilityOptions = ["electricity", "water", "gas"];
   const outdoorOptions = ["balcony", "patio", "yard"];
 
   const scrollToTop = () => {
@@ -53,19 +54,19 @@ const RentalDetail = () => {
               </div>
               <hr className="mb-4 border border-gray-700" />
               <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
-                <div className="flex flex-col">
+                <div className="flex flex-col space-y-2">
                   <p className="text-[18px] text-black">Square Feet</p>
-                  <p className="font-medium text-gray-900">05</p>
+                  <p className="font-medium text-gray-900">1500</p>
                 </div>
                 <div className="flex">
                   <div className="self-stretch border-r-2 border-gray-800"></div>
                   <div className="flex flex-col pl-2">
                     <p className="text-[18px] text-black">Laundry</p>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 pt-2">
                       {laundryOptions.map((option, index) => (
                         <p
                           key={index}
-                          className={`${index === 0 ? "bg-primary text-white" : "bg-white text-black"} rounded-full border border-gray-700 px-4 py-2 transition duration-300`}
+                          className={`${index === 1 ? "bg-primary text-white" : "bg-white text-black"} rounded-full border border-gray-700 px-4 py-2 transition duration-300`}
                         >
                           {option}
                         </p>
@@ -77,7 +78,7 @@ const RentalDetail = () => {
               <hr className="mb-4 border border-gray-700" />
               <div>
                 <p className="text-[18px] text-black">Pet friendly</p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 pt-2">
                   {petOptions.map((option, index) => (
                     <p
                       key={index}
@@ -101,10 +102,12 @@ const RentalDetail = () => {
               <hr className="mb-4 border border-gray-700" />
               <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
                 <div className="flex flex-col">
-                  <p className="text-[18px] text-black">Move in Date</p>
-                  <div className="flex space-x-2">
-                    <p className="font-medium text-gray-900">MM/DD/YYYY</p>
-                    <p className="rounded-2xl border border-gray-800 bg-white px-4 py-2">
+                  <p className="py-2 text-[18px] text-black">Move in Date</p>
+                  <div className="flex space-x-4">
+                    <p className="text-sm font-medium text-gray-900">
+                      MM/DD/YYYY
+                    </p>
+                    <p className="ml-3 rounded-2xl border border-gray-800 bg-white px-4 py-2 pt-2">
                       Available January 30 2025
                     </p>
                   </div>
@@ -114,7 +117,7 @@ const RentalDetail = () => {
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div className="flex flex-col space-y-1">
                   <p className="text-black">Leasing Type</p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 pt-2">
                     {leaseOptions.map((option, index) => (
                       <p
                         key={index}
@@ -142,11 +145,11 @@ const RentalDetail = () => {
                   <p className="text-[18px] text-black">
                     Roommate Gender Preference
                   </p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 pt-2">
                     {genderOptions.map((option, index) => (
                       <p
                         key={index}
-                        className="rounded-full border border-gray-700 bg-white px-4 py-2 text-black transition duration-300 hover:bg-primary hover:text-white"
+                        className={`${index === 2 ? "bg-white text-black" : "bg-primary text-white"} rounded-full border border-gray-700 bg-primary px-4 py-2`}
                       >
                         {option}
                       </p>
@@ -157,11 +160,11 @@ const RentalDetail = () => {
                   <div className="self-stretch border-r-2 border-gray-800"></div>
                   <div className="flex flex-col pl-2">
                     <p className="text-[18px] text-black">Smoking preference</p>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 pt-2">
                       {smokingOptions.map((option, index) => (
                         <p
                           key={index}
-                          className="rounded-full border border-gray-700 bg-white px-4 py-2 text-black transition duration-300 hover:bg-primary hover:text-white"
+                          className={`${index === 0 ? "bg-white text-black" : "bg-primary text-white"} rounded-full border border-gray-700 bg-primary px-4 py-2`}
                         >
                           {option}
                         </p>
@@ -174,7 +177,7 @@ const RentalDetail = () => {
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                 <div className="flex flex-col">
                   <p className="text-[18px] text-black">Deposit Payment</p>
-                  <div className="flex space-x-2">
+                  <div className="flex space-x-2 pt-2">
                     <p className="font-medium text-gray-900">$500</p>
                     <p className="rounded-2xl border border-gray-800 bg-white px-4 py-2">
                       20%
@@ -187,7 +190,7 @@ const RentalDetail = () => {
                     <p className="text-[18px] text-black">
                       Credit Check/Background Check
                     </p>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 pt-2">
                       <p className="rounded-full border border-gray-700 bg-white px-4 py-2 text-black transition duration-300 hover:bg-primary hover:text-white">
                         Approved
                       </p>
@@ -212,11 +215,11 @@ const RentalDetail = () => {
               <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
                 <div className="flex flex-col">
                   <p className="text-[18px] text-black">Security Feature</p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 pt-2">
                     {securityOptions.map((option, index) => (
                       <p
                         key={index}
-                        className="rounded-full border border-gray-700 bg-white px-4 py-2 text-black transition duration-300 hover:bg-primary hover:text-white"
+                        className={`${index === 1 ? "bg-white text-black" : "bg-primary text-white"} rounded-full border border-gray-700 bg-primary px-4 py-2`}
                       >
                         {option}
                       </p>
@@ -227,11 +230,11 @@ const RentalDetail = () => {
                   <div className="self-stretch border-r-2 border-gray-800"></div>
                   <div className="flex flex-col pl-2">
                     <p className="text-[18px] text-black">Utilities included</p>
-                    <div className="flex flex-wrap gap-2">
-                      {securityOptions.map((option, index) => (
+                    <div className="flex flex-wrap gap-2 pt-2">
+                      {utilityOptions.map((option, index) => (
                         <p
                           key={index}
-                          className="rounded-full border border-gray-700 bg-white px-4 py-2 text-black transition duration-300 hover:bg-primary hover:text-white"
+                          className={`${index === 0 ? "bg-white text-black" : "bg-primary text-white"} rounded-full border border-gray-700 bg-primary px-4 py-2`}
                         >
                           {option}
                         </p>
@@ -244,7 +247,7 @@ const RentalDetail = () => {
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                 <div className="flex flex-col">
                   <p className="text-[18px] text-black">Outdoor space</p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 pt-2">
                     {outdoorOptions.map((option, index) => (
                       <p
                         key={index}
@@ -259,7 +262,7 @@ const RentalDetail = () => {
                   <div className="self-stretch border-r-2 border-gray-800"></div>
                   <div className="flex flex-col pl-2">
                     <p className="text-[18px] text-black">Property Insurance</p>
-                    <div className="flex space-x-2">
+                    <div className="flex space-x-2 pt-2">
                       <p className="font-medium text-gray-900">$100</p>
                       <p className="rounded-2xl border border-gray-800 bg-white px-4 py-2">
                         Approximate monthly cost
