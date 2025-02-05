@@ -37,7 +37,7 @@ const PropertyDetailHeader = () => {
 
   return (
     <div
-      className="relative min-h-[950px] bg-contain bg-bottom"
+      className="relative min-h-[950px] bg-cover bg-bottom"
       style={{
         backgroundImage: `url('https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/property/detail_bg.png')`,
         backgroundClip: "border-box",
@@ -53,9 +53,9 @@ const PropertyDetailHeader = () => {
 
         {/* Content Wrapper */}
         {/* Content Wrapper */}
-        <div className="absolute left-1/2 mx-auto my-52 flex min-w-[80%] max-w-7xl -translate-x-1/2 transform flex-col items-center justify-center rounded-lg bg-white p-6 shadow-2xl">
+        <div className="absolute left-1/2 mx-auto my-52 flex min-w-[80%] max-w-7xl -translate-x-1/2 transform flex-col items-center justify-center rounded-lg border border-gray-700/50 bg-white p-6 shadow-md shadow-black/15">
           {/* Upper Carousel */}
-          <div className="flex items-center justify-center space-x-2 rounded-xl border border-gray-700 p-3">
+          <div className="flex items-center justify-center space-x-2 rounded-xl border border-gray-400 p-3">
             <div className="flex w-full max-w-3xl space-x-2 overflow-hidden">
               {images
                 .slice(carouselIndex, carouselIndex + 9)
@@ -66,7 +66,7 @@ const PropertyDetailHeader = () => {
                     width={190}
                     height={124}
                     alt="Carousel Item"
-                    className="h-32 w-32 cursor-pointer rounded object-contain hover:opacity-80" // Updated sizes
+                    className="h-32 w-32 cursor-pointer rounded-md object-cover hover:opacity-80" // Updated sizes
                     onClick={() => handleImageClick(image)}
                   />
                 ))}
@@ -82,7 +82,7 @@ const PropertyDetailHeader = () => {
                 width={963}
                 height={767}
                 alt="Selected Item"
-                className="max-h-96 max-w-96 rounded object-contain shadow-lg" // Updated sizes
+                className="max-h-96 max-w-96 rounded object-cover shadow-lg" // Updated sizes
               />
             ))}
           </div>
