@@ -6,12 +6,15 @@ import { NavBar } from "./nav-bar";
 
 const PropertyDetailHeader = () => {
   const images = [
-    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//property1.png",
-    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//property2.png",
-    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//property3.png",
-    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//rental1.png",
-    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//rental2.png",
-    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//rental3.png",
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/metro_haven/1.png",
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/metro_haven/2.png",
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/metro_haven/3.png",
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/metro_haven/4.png",
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/metro_haven/5.png",
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/metro_haven/6.png",
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/metro_haven/7.png",
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/metro_haven/8.png",
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/metro_haven/9.png",
   ];
 
   const [carouselIndex, setCarouselIndex] = useState(0);
@@ -33,12 +36,17 @@ const PropertyDetailHeader = () => {
   };
 
   return (
-    <div className="relative">
+    <div
+      className="relative min-h-screen"
+      style={{
+        backgroundImage: `url('https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/property/detail_bg.png')`,
+        backgroundClip: "border-box",
+        backgroundSize: "cover",
+        backdropFilter: "blur(70px)",
+      }}
+    >
       <div
-        className="relative h-screen bg-cover bg-center"
-        style={{
-          backgroundImage: `url('https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/property/detail_bg.png')`,
-        }}
+        className="relative min-h-screen bg-cover bg-top"
         aria-label="Property Detail Background"
       >
         {/* Navbar */}
@@ -48,7 +56,7 @@ const PropertyDetailHeader = () => {
 
         {/* Content Wrapper */}
         {/* Content Wrapper */}
-        <div className="absolute left-1/2 mx-auto mt-32 flex w-[80%] max-w-7xl -translate-x-1/2 transform flex-col items-center justify-center rounded-lg bg-white p-6 shadow-2xl">
+        <div className="absolute left-1/2 mx-auto my-52 flex min-w-[80%] max-w-7xl -translate-x-1/2 transform flex-col items-center justify-center rounded-lg bg-white p-6 shadow-2xl">
           {/* Upper Carousel */}
           <div className="flex items-center justify-center space-x-2 rounded-xl border border-gray-700 p-3">
             <div className="flex w-full max-w-3xl space-x-2 overflow-hidden">
@@ -58,10 +66,10 @@ const PropertyDetailHeader = () => {
                   <Image
                     key={index}
                     src={image}
-                    width={720}
-                    height={910}
+                    width={190}
+                    height={124}
                     alt="Carousel Item"
-                    className="h-32 w-32 cursor-pointer rounded hover:opacity-80" // Updated sizes
+                    className="h-32 w-32 cursor-pointer rounded object-contain hover:opacity-80" // Updated sizes
                     onClick={() => handleImageClick(image)}
                   />
                 ))}
@@ -74,10 +82,10 @@ const PropertyDetailHeader = () => {
               <Image
                 key={index}
                 src={image}
-                width={720}
-                height={910}
+                width={963}
+                height={767}
                 alt="Selected Item"
-                className="h-96 w-96 rounded shadow-lg" // Updated sizes
+                className="max-h-96 max-w-96 rounded object-contain shadow-lg" // Updated sizes
               />
             ))}
           </div>

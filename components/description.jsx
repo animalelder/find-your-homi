@@ -2,7 +2,8 @@ import Image from "next/image";
 
 const Description = () => {
   return (
-    <div className="mt-60 bg-gradient-to-b from-white to-[#FEF5F4] p-4 md:p-8 lg:p-12">
+    <div className="bg-gradient-to-b from-white via-red-50 to-white p-4 md:p-8 lg:p-12">
+      <div className="-mt-8 h-28 w-full backdrop-blur-3xl"></div>
       <div className="flex flex-col gap-10 lg:flex-row">
         {/* Left Section */}
         <div className="flex flex-col gap-4 lg:w-7/12">
@@ -21,7 +22,7 @@ const Description = () => {
             <div className="flex flex-col">
               <div className="flex items-center gap-1">
                 <Image
-                  src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//bedroom_icon.png"
+                  src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/icons/bedroom_icon.png"
                   alt="bedroom icon"
                   width={32}
                   height={32}
@@ -38,7 +39,7 @@ const Description = () => {
               <div className="flex flex-col pl-2">
                 <div className="flex items-center gap-1">
                   <Image
-                    src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//bathroom_icon.png"
+                    src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/icons/bathroom_icon.png"
                     width={32}
                     height={32}
                     alt="bathroom icon"
@@ -56,7 +57,7 @@ const Description = () => {
               <div className="flex flex-col pl-2">
                 <div className="flex items-center gap-1">
                   <Image
-                    src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//area_icon.png"
+                    src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/icons/area_icon.png"
                     alt="square feet icon"
                     width={32}
                     height={32}
@@ -72,69 +73,68 @@ const Description = () => {
 
         {/* Right Section */}
         <div className="text-gray-700 lg:w-1/3">
-          d
           <h3 className="mb-4 text-2xl font-semibold">
             Key Features and Amenities
           </h3>
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-1 rounded-lg bg-gradient-to-r from-[#FF5757] to-[#FF9897] p-2 text-white">
+          <div className="flex flex-col gap-8">
+            <div className="flex items-center gap-1 rounded-lg bg-gradient-to-r from-[#FF5757] to-[#FEF5F3] p-2 py-3 text-white">
               <Image
-                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//feature_icon.png"
-                wdith={32}
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/icons/feature_icon.png"
+                width={32}
                 height={32}
                 alt="icon for feature"
                 className="h-5 w-5"
               />
               <p className="text-[14px] font-semibold">
-                Expansive oceanfront terrace for outdoor entertaining
+                Expansive private balcony terrace for outdoor entertaining
               </p>
             </div>
-            <div className="flex items-center gap-1 rounded-lg bg-gradient-to-r from-[#FF5757] to-[#FF9897] p-2 text-white">
+            <div className="flex items-center gap-1 rounded-lg bg-gradient-to-r from-[#FF5757] to-[#FEF5F3] p-2 py-3 text-white">
               <Image
                 src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//feature_icon.png"
-                wdith={32}
+                width={32}
                 height={32}
                 alt="icon for feature"
                 className="h-5 w-5"
               />
               <p className="text-[14px] font-semibold">
-                Expansive oceanfront terrace for outdoor entertaining
+                Gourmet kitchen with top-of-the-line appliances
               </p>
             </div>
-            <div className="flex items-center gap-1 rounded-lg bg-gradient-to-r from-[#FF5757] to-[#FF9897] p-2 text-white">
+            <div className="flex items-center gap-1 rounded-lg bg-gradient-to-r from-[#FF5757] to-[#FEF5F3] p-2 py-3 text-white">
               <Image
-                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//feature_icon.png"
-                wdith={32}
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/icons/feature_icon.png"
+                width={32}
                 height={32}
                 alt="icon for feature"
                 className="h-5 w-5"
               />
-              <p className="text-[14px] font-semibold">
-                Expansive oceanfront terrace for outdoor entertaining
+              <p className="text-nowrap text-[14px] font-semibold">
+                Master suite with a spa-inspired bathroom and private balcony
               </p>
             </div>
-            <div className="flex items-center gap-1 rounded-lg bg-gradient-to-r from-[#FF5757] to-[#FF9897] p-2 text-white">
+            <div className="flex items-center gap-1 rounded-lg bg-gradient-to-r from-[#FF5757] to-[#FEF5F3] p-2 py-3 text-white">
               <Image
-                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//feature_icon.png"
-                wdith={32}
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/icons/feature_icon.png"
+                width={32}
                 height={32}
                 alt="icon for feature"
                 className="h-5 w-5"
               />
               <p className="text-[14px] font-semibold">
-                Expansive oceanfront terrace for outdoor entertaining
+                Private garage and ample storage space
               </p>
             </div>
-            <div className="flex items-center gap-1 rounded-lg bg-gradient-to-r from-[#FF5757] to-[#FF9897] p-2 text-white">
+            <div className="flex items-center gap-1 rounded-lg bg-gradient-to-r from-[#FF5757] to-[#FEF5F3] p-2 py-3 text-white">
               <Image
-                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//feature_icon.png"
-                wdith={32}
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/icons/feature_icon.png"
+                width={32}
                 height={32}
                 alt="icon for feature"
                 className="h-5 w-5"
               />
               <p className="text-[14px] font-semibold">
-                Expansive oceanfront terrace for outdoor entertaining
+                Close to all the downtown Toronto culture and life
               </p>
             </div>
           </div>
