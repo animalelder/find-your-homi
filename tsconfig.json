@@ -3,6 +3,7 @@
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
+    "checkJs": false,
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -28,9 +29,10 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
+    "**/*.js",
+    "**/*.jsx",
     "**/*.tsx",
-    ".next/types/**/*.ts",
-    "components/ui/input.tsx"
+    ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }

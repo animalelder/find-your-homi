@@ -3,24 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 export function NavBar() {
-  // const pathname = usePathname(); // Get the current location
-  // const supabase = createClient();
-  // const [session, setSession] = useState(null);
-
-  // useEffect(() => {
-  //   supabase.auth.getSession().then(({ data: { session } }) => {
-  //     setSession(session);
-  //   });
-
-  //   const { data } = supabase.auth.onAuthStateChange((_event, session) => {
-  //     setSession(session);
-  //   });
-
-  //   return () => data.subscription.unsubscribe();
-  // }, []);
-
-  // const rentalButton = pathname === "/" ? "block" : "hidden";
-
   return (
     <div className="relative inset-x-0">
       <div className="absolute left-1/2 top-6 flex w-full -translate-x-1/2 items-center justify-center px-4 sm:px-12">

@@ -2,9 +2,8 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { NavBar } from "./nav-bar";
 
-const PropertyDetailHeader = () => {
+const PropertyDetailHeader = ({ children }) => {
   const images = [
     "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/metro_haven/1.png",
     "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/metro_haven/2.png",
@@ -48,7 +47,7 @@ const PropertyDetailHeader = () => {
       <div className="relative w-full" aria-label="Property Detail Background">
         {/* Navbar */}
         <div className="absolute left-0 top-[-2] z-10 w-full px-4 sm:px-12">
-          <NavBar />
+          {children}
         </div>
 
         {/* Content Wrapper */}

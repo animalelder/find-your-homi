@@ -1,15 +1,12 @@
 import Image from "next/image";
-import { NavBar } from "./nav-bar";
 
-const PropertyHeader = () => {
+const PropertyHeader = ({ children }) => {
   return (
     <div className="relative bg-white">
       {/* Hero Section */}
       <div className="h-[735px] bg-opacity-70 bg-[url('https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/property/room_bg.png')] bg-cover bg-bottom bg-no-repeat">
         {/* Navbar */}
-        <div className="relative z-50">
-          <NavBar />
-        </div>
+        <div className="relative z-50">{children}</div>
 
         {/* Hero Content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-black">

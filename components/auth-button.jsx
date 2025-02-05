@@ -1,21 +1,13 @@
-import { createClient } from "@/utils/supabase/server";
+import { signOut } from "@/app/signout";
+import { createClient } from "@/utils/supabase/client";
 import Link from "next/link";
-import { redirect } from "next/navigation";
 
 export default async function AuthButton() {
-  const supabase = await createClient();
+  const supabase = createClient();
 
   const {
     data: { user },
   } = await supabase.auth.getUser();
-
-  const signOut = async () => {
-    "use server";
-
-    const supabase = await createClient();
-    await supabase.auth.signOut();
-    return redirect("/");
-  };
 
   return user ? (
     <div className="relative flex items-center gap-4">
@@ -27,7 +19,7 @@ export default async function AuthButton() {
     </div>
   ) : (
     <Link
-      href="/login"
+      href="/sign-in"
       className="rounded-full bg-primaryGreen px-6 py-2 text-gray-950 hover:border-spacing-1 hover:border hover:border-primaryGreen hover:bg-primaryGreen/50"
     >
       Login

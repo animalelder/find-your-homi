@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 
 const Faq = () => {
-  const [currentPage, setCurrentPage] = React.useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const handlePrev = () => {
     if (currentPage > 1) {
