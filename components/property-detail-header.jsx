@@ -37,7 +37,7 @@ const PropertyDetailHeader = () => {
 
   return (
     <div
-      className="relative min-h-screen bg-contain bg-bottom"
+      className="relative min-h-[950px] bg-contain bg-bottom"
       style={{
         backgroundImage: `url('https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/property/detail_bg.png')`,
         backgroundClip: "border-box",
