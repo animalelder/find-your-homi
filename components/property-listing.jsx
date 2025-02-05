@@ -41,21 +41,21 @@ const PropertyListing = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-skyBlue">
+    <div className="min-h-screen bg-white bg-gradient-to-b from-sky-300/25 via-sky-500/50 pb-12">
       <div className="mx-4 sm:mx-[10%]">
         <div className="container mx-auto px-4 py-8">
           {/* Header Section */}
-          <h3 className="mb-4 text-2xl font-semibold text-primaryGreen sm:text-3xl">
+          <h3 className="mb-4 font-['Urbanist'] text-4xl font-semibold text-primaryGreen">
             Discover a World of Possibilities
           </h3>
-          <p className="mb-8 text-sm text-gray-600">
+          <p className="mb-8 font-['Urbanist'] text-sm text-gray-600">
             Our portfolio of properties is as diverse as your dreams. Explore
             the following categories to find the perfect property that resonates
             with your vision of home.
           </p>
 
           {/* Featured Properties */}
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-3">
             {[
               "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//property1.png",
               "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//property2.png",
@@ -63,7 +63,7 @@ const PropertyListing = () => {
             ].map((property, index) => (
               <div
                 key={index}
-                className="w-full max-w-sm rounded-lg bg-white p-4 shadow-md"
+                className="w-full max-w-sm space-y-5 rounded-lg bg-white p-4 shadow-md"
               >
                 <Image
                   src={property}
@@ -72,7 +72,7 @@ const PropertyListing = () => {
                   alt={`Property ${index + 1}`}
                   className="w-full rounded-lg"
                 />
-                <p className="mt-2 inline-block rounded-full bg-primaryGreen px-2 py-1 text-[14px]">
+                <p className="mt-3 inline-block rounded-full bg-primaryGreen px-3 py-1 text-[14px]">
                   {index === 0
                     ? "Urban Living - Heart of Toronto"
                     : index === 1
@@ -86,9 +86,9 @@ const PropertyListing = () => {
                       ? "Metropolitan Haven"
                       : "Rustic Retreat Cottage"}
                 </h4>
-                <p className="mt-2 text-sm text-gray-600">
+                <p className="mt-2 line-clamp-2 text-sm text-gray-600">
                   {index === 0
-                    ? "Experience the vibrant city life with this beautifully designed modern apartment located in the heart of Toronto..."
+                    ? "Experience the vibrant city in a beautiful modern apartment located in the heart of Toronto..."
                     : index === 1
                       ? "Immerse yourself in the energy of the city. This modern apartment in the heart..."
                       : "Find tranquility in the countryside. This charming cottage is nestled amidst rolling hills..."}
@@ -96,10 +96,10 @@ const PropertyListing = () => {
                     Read More
                   </a>
                 </p>
-                <div className="mt-4 flex items-center justify-between">
+                <div className="mt-auto flex items-center justify-between">
                   <div>
                     <span className="text-sm text-gray-400">Price</span>
-                    <p className="text-lg font-bold">$1,250</p>
+                    <p className="text-lg font-bold">$3,000</p>
                   </div>
                   <button className="rounded-lg bg-primaryGreen px-4 py-2 hover:bg-primaryLight">
                     View Property Details
@@ -113,12 +113,12 @@ const PropertyListing = () => {
         <hr className="mx-auto my-6 h-[1px] w-[80%] border-t border-red-600" />
 
         {/* Listings Section */}
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto min-w-fit max-w-screen-xl px-4 pb-20">
+          <div className="grid grid-cols-3 gap-5">
             {listings.map((item, index) => (
               <div
                 key={index}
-                className="relative w-full cursor-pointer overflow-hidden rounded-lg bg-cover bg-center shadow-md"
+                className="relative w-full max-w-sm cursor-pointer overflow-hidden rounded-lg bg-cover bg-center shadow-md"
                 style={{ backgroundImage: `url(${item.bg})`, height: "400px" }}
               >
                 <Image

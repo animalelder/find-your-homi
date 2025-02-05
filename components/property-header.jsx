@@ -5,19 +5,14 @@ const PropertyHeader = () => {
   return (
     <div className="relative bg-white">
       {/* Hero Section */}
-      <div
-        className="relative h-screen bg-cover bg-center"
-        style={{
-          backgroundImage: `url('https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/property/bg.png')`,
-        }}
-      >
+      <div className="h-[735px] bg-opacity-70 bg-[url('https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/property/room_bg.png')] bg-cover bg-bottom bg-no-repeat">
         {/* Navbar */}
-        <div className="absolute left-0 top-0 flex w-full items-center justify-center px-4 sm:px-12">
+        <div className="relative z-50">
           <NavBar />
         </div>
 
         {/* Hero Content */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-white">
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-black">
           {/* Search Input and Find Property Button */}
           <div className="flex w-full max-w-lg">
             <div className="relative w-full rounded-lg bg-gray-100 p-2">
@@ -45,8 +40,9 @@ const PropertyHeader = () => {
               />
               <input
                 type="text"
-                placeholder="Location"
-                className="w-full rounded-lg border py-2 pl-10 pr-4"
+                placeholder="Greater Toronto Area"
+                disabled
+                className="w-full rounded-lg border py-2 pl-10 pr-4 placeholder-slate-700/80 disabled:bg-white"
               />
             </div>
 
@@ -61,8 +57,9 @@ const PropertyHeader = () => {
               />
               <input
                 type="text"
-                placeholder="Property Type"
-                className="w-full rounded-lg border py-2 pl-10 pr-10"
+                placeholder="Condo, Apartment"
+                disabled
+                className="w-full rounded-lg border py-2 pl-10 pr-10 placeholder-slate-700/80 disabled:bg-white"
               />
               <Image
                 src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//chevron_button.png"
@@ -84,8 +81,9 @@ const PropertyHeader = () => {
               />
               <input
                 type="text"
-                placeholder="Pricing Range"
-                className="w-full rounded-lg border py-2 pl-10 pr-10"
+                disabled
+                placeholder="$1500 - $3000"
+                className="w-full rounded-lg border py-2 pl-10 pr-10 placeholder-slate-700/80 disabled:bg-white"
               />
               <Image
                 src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//chevron_button.png"
@@ -107,8 +105,9 @@ const PropertyHeader = () => {
               />
               <input
                 type="text"
-                placeholder="Property Size"
-                className="w-full rounded-lg border py-2 pl-10 pr-10"
+                disabled
+                placeholder="1875 - 2500 sqft"
+                className="w-full rounded-lg border py-2 pl-10 pr-10 placeholder-slate-700/80 disabled:bg-white"
               />
               <Image
                 src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//chevron_button.png"
@@ -130,8 +129,9 @@ const PropertyHeader = () => {
               />
               <input
                 type="text"
-                placeholder="Build Year"
-                className="w-full rounded-lg border py-2 pl-10 pr-10"
+                disabled
+                placeholder="Homi Match Enabled"
+                className="w-full rounded-lg border py-2 pl-10 pr-10 placeholder-slate-700/80 disabled:bg-white"
               />
               <Image
                 src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//chevron_button.png"
