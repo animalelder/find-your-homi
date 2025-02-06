@@ -213,26 +213,27 @@ const LandingTop = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-white">
-          <h1 className="max-w-2xl text-6xl font-bold leading-relaxed tracking-normal drop-shadow-lg">
+        <div className="backdrop-brightness-50/80 absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-neutral-50 backdrop-blur-[1.5px]">
+          <h1 className="max-w-2xl text-7xl font-bold leading-relaxed tracking-normal drop-shadow-md">
             Welcome to{" "}
-            <span className="font-extrabold text-primaryGreen drop-shadow">
+            <span className="font-['Urbanist'] font-extrabold text-teal-400 drop-shadow-md">
               HOMI
             </span>
           </h1>
+          <div className="h-11"></div>
           <h2 className="text-5xl">
             <div className="py-1">Renting made</div>
-            <div className="py-1 drop-shadow-lg">
-              <span className="playfair-display-italic tracking-wider">
+            <div className="py-1">
+              <span className="playfair-display-italic tracking-wider drop-shadow-2xl">
                 Simple
               </span>{" "}
               and{" "}
-              <span className="playfair-display-italic tracking-wider drop-shadow-xl">
+              <span className="playfair-display-italic tracking-wider drop-shadow-2xl">
                 Seamless
               </span>
             </div>
           </h2>
-          <button className="mt-6 cursor-pointer rounded-full bg-primaryGreen px-6 py-3 text-lg font-semibold tracking-wider text-gray-200 transition-colors duration-300 hover:bg-[#00f0d5] hover:text-gray-900">
+          <button className="mt-6 cursor-pointer rounded-full bg-primaryGreen px-6 py-3 text-lg font-semibold tracking-wider text-neutral-50 transition-colors duration-300 hover:bg-[#00f0d5] hover:text-gray-900">
             Find Your Home
           </button>
         </div>
