@@ -22,8 +22,8 @@ const RentalDetail = () => {
 
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-white/60 from-5% via-emerald-400/45 via-35% to-white to-70%">
-      <div className="grid h-full grid-flow-row space-y-7 p-4 sm:p-6 lg:p-8">
-        <div className="my-12 flex flex-col px-28 lg:flex-row">
+      <div className="grid h-full grid-flow-row p-4 space-y-7 sm:p-6 lg:p-8">
+        <div className="flex flex-col my-12 px-28 lg:flex-row">
           <div className="p-4 lg:w-1/4">
             <h3 className="text-base font-semibold text-black">
               Listing Price
@@ -35,15 +35,15 @@ const RentalDetail = () => {
 
           <div className="flex flex-col space-y-10 lg:w-3/4">
             {/* Rental Details Section */}
-            <div className="space-y-10 rounded-xl border border-gray-700 bg-white/40 p-4">
-              <div className="mb-4 flex items-center justify-between">
+            <div className="p-4 space-y-10 border border-gray-700 rounded-xl bg-white/40">
+              <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-semibold">Rental Details</h3>
-                <button className="cursor-pointer rounded-lg border border-gray-700 bg-white px-4 py-2 transition duration-300 hover:bg-primary hover:text-white">
+                <button className="px-4 py-2 transition duration-300 bg-white border border-gray-700 rounded-lg cursor-pointer hover:bg-primary hover:text-white">
                   Learn More
                 </button>
               </div>
               <hr className="mb-4 border border-gray-700" />
-              <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
+              <div className="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-3">
                 <div className="flex flex-col">
                   <p className="text-sm text-black">Bedrooms</p>
                   <p className="font-medium text-gray-900">04</p>
@@ -57,7 +57,7 @@ const RentalDetail = () => {
                 </div>
               </div>
               <hr className="mb-4 border border-gray-700" />
-              <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
+              <div className="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-3">
                 <div className="flex flex-col space-y-2">
                   <p className="text-sm text-black">Square Feet</p>
                   <p className="font-['Urbanist'] text-lg font-semibold leading-relaxed text-gray-900">
@@ -98,22 +98,22 @@ const RentalDetail = () => {
             </div>
 
             {/* Lease Details Section */}
-            <div className="space-y-14 rounded-xl border border-gray-700 bg-white/40 p-4">
-              <div className="mb-4 flex items-center justify-between">
+            <div className="p-4 border border-gray-700 space-y-14 rounded-xl bg-white/40">
+              <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-semibold">Lease Details</h3>
-                <button className="cursor-pointer rounded-lg border border-gray-700 bg-white px-4 py-2 font-semibold tracking-wide transition duration-300 hover:bg-altGreen hover:text-white">
+                <button className="px-4 py-2 font-semibold tracking-wide transition duration-300 bg-white border border-gray-700 rounded-lg cursor-pointer hover:bg-altGreen hover:text-white">
                   Learn More
                 </button>
               </div>
               <hr className="mb-4 border border-gray-700" />
-              <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
+              <div className="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-3">
                 <div className="flex flex-col">
                   <p className="py-2 text-sm text-black">Move in Date</p>
                   <div className="flex items-center gap-2 space-x-4">
                     <p className="font-['Urbanist'] text-lg font-semibold leading-relaxed text-gray-900">
                       MM/DD/YYYY
                     </p>
-                    <p className="ml-3 text-nowrap rounded-2xl border border-gray-800 bg-white px-4 py-2 pt-2">
+                    <p className="px-4 py-2 pt-2 ml-3 bg-white border border-gray-800 text-nowrap rounded-2xl">
                       Available January 30 2025
                     </p>
                   </div>
@@ -138,17 +138,17 @@ const RentalDetail = () => {
             </div>
 
             {/* Room Matching Section */}
-            <div className="space-y-12 rounded-xl border border-gray-700 bg-white/40 p-4">
-              <div className="mb-4 flex items-center justify-between">
+            <div className="p-4 space-y-12 border border-gray-700 rounded-xl bg-white/40">
+              <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-semibold">
                   Preferences & Room Matching
                 </h3>
-                <button className="cursor-pointer rounded-lg border border-gray-700 bg-white px-4 py-2 font-semibold tracking-wide transition duration-300 hover:bg-altGreen hover:text-white">
+                <button className="px-4 py-2 font-semibold tracking-wide transition duration-300 bg-white border border-gray-700 rounded-lg cursor-pointer hover:bg-altGreen hover:text-white">
                   Learn More
                 </button>
               </div>
               <hr className="mb-4 border border-gray-700" />
-              <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
+              <div className="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-3">
                 <div className="flex flex-col">
                   <p className="text-sm text-black">
                     Roommate Gender Preference
@@ -185,11 +185,11 @@ const RentalDetail = () => {
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                 <div className="flex flex-col">
                   <p className="text-sm text-black">Deposit Payment</p>
-                  <div className="flex items-baseline gap-2 space-x-2 pt-2">
+                  <div className="flex items-baseline gap-2 pt-2 space-x-2">
                     <p className="font-['Urbanist'] text-lg font-semibold leading-relaxed text-gray-900">
                       $500
                     </p>
-                    <p className="rounded-2xl border border-gray-800 bg-white px-4 py-2">
+                    <p className="px-4 py-2 bg-white border border-gray-800 rounded-2xl">
                       20%
                     </p>
                   </div>
@@ -201,10 +201,10 @@ const RentalDetail = () => {
                       Credit Check/Background Check
                     </p>
                     <div className="flex flex-wrap gap-2 pt-2">
-                      <p className="rounded-full border border-gray-700 bg-white px-4 py-2 font-semibold tracking-wide text-black transition duration-300 hover:bg-altGreen hover:text-white">
+                      <p className="px-4 py-2 font-semibold tracking-wide text-black transition duration-300 bg-white border border-gray-700 rounded-full hover:bg-altGreen hover:text-white">
                         Approved
                       </p>
-                      <p className="rounded-full border border-gray-700 bg-white px-4 py-2 font-semibold tracking-wide text-black transition duration-300 hover:bg-altGreen hover:text-white">
+                      <p className="px-4 py-2 font-semibold tracking-wide text-black transition duration-300 bg-white border border-gray-700 rounded-full hover:bg-altGreen hover:text-white">
                         Denied
                       </p>
                     </div>
@@ -214,17 +214,17 @@ const RentalDetail = () => {
             </div>
 
             {/* Building Features Section */}
-            <div className="space-y-16 rounded-xl border border-gray-700 bg-white/40 p-4">
-              <div className="mb-4 flex items-center justify-between">
+            <div className="p-4 space-y-16 border border-gray-700 rounded-xl bg-white/40">
+              <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-semibold">
                   Building Features & Property Insurance
                 </h3>
-                <button className="cursor-pointer rounded-lg border border-gray-700 bg-white px-4 py-2 font-semibold tracking-wide transition duration-300 hover:bg-altGreen hover:text-white">
+                <button className="px-4 py-2 font-semibold tracking-wide transition duration-300 bg-white border border-gray-700 rounded-lg cursor-pointer hover:bg-altGreen hover:text-white">
                   Learn More
                 </button>
               </div>
               <hr className="mb-4 border border-gray-700" />
-              <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
+              <div className="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-3">
                 <div className="flex flex-col">
                   <p className="text-sm text-black">Security Feature</p>
                   <div className="flex flex-wrap gap-2 pt-2">
@@ -276,11 +276,11 @@ const RentalDetail = () => {
                     <p className="text-sm text-black">
                       Minimum Property Insurance
                     </p>
-                    <div className="flex items-baseline gap-2 space-x-2 pt-2">
+                    <div className="flex items-baseline gap-2 pt-2 space-x-2">
                       <p className="font-['Urbanist'] text-lg font-semibold leading-relaxed text-gray-900">
                         $375
                       </p>
-                      <p className="rounded-2xl border border-gray-800 bg-white px-4 py-2">
+                      <p className="px-4 py-2 bg-white border border-gray-800 rounded-2xl">
                         Approximate monthly cost
                       </p>
                     </div>
@@ -294,24 +294,27 @@ const RentalDetail = () => {
         <div className="flex w-[1168px] max-w-[1200px] justify-between place-self-center font-['Urbanist'] backdrop-blur-xl">
           {/* Left Section */}
           <div className="grow basis-1/3">
-            <h3 className="mb-4 text-4xl font-semibold leading-normal tracking-wide text-black">
-              Inquire About Metropolitan Haven
+            <h3 className="mb-4 text-4xl font-medium leading-normal tracking-wider text-gray-900">
+              Inquire About
+              <div className="font-bold tracking-normal text-black">
+                Metropolitan Haven
+              </div>
             </h3>
-            <p className="mb-6 tracking-normal text-gray-600">
+            <p className="mb-6 tracking-wide text-gray-600 text-balance">
               Interested in this property? Fill out the form below, and our real
               estate experts will get back to you with more details, including
               scheduling a viewing and answering any questions you may have.
             </p>
             <button
-              className="-ml-28 hidden opacity-65 hover:opacity-100 md:mt-32 md:block"
+              className="hidden -ml-28 opacity-85 hover:opacity-100 md:mt-32 md:block"
               onClick={scrollToTop}
             >
               <Image
-                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/icons/upArrow.png"
-                width={148}
-                height={148}
-                alt="Arrow"
-                className="h-12 w-12"
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/icons/scrolltopicon.svg"
+                width={150}
+                height={150}
+                alt="Scroll to top of page"
+                className="size-12 drop-shadow-xl"
               />
             </button>
           </div>
@@ -324,7 +327,7 @@ const RentalDetail = () => {
                 <div className="w-full sm:w-1/2">
                   <label
                     htmlFor="fname"
-                    className="mb-1 block text-sm font-semibold tracking-wide text-gray-700"
+                    className="block mb-1 text-sm font-semibold tracking-wide text-gray-700"
                   >
                     First Name
                   </label>
@@ -332,13 +335,13 @@ const RentalDetail = () => {
                     type="text"
                     id="fname"
                     placeholder="Enter first name"
-                    className="w-full rounded-md border border-gray-800 bg-white px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full px-4 py-2 bg-white border border-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-800"
                   />
                 </div>
                 <div className="w-full sm:w-1/2">
                   <label
                     htmlFor="Lname"
-                    className="mb-1 block text-sm font-semibold tracking-wide text-gray-700"
+                    className="block mb-1 text-sm font-semibold tracking-wide text-gray-700"
                   >
                     Last Name
                   </label>
@@ -346,7 +349,7 @@ const RentalDetail = () => {
                     type="text"
                     id="Lname"
                     placeholder="Enter last name"
-                    className="w-full rounded-md border border-gray-800 bg-white px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full px-4 py-2 bg-white border border-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-800"
                   />
                 </div>
               </div>
@@ -356,7 +359,7 @@ const RentalDetail = () => {
                 <div className="w-full sm:w-1/2">
                   <label
                     htmlFor="email"
-                    className="mb-1 block text-sm font-semibold tracking-wide text-gray-700"
+                    className="block mb-1 text-sm font-semibold tracking-wide text-gray-700"
                   >
                     Email
                   </label>
@@ -364,13 +367,13 @@ const RentalDetail = () => {
                     type="email"
                     id="email"
                     placeholder="Enter your email"
-                    className="w-full rounded-md border border-gray-800 bg-white px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full px-4 py-2 bg-white border border-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-800"
                   />
                 </div>
                 <div className="w-full sm:w-1/2">
                   <label
                     htmlFor="phone"
-                    className="mb-1 block text-sm font-semibold tracking-wide text-gray-700"
+                    className="block mb-1 text-sm font-semibold tracking-wide text-gray-700"
                   >
                     Phone
                   </label>
@@ -378,7 +381,7 @@ const RentalDetail = () => {
                     type="tel"
                     id="phone"
                     placeholder="Enter phone number"
-                    className="w-full rounded-md border border-gray-800 bg-white px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full px-4 py-2 bg-white border border-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-800"
                   />
                 </div>
               </div>
@@ -386,13 +389,13 @@ const RentalDetail = () => {
               {/* Property Selection */}
               <div>
                 <p className="mb-2 text-sm font-bold tracking-wide text-black">
-                  Selected property
+                  Selected property:
                 </p>
                 <select
                   name="property"
                   id="property"
                   disabled
-                  className="w-full rounded-md bg-white px-4 py-2 caret-white focus:outline-none focus:ring-1 focus:ring-primary/25"
+                  className="w-full px-4 py-2 bg-white rounded-md caret-white focus:outline-none focus:ring-1 focus:ring-emerald-800/25"
                 >
                   <option value="Downtown Condo, Toronto Canada">
                     Metropolitan Haven
@@ -410,14 +413,14 @@ const RentalDetail = () => {
               <div>
                 <label
                   htmlFor="message"
-                  className="mb-1 block text-sm font-semibold tracking-wide text-gray-700"
+                  className="block mb-1 text-sm font-semibold tracking-wide text-gray-700"
                 >
                   Message
                 </label>
                 <textarea
                   id="message"
                   placeholder="Enter your message here"
-                  className="w-full rounded-md border border-gray-800 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-full px-4 py-2 border border-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-800"
                   rows="4"
                 ></textarea>
               </div>
@@ -428,7 +431,7 @@ const RentalDetail = () => {
                   <input
                     type="checkbox"
                     id="terms"
-                    className="h-4 w-4 rounded border border-gray-300 checked:bg-primaryGreen focus:ring-primary/50"
+                    className="w-4 h-4 border border-gray-300 rounded accent-primaryGreen focus:ring-emerald-800/50"
                   />
                   <label
                     htmlFor="terms"
@@ -439,7 +442,7 @@ const RentalDetail = () => {
                 </div>
                 <button
                   type="submit"
-                  className="rounded-md bg-primary px-6 py-2 text-sm font-semibold tracking-wide text-white transition duration-300 hover:bg-emerald-300 hover:text-emerald-950"
+                  className="px-6 py-2 text-sm font-semibold tracking-wide text-white transition duration-300 rounded-md bg-primary hover:bg-emerald-300 hover:text-emerald-950"
                 >
                   Send Your Message
                 </button>

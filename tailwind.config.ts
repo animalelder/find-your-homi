@@ -2,7 +2,9 @@ import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
+  presets: [require("./subframe/tailwind.config.js")],
   content: [
+    "./subframe/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{ts,tsx,js,jsx}",
     "./components/**/*.{ts,tsx,js,jsx}",
     "./app/**/*.{ts,tsx,js,jsx}",
