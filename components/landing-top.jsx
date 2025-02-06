@@ -51,7 +51,7 @@ const LandingTop = () => {
     <div className="relative bg-white">
       {/* Hero Section */}
       <div
-        className="relative h-screen bg-cover bg-center"
+        className="relative h-screen bg-cover bg-top"
         style={{
           backgroundImage:
             "url('https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/home/hero_img.png')",
@@ -214,12 +214,16 @@ const LandingTop = () => {
 
         {/* Hero Content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-white">
-          <h2 className="max-w-2xl text-3xl font-bold leading-relaxed tracking-normal drop-shadow-lg sm:text-5xl md:text-6xl">
+          <h1 className="max-w-2xl text-6xl font-bold leading-relaxed tracking-normal drop-shadow-lg">
             Welcome to{" "}
-            <span className="text-primaryGreen drop-shadow">HOMI</span>
+            <span className="font-extrabold text-primaryGreen drop-shadow">
+              HOMI
+            </span>
+          </h1>
+          <h2 className="text-5xl">
             <div className="py-1">Renting made</div>
             <div className="py-1 drop-shadow-lg">
-              <span className="playfair-display-italic tracking-wide">
+              <span className="playfair-display-italic tracking-wider">
                 Simple
               </span>{" "}
               and{" "}
@@ -228,7 +232,7 @@ const LandingTop = () => {
               </span>
             </div>
           </h2>
-          <button className="mt-6 cursor-pointer rounded-full bg-primaryGreen px-6 py-3 text-lg text-green-950 hover:bg-primaryLight hover:text-gray-700">
+          <button className="mt-6 cursor-pointer rounded-full bg-primaryGreen px-6 py-3 text-lg font-semibold tracking-wider text-gray-200 transition-colors duration-300 hover:bg-[#00f0d5] hover:text-gray-900">
             Find Your Home
           </button>
         </div>
@@ -237,11 +241,11 @@ const LandingTop = () => {
       {/* Featured Image */}
       <div className="flex w-full justify-center py-8">
         <Image
-          src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//featured.png"
-          width={1046}
+          src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/home/featuredbrands.png"
+          width={624}
           height={95}
           alt="Featured"
-          className="w-11/12 max-w-5xl rounded-lg"
+          className="h-auto max-w-[624px]"
         />
       </div>
     </div>

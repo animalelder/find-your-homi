@@ -45,7 +45,7 @@ export default function Page() {
                 <img
                   src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/profile/tenant_img.png"
                   alt="Tenant"
-                  className="h-auto min-w-60 rounded-full"
+                  className="h-auto min-w-52 rounded-full"
                 />
               </div>
               <h4 className="text-lg font-semibold sm:text-xl">Amy Peters</h4>

@@ -25,18 +25,26 @@ const LandingBody = () => {
   return (
     <div className="w-full flex-col items-center justify-start bg-white">
       <div id="find-home" className="w-full bg-primaryLight px-4 py-8">
-        <div className="flex flex-col items-center justify-center">
-          <h2 className="mb-4 text-center text-4xl font-bold">
-            Find your Home with <span className="text-primaryGreen">homi</span>
+        <div className="flex flex-col items-center justify-between space-y-1">
+          <h2 className="mb-4 pt-6 text-center text-5xl font-bold">
+            Find your home with{" "}
+            <span className="font-['Urbanist'] font-black text-primaryGreen">
+              HOMI
+            </span>
           </h2>
-          <p className="mb-6 w-full text-center text-gray-600 md:w-[1020px]">
-            Discover the ease of finding your perfect space with Homi. Whether
-            you&apos;re searching for a cozy apartment or the ideal roommate,
-            our platform connects you with trusted listings, tailored matches,
-            and seamless communication—all in one place. Your next home is just
-            a few clicks away!
+          <h3 className="pb-8 text-center text-xl font-medium text-gray-800">
+            Discover the ease of finding your perfect living arrangement with
+            Homi.
+          </h3>
+          <p className="w-[700px] text-pretty pb-6 text-left indent-9 text-base text-gray-950">
+            Whether you&apos;re searching for a cozy apartment, the ideal
+            roommate-or both-our platform connects you with trusted listings,
+            tailored matches with verified users, and seamless communication-all
+            in one place. <b>Your next home is just a few clicks away!</b>
           </p>
-          <button className="mb-8 rounded-full bg-buttonRed px-6 py-2 text-white">
+        </div>
+        <div className="my-8 flex items-center justify-center gap-5">
+          <button className="mb-8 rounded-lg bg-buttonRed px-6 py-2 text-xl text-white hover:bg-red-500">
             Browse Now
           </button>
         </div>
