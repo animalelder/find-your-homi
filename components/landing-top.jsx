@@ -213,7 +213,7 @@ const LandingTop = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="backdrop-brightness-50/80 absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-neutral-50 backdrop-blur-[1.5px]">
+        <div className="backdrop-brightness-50/80 absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-neutral-50 backdrop-blur-[1.125px]">
           <h1 className="max-w-2xl text-7xl font-bold leading-relaxed tracking-normal drop-shadow-md">
             Welcome to{" "}
             <span className="font-['Urbanist'] font-extrabold text-teal-400 drop-shadow-md">
