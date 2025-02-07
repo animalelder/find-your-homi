@@ -23,7 +23,8 @@
     "paths": {
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],
-      "@/subframe/*": ["./subframe/*"]
+      "@/subframe/*": ["./subframe/*"],
+      "@/hooks/*": ["./hooks/*"]
     },
     "strictNullChecks": true
   },

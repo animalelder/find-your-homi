@@ -1,10 +1,12 @@
 "use client";
 
+import { useToast } from "@/hooks/use-toast";
 import Image from "next/image";
 import { useState } from "react";
 
 const RentalDetail = () => {
   const [submitted, setSubmitted] = useState(false);
+  const { toast } = useToast();
   // Options for different features
   const laundryOptions = ["In-Unit", "On-site", "None"];
   const petOptions = ["Yes", "No"];
@@ -447,7 +449,11 @@ const RentalDetail = () => {
                     type="submit"
                     onClick={() => {
                       setSubmitted(true);
-                      alert("Thank you. Your form has been submitted!");
+                      toast({
+                        title: "Property Inquiry Successful",
+                        description:
+                          "Thank you for your interest into Metropolitan Haven. You will receive a message from the landlord, Colin, soon!",
+                      });
                     }}
                     className="rounded-md bg-primary px-6 py-2 text-sm font-semibold tracking-wide text-white transition duration-300 hover:bg-emerald-300 hover:text-emerald-950"
                   >
