@@ -58,7 +58,7 @@ const FindHome = () => {
             }}
           >
             <Image
-              src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//Live_Listing.png"
+              src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/livelisting/badge.png"
               alt="Live Listing"
               width={249}
               height={43}

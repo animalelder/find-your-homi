@@ -6,19 +6,19 @@ const LandingBody = () => {
       bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home1.png",
       title: "Apartment in Toronto",
       description: "Region Home apartment",
-      price: "$5,300/m",
+      price: "$1,300/m",
     },
     {
       bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home2.png",
       title: "Condo in Toronto",
       description: "Resource Home apartment",
-      price: "$8,500/m",
+      price: "$2,500/m",
     },
     {
       bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home3.png",
       title: "Condo in Toronto",
       description: "Region Home apartment",
-      price: "$5,300/m",
+      price: "$2,300/m",
     },
   ];
 

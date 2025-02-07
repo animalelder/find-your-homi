@@ -6,7 +6,13 @@ import { ChatReceived } from "@/subframe/components/ChatReceived";
 import { ChatSent } from "@/subframe/components/ChatSent";
 import { IconButton } from "@/subframe/components/IconButton";
 import { TextField } from "@/subframe/components/TextField";
-import React, { Fragment, useRef, useState } from "react";
+import React, {
+  Fragment,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 const initialMessages: React.ReactElement[] = [
   <ChatReceived
@@ -14,13 +20,13 @@ const initialMessages: React.ReactElement[] = [
     initials="LB"
     key={1}
     name="Lisa Breckin"
-    message="👋 Hey! What apartments have you looked at recently? I really love Metropolitan Haven."
+    message="👋 Hey! Just wanted to check in with you...which apartments have you looked at recently? Homi really has a lot of amazing homes. For me, I really love Metropolitan Haven."
     time="11:11am"
   />,
   <ChatSent
     name="You"
     key={2}
-    message="Just browsing...Metropolitan Haven? I'll check it out!"
+    message="Just been browsing...Metropolitan Haven? I'll check it out!"
     timestamp="11:21am"
   />,
   <ChatReceived
@@ -34,7 +40,7 @@ const initialMessages: React.ReactElement[] = [
   <ChatSent
     name="You"
     key={4}
-    message="Totally is. Let me wrap up this report real fast and I'll share my thoughts ☺️"
+    message="Ohhh! I have it saved to my favorites lol. We should go check it out! I'm gonna send a message to Colin, the landlord. Let me wrap up this report real fast and I'll share my thoughts ☺️"
     timestamp="11:25am"
   />,
   <ChatReceived
@@ -50,30 +56,53 @@ const initialMessages: React.ReactElement[] = [
 function MessengerChatInbox() {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState(initialMessages);
-  const ref = useRef<typeof TextField | null>(null);
+  const ref = useRef<HTMLInputElement>(null);
+  const chats = useRef<HTMLDivElement>(null);
 
-  const handleSend = (message: string, messages: React.ReactElement[]) => {
-    setMessages((currentOnes) => [
-      ...currentOnes,
+  const handleSend = useCallback(() => {
+    const newMessages = [
+      ...messages,
       <ChatSent
         name="You"
-        key={currentOnes.length + 1}
+        key={messages.length + 1}
         message={message}
+        ref={chats}
         timestamp="7:31 PM"
       />,
-    ]);
+    ];
+    setMessages(newMessages);
+
+    if (ref.current != null) ref.current.focus();
 
     setMessage("");
-  };
+  }, [message, messages]);
+
+  const onKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "Enter") handleSend();
+    },
+    [handleSend],
+  );
+
+  useEffect(() => {
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [onKeyDown]);
 
   return (
-    <div className="container flex items-start h-full rounded-md shadow-md bg-default-background mobile:flex-col mobile:flex-nowrap mobile:gap-0 max-w-none">
-      <div className="border-neutral-border mobile:h-auto mobile:w-full mobile:flex-none flex max-w-[384px] shrink-0 grow basis-0 flex-col items-start self-stretch border-r border-solid">
-        <div className="flex flex-col items-center w-full gap-1 px-4 pt-4 pb-2">
-          <div className="flex items-center w-full gap-4">
-            <div className="flex items-center gap-4 px-2 py-2 shrink-0 grow basis-0">
-              <span className="text-heading-3 font-heading-3 text-default-font shrink-0 grow basis-0">
-                HOMI Chat
+    <div className="container flex h-full max-w-none items-start rounded-md bg-default-background shadow-md mobile:flex-col mobile:flex-nowrap mobile:gap-0">
+      <div className="flex max-w-[384px] shrink-0 grow basis-0 flex-col items-start self-stretch border-r border-solid border-neutral-border mobile:h-auto mobile:w-full mobile:flex-none">
+        <div className="flex w-full flex-col items-center gap-1 px-4 pb-2 pt-4">
+          <div className="flex w-full items-center gap-4">
+            <div className="flex shrink-0 grow basis-0 items-center gap-4 px-2 py-2">
+              <Avatar
+                size="x-large"
+                image="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/profile/amy4.png"
+              >
+                A
+              </Avatar>
+              <span className="shrink-0 grow basis-0 text-nowrap font-heading-3 text-heading-3 text-default-font">
+                Amy's HOMI Chat
               </span>
             </div>
             <IconButton
@@ -82,9 +111,9 @@ function MessengerChatInbox() {
               onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
             />
           </div>
-          <div className="flex flex-col items-center w-full gap-4 px-2 py-2">
+          <div className="flex w-full flex-col items-center gap-4 px-2 py-2">
             <TextField
-              className="flex-none w-full h-auto"
+              className="h-auto w-full flex-none"
               variant="filled"
               label=""
               helpText=""
@@ -98,12 +127,12 @@ function MessengerChatInbox() {
             </TextField>
           </div>
         </div>
-        <div className="flex flex-col items-start w-full gap-4 px-4 py-4 overflow-auto shrink-0 grow basis-0">
+        <div className="flex w-full shrink-0 grow basis-0 flex-col items-start gap-4 overflow-auto px-4 py-4">
           <ChatList>
             <ChatList.ChatListItem
-              avatar="https://res.cloudinary.com/subframe/image/upload/v1738862522/uploads/6038/anoxisdsffwgiwjrmnzg.png"
-              name="Warren Daniels"
-              message="Let me know, you can come look for yourself!"
+              avatar="https://res.cloudinary.com/subframe/image/upload/v1738892905/uploads/6038/p7rkrjpx7hekzvcnmesi.png"
+              name="Metropolitan Haven: Colin"
+              message="Hi, Amy! When is a good time to chat about the property?"
               timestamp="Just now"
               unread={true}
             />
@@ -119,7 +148,7 @@ function MessengerChatInbox() {
               name="Travis F."
               message="LOL how long have you lived downtown?"
               timestamp="18 hours ago"
-              replied={true}
+              unread={true}
             />
             <ChatList.ChatListItem
               avatar="https://res.cloudinary.com/subframe/image/upload/v1738862605/uploads/6038/qwolssltw7twalc5zhwl.png"
@@ -133,25 +162,25 @@ function MessengerChatInbox() {
               name="Lisa McKinley"
               message="awesome, can't wait!"
               timestamp="3 days ago"
-              unread={true}
+              replied={true}
             />
           </ChatList>
         </div>
       </div>
-      <div className="flex flex-col items-start self-stretch mobile:h-auto mobile:w-full mobile:flex-none mobile:border-t mobile:border-solid mobile:border-neutral-border shrink-0 grow basis-0">
-        <div className="flex items-center w-full px-6 py-6 border-b border-solid border-neutral-border">
-          <div className="flex items-center gap-4 shrink-0 grow basis-0">
+      <div className="flex shrink-0 grow basis-0 flex-col items-start self-stretch mobile:h-auto mobile:w-full mobile:flex-none mobile:border-t mobile:border-solid mobile:border-neutral-border">
+        <div className="flex w-full items-center border-b border-solid border-neutral-border px-6 py-6">
+          <div className="flex shrink-0 grow basis-0 items-center gap-4">
             <Avatar
               size="large"
               image="https://res.cloudinary.com/subframe/image/upload/v1738863559/uploads/6038/mtxztkxsus0ff3wajuu5.png"
             >
               A
             </Avatar>
-            <div className="flex flex-col items-start shrink-0 grow basis-0">
-              <span className="w-full text-heading-3 font-heading-3 text-default-font">
+            <div className="flex shrink-0 grow basis-0 flex-col items-start">
+              <span className="w-full font-heading-3 text-heading-3 text-default-font">
                 Lisa B. ✅ Verified
               </span>
-              <span className="text-body font-body text-subtext-color">
+              <span className="font-body text-body text-subtext-color">
                 lisa.breckin@gmail.com
               </span>
             </div>
@@ -169,16 +198,16 @@ function MessengerChatInbox() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-end w-full overflow-auto shrink-0 grow basis-0">
-          <div className="container flex flex-col items-center w-full gap-4 py-12 overflow-auto max-w-none shrink-0 grow basis-0">
-            <div className="flex flex-col items-start w-full gap-2 shrink-0 grow basis-0" />
-            <div className="flex flex-col items-center justify-end w-full gap-8">
+        <div className="flex w-full shrink-0 grow basis-0 flex-col items-center justify-end overflow-auto">
+          <div className="container flex w-full max-w-none shrink-0 grow basis-0 flex-col items-center gap-4 overflow-auto py-12">
+            <div className="flex w-full shrink-0 grow basis-0 flex-col items-start gap-2" />
+            <div className="flex w-full flex-col items-center justify-end gap-8">
               {messages.map((message, index) => (
                 <Fragment key={index}>{message}</Fragment>
               ))}
             </div>
           </div>
-          <div className="container flex items-end w-full gap-2 pt-1 pb-8 max-w-none">
+          <div className="container flex w-full max-w-none items-end gap-2 pb-8 pt-1">
             <div className="flex items-end">
               <IconButton
                 variant="brand-tertiary"
@@ -205,6 +234,7 @@ function MessengerChatInbox() {
                 placeholder="Type your message..."
                 ref={ref as any}
                 value={message}
+                autoFocus
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                   setMessage(event.target.value);
                 }}
@@ -213,8 +243,9 @@ function MessengerChatInbox() {
             <IconButton
               variant="brand-primary"
               icon="FeatherSend"
+              type="submit"
               onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
-                handleSend(message, messages);
+                handleSend();
               }}
             />
           </div>

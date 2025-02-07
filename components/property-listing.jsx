@@ -122,7 +122,7 @@ const PropertyListing = () => {
                 style={{ backgroundImage: `url(${item.bg})`, height: "400px" }}
               >
                 <Image
-                  src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//live_listing.png"
+                  src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/livelisting/badge.png"
                   width={249}
                   height={43}
                   alt="Live Listing"
