@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const PropertyListing = () => {
+const PropertyResults = () => {
   const listings = [
     {
       bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home4.png",
@@ -42,17 +42,16 @@ const PropertyListing = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white bg-gradient-to-b from-sky-300/25 via-sky-500/50 pb-12">
+    <div className="min-h-screen bg-white bg-gradient-to-b from-cyan-400/40 via-sky-500/50 pb-12">
       <div className="mx-4 sm:mx-[10%]">
         <div className="container mx-auto px-4 py-8">
           {/* Header Section */}
-          <h3 className="mb-4 font-['Urbanist'] text-4xl font-semibold text-primaryGreen">
-            Discover a World of Possibilities
+          <h3 className="mb-2.5 text-6xl font-medium text-white drop-shadow">
+            Search Results
           </h3>
-          <p className="mb-8 font-['Urbanist'] text-sm text-gray-600">
-            Our portfolio of properties is as diverse as your dreams. Explore
-            the following categories to find the perfect property that resonates
-            with your vision of home.
+          <p className="mb-10 text-lg text-gray-700">
+            Based on your criteria, here are some properties that we think you
+            will really love!
           </p>
 
           {/* Featured Properties */}
@@ -112,39 +111,9 @@ const PropertyListing = () => {
             ))}
           </div>
         </div>
-
-        <hr className="mx-auto my-6 h-[1px] w-[80%] border-t border-red-600" />
-
-        {/* Listings Section */}
-        <div className="mx-auto min-w-fit max-w-screen-xl px-4 pb-20">
-          <div className="grid grid-cols-3 gap-5">
-            {listings.map((item, index) => (
-              <div
-                key={index}
-                className="relative w-full max-w-sm cursor-pointer overflow-hidden rounded-lg bg-cover bg-center shadow-md"
-                style={{ backgroundImage: `url(${item.bg})`, height: "400px" }}
-              >
-                <Image
-                  src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/livelisting/badge.png"
-                  width={249}
-                  height={43}
-                  alt="Live Listing"
-                  className="absolute left-4 top-[-60px] h-48 w-48 object-contain"
-                />
-                <div className="absolute bottom-4 left-1/2 w-[90%] -translate-x-1/2 transform rounded-2xl bg-white p-4">
-                  <p className="font-semibold">{item.title}</p>
-                  <span className="block text-sm text-gray-600">
-                    {item.description}
-                  </span>
-                  <span className="block font-bold">{item.price}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </div>
   );
 };
 
-export default PropertyListing;
+export default PropertyResults;

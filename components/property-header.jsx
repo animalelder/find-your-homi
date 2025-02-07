@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const PropertyHeader = ({ children }) => {
   return (
@@ -18,9 +19,11 @@ const PropertyHeader = ({ children }) => {
                 placeholder="Enter your search criteria here"
                 className="w-full rounded-lg border bg-[#e7ecf3] px-3 py-2 pr-20 font-semibold tracking-wider outline-none"
               />
-              <button className="absolute right-2 top-1/2 -translate-y-1/2 transform rounded-lg bg-primaryBlue p-2 text-sm font-semibold text-white">
-                Find Properties
-              </button>
+              <Link href="/results">
+                <button className="absolute right-2 top-1/2 -translate-y-1/2 transform rounded-lg bg-primaryBlue p-2 text-sm font-semibold text-white">
+                  Find Properties
+                </button>
+              </Link>
             </div>
           </div>
 
