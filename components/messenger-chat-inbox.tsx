@@ -98,7 +98,7 @@ function MessengerChatInbox() {
             <div className="flex shrink-0 grow basis-0 items-center gap-4 px-2 py-2">
               <Avatar
                 size="x-large"
-                image="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/profile/amy4.png"
+                image="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/profile/amy3.png"
                 className="outline outline-offset-1 outline-altGreen"
               >
                 A
