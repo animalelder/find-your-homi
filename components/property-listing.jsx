@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const PropertyListing = () => {
   const listings = [
@@ -61,51 +62,53 @@ const PropertyListing = () => {
               "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//property2.png",
               "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//property3.png",
             ].map((property, index) => (
-              <div
-                key={index}
-                className="w-full max-w-sm space-y-5 rounded-lg bg-white p-4 shadow-md"
-              >
-                <Image
-                  src={property}
-                  width={834}
-                  height={1119}
-                  alt={`Property ${index + 1}`}
-                  className="w-full rounded-lg"
-                />
-                <p className="mt-3 inline-block rounded-full bg-primaryGreen px-3 py-1 text-[14px]">
-                  {index === 0
-                    ? "Urban Living - Heart of Toronto"
-                    : index === 1
-                      ? "Urban Oasis - Life in the Heart of the City"
-                      : "City Charm - Enjoy the City's Lights"}
-                </p>
-                <h4 className="mt-3 text-lg font-bold">
-                  {index === 0
-                    ? "Toronto Modern Apartment"
-                    : index === 1
-                      ? "Metropolitan Haven"
-                      : "Rustic Retreat Cottage"}
-                </h4>
-                <p className="mt-2 line-clamp-2 text-sm text-gray-600">
-                  {index === 0
-                    ? "Experience the vibrant city in a beautiful modern apartment located in the heart of Toronto..."
-                    : index === 1
-                      ? "Immerse yourself in the energy of the city. This modern apartment in the heart..."
-                      : "Find tranquility in the countryside. This charming cottage is nestled amidst rolling hills..."}
-                  <a href="#" className="ml-1 text-primaryBlue">
-                    Read More
-                  </a>
-                </p>
-                <div className="mt-auto flex items-center justify-between">
-                  <div>
-                    <span className="text-sm text-gray-400">Price</span>
-                    <p className="text-lg font-bold">$3,000</p>
+              <Link href="/property-details">
+                <div
+                  key={index}
+                  className="w-full max-w-sm space-y-5 rounded-lg bg-white p-4 shadow-md"
+                >
+                  <Image
+                    src={property}
+                    width={834}
+                    height={1119}
+                    alt={`Property ${index + 1}`}
+                    className="w-full rounded-lg"
+                  />
+                  <p className="mt-3 inline-block rounded-full bg-primaryGreen px-3 py-1 text-[14px]">
+                    {index === 0
+                      ? "Urban Living - Heart of Toronto"
+                      : index === 1
+                        ? "Urban Oasis - Life in the Heart of the City"
+                        : "City Charm - Enjoy the City's Lights"}
+                  </p>
+                  <h4 className="mt-3 text-lg font-bold">
+                    {index === 0
+                      ? "Toronto Modern Apartment"
+                      : index === 1
+                        ? "Metropolitan Haven"
+                        : "Rustic Retreat Cottage"}
+                  </h4>
+                  <p className="mt-2 line-clamp-2 text-sm text-gray-600">
+                    {index === 0
+                      ? "Experience the vibrant city in a beautiful modern apartment located in the heart of Toronto..."
+                      : index === 1
+                        ? "Immerse yourself in the energy of the city. This modern apartment in the heart..."
+                        : "Find tranquility in the countryside. This charming cottage is nestled amidst rolling hills..."}
+                    <a href="#" className="ml-1 text-primaryBlue">
+                      Read More
+                    </a>
+                  </p>
+                  <div className="mt-auto flex items-center justify-between">
+                    <div>
+                      <span className="text-sm text-gray-400">Price</span>
+                      <p className="text-lg font-bold">$3,000</p>
+                    </div>
+                    <button className="rounded-lg bg-primaryGreen px-4 py-2 hover:bg-primaryLight">
+                      View Property Details
+                    </button>
                   </div>
-                  <button className="rounded-lg bg-primaryGreen px-4 py-2 hover:bg-primaryLight">
-                    View Property Details
-                  </button>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
