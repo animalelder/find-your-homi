@@ -1,3 +1,4 @@
+import { Mail, Send } from "lucide-react";
 import Image from "next/image";
 
 const PropertyFooter = () => {
@@ -34,25 +35,13 @@ const PropertyFooter = () => {
             className="h-auto w-[179px]"
           />
           <div className="relative w-full max-w-sm">
-            <Image
-              src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//email_iconSmall.png"
-              width={40}
-              height={40}
-              alt="Email Icon"
-              className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform"
-            />
+            <Mail className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 transform" />
             <input
               type="email"
               placeholder="Enter your email"
               className="w-full rounded-md border border-gray-300 py-2 pl-10 pr-10 focus:outline-none focus:ring-2 focus:ring-primaryGreen"
             />
-            <Image
-              src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//send_icon.png"
-              width={50}
-              height={50}
-              alt="Send Icon"
-              className="absolute right-3 top-1/2 h-5 w-5 -translate-y-1/2 transform cursor-pointer"
-            />
+            <Send className="absolute right-3 top-1/2 size-5 -translate-y-1/2 transform cursor-pointer fill-blue-300" />
           </div>
         </div>
 

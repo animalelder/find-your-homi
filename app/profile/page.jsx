@@ -2,6 +2,7 @@ import { NavBar } from "@/components/nav-bar";
 import {
   CirclePlus,
   CircleUserRound,
+  MapPin,
   MessageSquareText,
   Settings,
 } from "lucide-react";
@@ -43,16 +44,14 @@ export default function Page() {
               </div>
               <h4 className="text-3xl font-semibold">Amy Peters</h4>
               <div className="flex items-center gap-2 text-gray-950">
-                <img
-                  src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/profile/location_icon.png"
-                  alt="Location"
-                  className="size-5"
-                />
+                <MapPin className="size-6 fill-[#ff5757]" />
                 <p className="text-lg font-medium text-gray-600">
                   Toronto, Canada
                 </p>
               </div>
-              <p className="text-xl text-black">Marketing Analyst</p>
+              <p className="font-['Urbanist'] text-xl font-semibold text-black">
+                Marketing Analyst
+              </p>
               <div className="inline-flex h-fit w-full justify-around gap-3 px-4 py-5">
                 <button className="w-auto min-w-[160px] rounded-lg bg-blue-500 px-3 py-2 text-sm text-white hover:bg-blue-600 sm:text-base">
                   Edit Profile

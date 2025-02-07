@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Bath, BedDouble, LandPlot, Zap } from "lucide-react";
 
 const Description = () => {
   return (
@@ -22,16 +22,10 @@ const Description = () => {
               {/* First Item */}
               <div className="flex flex-col">
                 <div className="flex items-center gap-1">
-                  <Image
-                    src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/icons/bedroom_icon.png"
-                    alt="bedroom icon"
-                    width={32}
-                    height={32}
-                    className="h-5 w-5"
-                  />
+                  <BedDouble className="size-5" />
                   <p className="text-gray-600">Bedrooms</p>
                 </div>
-                <p className="font-medium text-gray-900">04</p>
+                <p className="mt-3 font-medium text-gray-900">04</p>
               </div>
 
               {/* Border + Second Item in One Flex Container */}
@@ -39,16 +33,10 @@ const Description = () => {
                 <div className="self-stretch border-r-2 border-gray-800"></div>
                 <div className="flex flex-col pl-2">
                   <div className="flex items-center gap-1">
-                    <Image
-                      src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/icons/bathroom_icon.png"
-                      width={32}
-                      height={32}
-                      alt="bathroom icon"
-                      className="h-5 w-5"
-                    />
+                    <Bath className="size-5" />
                     <p className="text-gray-600">Bathrooms</p>
                   </div>
-                  <p className="font-medium text-gray-900">03</p>
+                  <p className="mt-3 font-medium text-gray-900">03</p>
                 </div>
               </div>
 
@@ -57,16 +45,12 @@ const Description = () => {
                 <div className="self-stretch border-r-2 border-gray-800"></div>
                 <div className="flex flex-col pl-2">
                   <div className="flex items-center gap-1">
-                    <Image
-                      src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/icons/area_icon.png"
-                      alt="square feet icon"
-                      width={32}
-                      height={32}
-                      className="h-5 w-5"
-                    />
+                    <LandPlot className="size-5" />
                     <p className="text-gray-600">Area</p>
                   </div>
-                  <p className="font-medium text-gray-900">2,500 Square Feet</p>
+                  <p className="mt-3 font-medium text-gray-900">
+                    2,500 Square Feet
+                  </p>
                 </div>
               </div>
             </div>
@@ -79,62 +63,32 @@ const Description = () => {
             Key Features and Amenities
           </h3>
           <div className="flex flex-col gap-6 font-medium text-white">
-            <div className="flex items-center gap-1 rounded-2xl bg-gradient-to-r from-[#FF5757] from-50% to-red-50/25 to-90% p-2 py-4 text-white">
-              <Image
-                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/icons/feature_icon.png"
-                width={32}
-                height={32}
-                alt="icon for feature"
-                className="h-5 w-5"
-              />
+            <div className="flex items-center gap-3 rounded-2xl bg-gradient-to-r from-[#FF5757] from-50% to-red-50/25 to-90% p-2 py-4 text-white">
+              <Zap className="size-5 fill-white" />
               <p className="text-[14px] font-semibold">
                 Expansive private balcony terrace for outdoor entertaining
               </p>
             </div>
-            <div className="flex items-center gap-1 rounded-2xl bg-gradient-to-r from-[#FF5757] from-50% to-red-50/25 to-90% p-2 py-4 text-white">
-              <Image
-                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//feature_icon.png"
-                width={32}
-                height={32}
-                alt="icon for feature"
-                className="h-5 w-5"
-              />
+            <div className="flex items-center gap-3 rounded-2xl bg-gradient-to-r from-[#FF5757] from-50% to-red-50/25 to-90% p-2 py-4 text-white">
+              <Zap className="size-5 fill-white" />
               <p className="text-[14px] font-semibold">
                 Gourmet kitchen with top-of-the-line appliances
               </p>
             </div>
-            <div className="flex items-center gap-1 rounded-2xl bg-gradient-to-r from-[#FF5757] from-50% to-red-50/25 to-90% p-2 py-4 text-white">
-              <Image
-                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/icons/feature_icon.png"
-                width={32}
-                height={32}
-                alt="icon for feature"
-                className="h-5 w-5"
-              />
+            <div className="flex items-center gap-3 rounded-2xl bg-gradient-to-r from-[#FF5757] from-50% to-red-50/25 to-90% p-2 py-4 text-white">
+              <Zap className="size-5 fill-white" />
               <p className="text-nowrap text-[14px] font-semibold">
                 Master suite with a spa-inspired bathroom and private balcony
               </p>
             </div>
-            <div className="flex items-center gap-1 rounded-2xl bg-gradient-to-r from-[#FF5757] from-50% to-red-50/25 to-90% p-2 py-4 text-white">
-              <Image
-                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/icons/feature_icon.png"
-                width={32}
-                height={32}
-                alt="icon for feature"
-                className="h-5 w-5"
-              />
+            <div className="flex items-center gap-3 rounded-2xl bg-gradient-to-r from-[#FF5757] from-50% to-red-50/25 to-90% p-2 py-4 text-white">
+              <Zap className="size-5 fill-white" />
               <p className="text-[14px] font-semibold">
                 Private garage and ample storage space
               </p>
             </div>
-            <div className="flex items-center gap-1 rounded-2xl bg-gradient-to-r from-[#FF5757] from-50% to-red-50/25 to-90% p-2 py-4 text-white">
-              <Image
-                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/icons/feature_icon.png"
-                width={32}
-                height={32}
-                alt="icon for feature"
-                className="h-5 w-5"
-              />
+            <div className="flex items-center gap-3 rounded-2xl bg-gradient-to-r from-[#FF5757] from-50% to-red-50/25 to-90% p-2 py-4 text-white">
+              <Zap className="size-5 fill-white" />
               <p className="text-[14px] font-semibold">
                 Close to all the downtown Toronto culture and life
               </p>
@@ -155,9 +109,9 @@ const Description = () => {
 
         {/* Note Box */}
         <div className="mt-4 flex flex-wrap items-center gap-2 rounded-lg border border-gray-700 bg-white p-3 md:flex-nowrap md:gap-4">
-          <p className="text-sm font-semibold md:text-base">Note</p>
+          <p className="text-sm font-semibold uppercase md:text-lg">Note</p>
           <div className="hidden h-full border-r-2 border-gray-800 md:block"></div>
-          <p className="text-sm text-gray-600 md:text-base">
+          <p className="text-sm text-gray-900 md:text-base">
             The figures provided above are estimates and may vary depending on
             the property, location, and individual circumstances.
           </p>
