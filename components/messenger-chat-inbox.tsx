@@ -6,6 +6,7 @@ import { ChatReceived } from "@/subframe/components/ChatReceived";
 import { ChatSent } from "@/subframe/components/ChatSent";
 import { IconButton } from "@/subframe/components/IconButton";
 import { TextField } from "@/subframe/components/TextField";
+import { ShieldCheck } from "lucide-react";
 import React, {
   Fragment,
   useCallback,
@@ -98,11 +99,12 @@ function MessengerChatInbox() {
               <Avatar
                 size="x-large"
                 image="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/profile/amy4.png"
+                className="outline outline-offset-1 outline-altGreen"
               >
                 A
               </Avatar>
-              <span className="shrink-0 grow basis-0 text-nowrap font-heading-3 text-heading-3 text-default-font">
-                Amy's HOMI Chat
+              <span className="ml-2 inline-flex shrink-0 grow basis-0 flex-nowrap items-center gap-1 font-heading-3 text-heading-3 text-default-font">
+                Amy Peters <ShieldCheck className="fill-primaryGreen" />
               </span>
             </div>
             <IconButton
@@ -172,13 +174,15 @@ function MessengerChatInbox() {
           <div className="flex shrink-0 grow basis-0 items-center gap-4">
             <Avatar
               size="large"
+              className="outline -outline-offset-1 outline-primaryBlue"
               image="https://res.cloudinary.com/subframe/image/upload/v1738863559/uploads/6038/mtxztkxsus0ff3wajuu5.png"
             >
               A
             </Avatar>
             <div className="flex shrink-0 grow basis-0 flex-col items-start">
-              <span className="w-full font-heading-3 text-heading-3 text-default-font">
-                Lisa B. ✅ Verified
+              <span className="inline-flex w-full flex-nowrap items-center gap-1 font-heading-3 text-heading-3 text-default-font">
+                Lisa B. <ShieldCheck className="ml-3 fill-primaryBlue" />{" "}
+                Verified
               </span>
               <span className="font-body text-body text-subtext-color">
                 lisa.breckin@gmail.com
