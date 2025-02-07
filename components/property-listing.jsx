@@ -62,11 +62,8 @@ const PropertyListing = () => {
               "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//property2.png",
               "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//property3.png",
             ].map((property, index) => (
-              <Link href="/property-details">
-                <div
-                  key={index}
-                  className="w-full max-w-sm space-y-5 rounded-lg bg-white p-4 shadow-md"
-                >
+              <Link key={index} href="/property-details">
+                <div className="w-full max-w-sm space-y-5 rounded-lg bg-white p-4 shadow-md">
                   <Image
                     src={property}
                     width={834}
