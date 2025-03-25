@@ -4,37 +4,37 @@ import Link from "next/link";
 const PropertyListing = () => {
   const listings = [
     {
-      bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home4.png",
+      bg: "assets/home4.png",
       title: "Apartment in Toronto, Canada",
       description: "Region Home Apartment",
       price: "$5,300/m",
     },
     {
-      bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home5.png",
+      bg: "assets/home5.png",
       title: "Condo in Toronto",
       description: "Resource Home apartment",
       price: "$8,500/m",
     },
     {
-      bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home6.png",
+      bg: "assets/home6.png",
       title: "Duplex in Toronto, Canada",
       description: "Region Home apartment",
       price: "$8,300/m",
     },
     {
-      bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home7.png",
+      bg: "assets/home7.png",
       title: "Duplex in Toronto, Canada",
       description: "Region Home apartment",
       price: "$8,300/m",
     },
     {
-      bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home8.png",
+      bg: "assets/home8.png",
       title: "Duplex in Toronto, Canada",
       description: "Region Home apartment",
       price: "$8,300/m",
     },
     {
-      bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home9.png",
+      bg: "assets/home9.png",
       title: "Condo in Toronto, Canada",
       description: "Region Home apartment",
       price: "$9,500/m",
@@ -58,9 +58,9 @@ const PropertyListing = () => {
           {/* Featured Properties */}
           <div className="grid grid-cols-3">
             {[
-              "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//property1.png",
-              "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//property2.png",
-              "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//property3.png",
+              "assets/property1.png",
+              "assets/property2.png",
+              "assets/property3.png",
             ].map((property, index) => (
               <div
                 key={index}
@@ -125,7 +125,7 @@ const PropertyListing = () => {
                 style={{ backgroundImage: `url(${item.bg})`, height: "400px" }}
               >
                 <Image
-                  src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/livelisting/badge.png"
+                  src="assets/livelisting/badge.png"
                   width={249}
                   height={43}
                   alt="Live Listing"

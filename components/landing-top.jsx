@@ -13,8 +13,7 @@ const LandingTop = () => {
       <div
         className="relative h-screen bg-cover bg-top"
         style={{
-          backgroundImage:
-            "url('https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/home/hero_img.png')",
+          backgroundImage: "url('assets/home/hero_img.png')",
         }}
       >
         <div className="absolute left-0 top-6 flex w-full items-center justify-center gap-5 px-4 font-['Urbanist'] text-lg font-medium tracking-wider sm:px-12">
@@ -23,7 +22,7 @@ const LandingTop = () => {
             {/* Logo */}
             <div>
               <Image
-                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//logo.png"
+                src="assets/logo.png"
                 width={40}
                 height={40}
                 alt="Logo"
@@ -111,7 +110,7 @@ const LandingTop = () => {
       {/* Featured Image */}
       <div className="flex w-full justify-center py-8">
         <Image
-          src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/home/featuredbrands.png"
+          src="assets/home/featuredbrands.png"
           width={624}
           height={95}
           alt="Featured"

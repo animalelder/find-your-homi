@@ -24,7 +24,8 @@
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],
       "@/subframe/*": ["./subframe/*"],
-      "@/hooks/*": ["./hooks/*"]
+      "@/hooks/*": ["./hooks/*"],
+      "assets/*": ["./assets/*"]
     },
     "strictNullChecks": true
   },

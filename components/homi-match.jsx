@@ -7,7 +7,7 @@ const HomiMatch = () => {
         {/* Left Image Section */}
         <div className="w-full lg:w-1/2">
           <Image
-            src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//match_btn.png"
+            src="assets/match_btn.png"
             width={310}
             height={232}
             alt="Match with Roommate"
@@ -29,7 +29,7 @@ const HomiMatch = () => {
           </button>
           <div className="flex justify-center lg:justify-end">
             <Image
-              src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//match_btn.png"
+              src="assets/match_btn.png"
               width={310}
               height={232}
               alt="Get Started Button"

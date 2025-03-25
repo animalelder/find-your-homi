@@ -10,14 +10,14 @@ export default async function Layout({
       {/* Background Image Section */}
       <div className="relative hidden w-1/2 lg:block">
         <Image
-          src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home3.png"
+          src="assets/images/home3.png"
           width={532}
           height={714}
           alt="Create Profile Background"
           className="h-full w-full object-cover"
         />
         <Image
-          src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//homi_logo.png"
+          src="assets/images/homi_logo.png"
           alt="Homi Logo"
           width={392}
           height={143}
@@ -30,7 +30,7 @@ export default async function Layout({
           <div className="flex items-center gap-2 pl-5">
             <p>Sign in or Create a new account with us.</p>
             <Image
-              src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//arrow-right-circle.png"
+              src="assets/arrow-right-circle.png"
               width={24}
               height={24}
               alt="Arrow Right"

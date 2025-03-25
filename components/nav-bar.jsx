@@ -12,7 +12,7 @@ export function NavBar() {
           <div>
             <Link href="/">
               <Image
-                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//logo.png"
+                src="assets/logo.png"
                 width={40}
                 height={40}
                 alt="Logo"

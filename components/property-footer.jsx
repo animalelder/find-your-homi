@@ -28,7 +28,7 @@ const PropertyFooter = () => {
       <div className="flex flex-col items-start gap-32 md:flex-row">
         <div className="flex flex-col items-start gap-7">
           <Image
-            src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//homi_logo.png"
+            src="assets/homi_logo.png"
             width={392}
             height={143}
             alt="Homi Logo"

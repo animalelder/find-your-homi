@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <div className="relative flex min-h-screen w-full shrink-0 flex-col items-center">
       <img
-        src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/profile/profile_bg.png"
+        src="assets/images/profile_bg.png"
         alt="Profile Background"
         className="w-full"
       />
@@ -37,7 +37,7 @@ export default function Page() {
             <div className="flex h-[553px] w-[400px] flex-col items-center justify-around gap-4 space-y-1.5 rounded-tl-full rounded-tr-full border border-x-2 border-indigo-800 border-opacity-30 bg-white pb-5 pt-7 text-center shadow-lg">
               <div className="size-56 justify-items-center rounded-full">
                 <img
-                  src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/profile/tenant_img.png"
+                  src="assets/images/tenant_img.png"
                   alt="Tenant"
                   className="h-auto min-w-52 rounded-full"
                 />
@@ -78,43 +78,43 @@ export default function Page() {
           <div className="mx-auto grid w-[1000px] grid-cols-4 gap-2 pl-7">
             <Link href="/property-details">
               <img
-                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/profile/rentals0.png"
+                src="assets/profile/rentals0.png"
                 alt="Rental 1"
                 className="h-full cursor-pointer rounded-lg object-cover hover:opacity-90 hover:shadow-inner hover:drop-shadow-md"
               />
             </Link>
             <img
-              src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/profile/rentals5.png"
+              src="assets/profile/rentals5.png"
               alt="Rental 2"
               className="h-full cursor-pointer rounded-lg object-cover"
             />
             <img
-              src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/profile/rentals1.png"
+              src="assets/profile/rentals1.png"
               alt="Rental 3"
               className="h-full cursor-pointer rounded-lg object-cover"
             />
             <img
-              src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/profile/rentals3.png"
+              src="assets/profile/rentals3.png"
               alt="Rental 4"
               className="h-full cursor-pointer rounded-lg object-cover"
             />
             <img
-              src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/profile/rentals6.png"
+              src="assets/profile/rentals6.png"
               alt="Rental 5"
               className="h-full cursor-pointer rounded-lg object-cover"
             />
             <img
-              src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/profile/rentals4.png"
+              src="assets/profile/rentals4.png"
               alt="Rental 6"
               className="h-full cursor-pointer rounded-lg object-cover"
             />
             <img
-              src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/profile/rentals2.png"
+              src="assets/profile/rentals2.png"
               alt="Rental 7"
               className="h-full cursor-pointer rounded-lg object-cover"
             />
             <img
-              src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/profile/rentals7.png"
+              src="assets/profile/rentals7.png"
               alt="Rental 8"
               className="h-full cursor-pointer rounded-lg object-cover"
             />

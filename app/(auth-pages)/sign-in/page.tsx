@@ -63,7 +63,7 @@ export default async function Login(props: { searchParams: Promise<Message> }) {
           <div className="flex justify-center gap-4">
             <button type="button">
               <Image
-                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//facebook_logo.png"
+                src="assets/facebook_logo.png"
                 alt="Facebook"
                 width={32}
                 height={32}
@@ -72,7 +72,7 @@ export default async function Login(props: { searchParams: Promise<Message> }) {
             </button>
             <button type="button">
               <Image
-                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//google_logo.png"
+                src="assets/google_logo.png"
                 width={32}
                 height={32}
                 alt="Google"

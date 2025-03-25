@@ -3,19 +3,19 @@ import Image from "next/image";
 const LandingBody = () => {
   const listings = [
     {
-      bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home1.png",
+      bg: "assets/home1.png",
       title: "Apartment in Toronto",
       description: "Region Home apartment",
       price: "$1,300/m",
     },
     {
-      bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home2.png",
+      bg: "assets/home2.png",
       title: "Condo in Toronto",
       description: "Resource Home apartment",
       price: "$2,500/m",
     },
     {
-      bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home3.png",
+      bg: "assets/home3.png",
       title: "Condo in Toronto",
       description: "Region Home apartment",
       price: "$2,300/m",
@@ -52,19 +52,19 @@ const LandingBody = () => {
         {/* Display Listings */}
         <div className="flex items-center justify-center gap-5">
           <Image
-            src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/livelisting/1.png"
+            src="assets/livelisting/1.png"
             alt="Details card for rental 1"
             width={363}
             height={480}
           />
           <Image
-            src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/livelisting/2.png"
+            src="assets/livelisting/2.png"
             alt="Details card for rental 2"
             width={362}
             height={480}
           />
           <Image
-            src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/livelisting/3.png"
+            src="assets/livelisting/3.png"
             alt="Details card for rental 3"
             width={363}
             height={480}
@@ -87,7 +87,7 @@ const LandingBody = () => {
       >
         <Image
           unoptimized
-          src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/home/homihelps.svg"
+          src="assets/home/homihelps.svg"
           alt="Homi helps you find the right people and the right living space"
           width={1287}
           height={544}
@@ -95,7 +95,7 @@ const LandingBody = () => {
         />
         <Image
           unoptimized
-          src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/home/match.svg"
+          src="assets/home/match.svg"
           alt="Homi helps you find the right people and the right living space"
           width={1170}
           height={543}
@@ -111,7 +111,7 @@ const LandingBody = () => {
             What people say about us
           </h1>
         </div>
-        <div className="flex items-center justify-between gap-6 bg-[url('https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//landlord_img.png')] bg-[size:630px_auto] bg-bottom bg-no-repeat px-10 lg:flex-row lg:gap-10">
+        <div className="flex items-center justify-between gap-6 bg-[url('../assets/landlord_img.png')] bg-[size:630px_auto] bg-bottom bg-no-repeat px-10 lg:flex-row lg:gap-10">
           {/* Testimonial 1 */}
           <div className="h-auto max-w-[370px] rounded-bl-3xl rounded-br-3xl bg-white p-4 shadow-xl lg:my-44">
             <h4 className="mb-2 text-lg font-medium text-black">Testimonial</h4>
@@ -119,7 +119,7 @@ const LandingBody = () => {
             <div>
               <div className="flex gap-4">
                 <Image
-                  src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//Joshua.png"
+                  src="assets/Joshua.png"
                   width={58}
                   height={58}
                   alt="Joshua"
@@ -145,7 +145,7 @@ const LandingBody = () => {
             <div>
               <div className="flex gap-4">
                 <Image
-                  src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//Nora.png"
+                  src="assets/Nora.png"
                   width={58}
                   height={58}
                   alt="Nora"
