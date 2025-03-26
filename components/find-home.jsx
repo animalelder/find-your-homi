@@ -8,19 +8,19 @@ const FindHome = () => {
 
   const listings = [
     {
-      bg: "assets/home1.png",
+      bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home1.png",
       title: "Apartment in Toronto",
       description: "Region Home apartment",
       price: "$5,300/m",
     },
     {
-      bg: "assets/home2.png",
+      bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home2.png",
       title: "Condo in Toronto",
       description: "Resource Home apartment",
       price: "$8,500/m",
     },
     {
-      bg: "assets/home3.png",
+      bg: "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home3.png",
       title: "Condo in Toronto",
       description: "Region Home apartment",
       price: "$5,300/m",
@@ -58,7 +58,7 @@ const FindHome = () => {
             }}
           >
             <Image
-              src="assets/livelisting/badge.png"
+              src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/livelisting/badge.png"
               alt="Live Listing"
               width={249}
               height={43}

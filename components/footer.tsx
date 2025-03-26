@@ -20,28 +20,28 @@ const Footer = () => {
         {/* Social Icons */}
         <div className="mb-8 flex justify-center gap-4 lg:mb-0 lg:justify-start">
           <Image
-            src="assets/instagram.png"
+            src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//instagram.png"
             width={43}
             height={43}
             alt="Instagram"
             className="h-8 w-8"
           />
           <Image
-            src="assets/linkedin-box.png"
+            src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//linkedin-box.png"
             width={43}
             height={43}
             alt="LinkedIn"
             className="h-8 w-8"
           />
           <Image
-            src="assets/pinterest.png"
+            src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//pinterest.png"
             width={43}
             height={43}
             alt="Pinterest"
             className="h-8 w-8"
           />
           <Image
-            src="assets/twitter.png"
+            src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//twitter.png"
             width={43}
             height={43}
             alt="Twitter"
@@ -89,7 +89,7 @@ const Footer = () => {
       {/* Logo at the extreme bottom */}
       <div className="mb-0 mt-12 flex justify-center">
         <Image
-          src="assets/homi.png"
+          src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//homi.png"
           width={2336}
           height={49}
           alt="Homi Logo"

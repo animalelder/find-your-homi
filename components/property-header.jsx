@@ -5,7 +5,7 @@ const PropertyHeader = ({ children }) => {
   return (
     <div className="relative bg-white">
       {/* Hero Section */}
-      <div className="h-[735px] bg-opacity-70 bg-[url('../assets/property/bg.png')] bg-cover bg-bottom bg-no-repeat">
+      <div className="h-[735px] bg-opacity-70 bg-[url('https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/property/room_bg.png')] bg-cover bg-bottom bg-no-repeat">
         {/* Navbar */}
         <div className="relative z-50">{children}</div>
 
@@ -32,7 +32,7 @@ const PropertyHeader = ({ children }) => {
             {/* Location Input */}
             <div className="relative flex w-full max-w-xs items-center">
               <Image
-                src="assets/location_img.png"
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//location_img.png"
                 width={40}
                 height={40}
                 alt="Location"
@@ -49,7 +49,7 @@ const PropertyHeader = ({ children }) => {
             {/* Property Type Input */}
             <div className="relative flex w-full max-w-xs items-center">
               <Image
-                src="assets/home_img.png"
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//home_img.png"
                 width={40}
                 height={40}
                 alt="Home"
@@ -62,7 +62,7 @@ const PropertyHeader = ({ children }) => {
                 className="w-full rounded-lg border py-2 pl-10 pr-10 placeholder-slate-700/80 disabled:bg-white"
               />
               <Image
-                src="assets/chevron_button.png"
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//chevron_button.png"
                 width={40}
                 height={40}
                 alt="Chevron"
@@ -73,7 +73,7 @@ const PropertyHeader = ({ children }) => {
             {/* Pricing Range Input */}
             <div className="relative flex w-full max-w-xs items-center">
               <Image
-                src="assets/pricing_icon.png"
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//pricing_icon.png"
                 width={40}
                 height={40}
                 alt="Pricing"
@@ -86,7 +86,7 @@ const PropertyHeader = ({ children }) => {
                 className="w-full rounded-lg border py-2 pl-10 pr-10 placeholder-slate-700/80 disabled:bg-white"
               />
               <Image
-                src="assets/chevron_button.png"
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//chevron_button.png"
                 width={40}
                 height={40}
                 alt="Chevron"
@@ -97,7 +97,7 @@ const PropertyHeader = ({ children }) => {
             {/* Property Size Input */}
             <div className="relative flex w-full max-w-xs items-center">
               <Image
-                src="assets/property_size.png"
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//property_size.png"
                 width={40}
                 height={40}
                 alt="Property Size"
@@ -110,7 +110,7 @@ const PropertyHeader = ({ children }) => {
                 className="w-full rounded-lg border py-2 pl-10 pr-10 placeholder-slate-700/80 disabled:bg-white"
               />
               <Image
-                src="assets/chevron_button.png"
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//chevron_button.png"
                 width={40}
                 height={40}
                 alt="Chevron"
@@ -121,7 +121,7 @@ const PropertyHeader = ({ children }) => {
             {/* Build Year Input */}
             <div className="relative flex w-full max-w-xs items-center">
               <Image
-                src="assets/calendar_icon.png"
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//calendar_icon.png"
                 width={40}
                 height={40}
                 alt="Calendar"
@@ -134,7 +134,7 @@ const PropertyHeader = ({ children }) => {
                 className="w-full rounded-lg border py-2 pl-10 pr-10 placeholder-slate-700/80 disabled:bg-white"
               />
               <Image
-                src="assets/chevron_button.png"
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//chevron_button.png"
                 width={40}
                 height={40}
                 alt="Chevron"

@@ -5,15 +5,15 @@ import { useState } from "react";
 
 const PropertyDetailHeader = ({ children }) => {
   const images = [
-    "assets/metro_haven/1.png",
-    "assets/metro_haven/2.png",
-    "assets/metro_haven/3.png",
-    "assets/metro_haven/4.png",
-    "assets/metro_haven/5.png",
-    "assets/metro_haven/6.png",
-    "assets/metro_haven/7.png",
-    "assets/metro_haven/8.png",
-    "assets/metro_haven/9.png",
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/metro_haven/1.png",
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/metro_haven/2.png",
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/metro_haven/3.png",
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/metro_haven/4.png",
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/metro_haven/5.png",
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/metro_haven/6.png",
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/metro_haven/7.png",
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/metro_haven/8.png",
+    "https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/metro_haven/9.png",
   ];
 
   const [carouselIndex, setCarouselIndex] = useState(0);
@@ -38,7 +38,7 @@ const PropertyDetailHeader = ({ children }) => {
     <div
       className="relative min-h-[950px] bg-cover bg-bottom"
       style={{
-        backgroundImage: `url('assets/property/detail_bg.png')`,
+        backgroundImage: `url('https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/property/detail_bg.png')`,
         backgroundClip: "border-box",
         backgroundSize: "cover",
         backdropFilter: "blur(70px)",
@@ -90,7 +90,7 @@ const PropertyDetailHeader = ({ children }) => {
           <div className="mt-8 flex items-center justify-center space-x-4">
             <button onClick={handlePrev} className="p-2">
               <Image
-                src="assets/back_button.png"
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//back_button.png"
                 width={77}
                 height={77}
                 alt="Previous"
@@ -98,7 +98,7 @@ const PropertyDetailHeader = ({ children }) => {
               />
             </button>
             <Image
-              src="assets/indicator.png"
+              src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//indicator.png"
               alt="Indicator"
               width={185}
               height={7}
@@ -106,7 +106,7 @@ const PropertyDetailHeader = ({ children }) => {
             />
             <button onClick={handleNext} className="p-2">
               <Image
-                src="assets/forward_button.png"
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//forward_button.png"
                 width={77}
                 height={77}
                 alt="Next"

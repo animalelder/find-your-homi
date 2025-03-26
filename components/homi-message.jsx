@@ -43,7 +43,7 @@ const HomiMessage = () => {
         {/* Image Section */}
         <div className="flex w-full justify-center rounded-lg md:w-1/2">
           <Image
-            src="assets/message.png"
+            src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//message.png"
             width={829}
             height={816}
             alt="Message Illustration"

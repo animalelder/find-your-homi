@@ -4,11 +4,11 @@ const LandlordTestimonial = () => {
   return (
     <div className="mb-auto block px-4 pt-10 sm:px-6 lg:px-20">
       <div className="mb-28 w-full text-center">
-        <h1 className="max-sm:text-3xl text-6xl font-bold text-gray-800 drop-shadow-lg">
+        <h1 className="text-6xl font-bold text-gray-800 drop-shadow-lg max-sm:text-3xl">
           What people say about us
         </h1>
       </div>
-      <div className="flex items-center justify-between gap-6 bg-[url('../assets/landlord_img.png')] bg-contain bg-bottom bg-no-repeat lg:flex-row lg:gap-10">
+      <div className="flex items-center justify-between gap-6 bg-[url('https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//landlord_img.png')] bg-contain bg-bottom bg-no-repeat lg:flex-row lg:gap-10">
         {/* Testimonial 1 */}
         <div className="h-auto max-w-[370px] rounded-bl-3xl rounded-br-3xl bg-white p-4 shadow-xl lg:my-44">
           <h4 className="mb-2 text-lg font-medium text-gray-700">
@@ -18,7 +18,7 @@ const LandlordTestimonial = () => {
           <div>
             <div className="flex gap-4">
               <Image
-                src="assets/Joshua.png"
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//Joshua.png"
                 width={58}
                 height={58}
                 alt="Joshua"
@@ -46,7 +46,7 @@ const LandlordTestimonial = () => {
           <div>
             <div className="flex gap-4">
               <Image
-                src="assets/Nora.png"
+                src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets//Nora.png"
                 width={58}
                 height={58}
                 alt="Nora"

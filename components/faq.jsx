@@ -81,7 +81,7 @@ const Faq = () => {
             className="rounded-full border border-gray-800 bg-white p-2 hover:bg-primary hover:text-white"
           >
             <Image
-              src="assets/icons/rightArrow.png"
+              src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/icons/rightArrow.png"
               width={41}
               height={41}
               alt="Previous"
@@ -93,7 +93,7 @@ const Faq = () => {
             className="rounded-full border border-gray-800 bg-white p-2 hover:bg-primary hover:text-white"
           >
             <Image
-              src="assets/icons/leftArrow.png"
+              src="https://pqrdckeuqfydcgbgrxcg.supabase.co/storage/v1/object/public/assets/icons/leftArrow.png"
               width={41}
               height={41}
               alt="Next"
