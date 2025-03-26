@@ -1,21 +1,20 @@
-import { NextRequest, NextResponse } from "next/server";
-
-import { getSessionCookie } from "better-auth/cookies";
+import { type NextRequest } from "next/server";
+import { updateSession } from "@/utils/supabase/middleware";
 
 export async function middleware(request: NextRequest) {
-  const sessionCookie = getSessionCookie(request, {
-    // Optionally pass config if cookie name, prefix or useSecureCookies option is customized in auth config.
-    cookieName: "session_token",
-    cookiePrefix: "better-auth",
-  });
-
-  if (!sessionCookie) {
-    return NextResponse.redirect(new URL("/", request.url));
-  }
-
-  return NextResponse.next();
+  return await updateSession(request);
 }
 
 export const config = {
-  matcher: ["/profile"], // Specify the routes the middleware applies to
+  matcher: [
+    /*
+     * Match all request paths except:
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     * - images - .svg, .png, .jpg, .jpeg, .gif, .webp
+     * Feel free to modify this pattern to include more paths.
+     */
+    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
+  ],
 };

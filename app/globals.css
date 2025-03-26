@@ -32,13 +32,6 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
-  @font-face {
-    font-family: "Urbanist";
-    font-style: normal;
-    font-weight: 100 900;
-    font-display: swap;
-    src: url(../fonts/Urbanist-Variable.ttf) format("ttf");
-  }
 
   h1,
   h2,
@@ -88,6 +81,8 @@
     --chart-5: 340 75% 55%;
   }
 }
+
+
 
 @layer base {
   * {
