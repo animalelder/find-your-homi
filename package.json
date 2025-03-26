@@ -16,6 +16,8 @@
     "@radix-ui/react-toast": "^1.2.6",
     "@radix-ui/react-tooltip": "^1.1.8",
     "@subframe/core": "^1.136.0",
+    "@supabase/ssr": "latest",
+    "@supabase/supabase-js": "latest",
     "autoprefixer": "10.4.20",
     "class-variance-authority": "^0.7.1",
     "classnames": "^2.3.2",
